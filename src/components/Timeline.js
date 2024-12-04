@@ -34,7 +34,7 @@ const Timeline = () => {
             {timelineData.map((item, index) => (
                 <div 
                     key={index} 
-                    className={`timeline-item ${index % 2 == 0 ? 'left' : 'right'}`}>
+                    className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
                     <div className='timeline-marker'></div>
                     <div className='timeline-content'>
                         <h3 className='timeline-title'>{item.title}</h3>
