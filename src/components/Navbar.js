@@ -27,9 +27,8 @@ const Navbar = () => {
                         <li className="nav-item dropdown">
                             <button
                                 className="nav-link dropdown-toggle"
-                                href="#"
                                 id="peopleDropdown"
-                                role="button"
+                                type="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >People</button>
@@ -42,9 +41,8 @@ const Navbar = () => {
                         <li className="nav-item dropdown">
                             <button
                                 className="nav-link dropdown-toggle"
-                                href="#"
                                 id="acadDropdown"
-                                role="button"
+                                type="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >Academics</button>
@@ -57,9 +55,8 @@ const Navbar = () => {
                         <li className="nav-item dropdown">
                             <button
                                 className="nav-link dropdown-toggle"
-                                href="#"
                                 id="facilitiesDropdown"
-                                role="button"
+                                type="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >Facilities</button>
