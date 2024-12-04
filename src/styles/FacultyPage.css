@@ -18,6 +18,7 @@
     background-color: #B1E5F2; /* Light blue background color for the hexagon */
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow effect */
+    border-radius: 25px;
 }
 
 /* Image inside the hexagon */
@@ -27,6 +28,7 @@
     object-fit: cover;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Clip the image inside hexagon */
     transition: opacity 0.3s ease;
+    border-radius: 25px;
 }
 
 /* Text styling for the hexagon */

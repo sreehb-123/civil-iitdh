@@ -4,7 +4,7 @@ import facultyLogo from '../assets/download-removebg-preview.png';
 import { useNavigate } from 'react-router-dom';
 
 const facultyData = [
-    { id: 1, name: 'Rakesh Lingam', role: 'Assistant Professor', image: facultyImg },
+    { id: 1, name: 'Giridhar Rajesh Bande', role: 'Assistant Professor', image: facultyImg },
     { id: 2, name: 'John Doe', role: 'Professor', image: facultyImg },
     { id: 3, name: 'Jane Smith', role: 'Associate Professor', image: facultyImg },
     { id: 4, name: 'Michael Brown', role: 'Lecturer', image: facultyImg },
@@ -17,7 +17,7 @@ const FacultyPage = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate('/facultyy');
+        navigate('/facultyPage');
     };
 
     return (
