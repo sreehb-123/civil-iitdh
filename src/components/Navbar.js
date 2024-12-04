@@ -25,14 +25,14 @@ const Navbar = () => {
                             <a className="nav-link" href="/#about">About</a>
                         </li>
                         <li className="nav-item dropdown">
-                            <a
+                            <button
                                 className="nav-link dropdown-toggle"
                                 href="#"
                                 id="peopleDropdown"
                                 role="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
-                            >People</a>
+                            >People</button>
                             <ul className="dropdown-menu" aria-labelledby="peopleDropdown">
                                 <li><a className="dropdown-item" href="#staff">Staff</a></li>
                                 <li><a className="dropdown-item" href="/faculty">Faculty</a></li>
@@ -40,14 +40,14 @@ const Navbar = () => {
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
-                            <a
+                            <button
                                 className="nav-link dropdown-toggle"
                                 href="#"
                                 id="acadDropdown"
                                 role="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
-                            >Academics</a>
+                            >Academics</button>
                             <ul className="dropdown-menu" aria-labelledby="acadDropdown">
                                 <li><a className="dropdown-item" href="#programs">Programs</a></li>
                                 <li><a className="dropdown-item" href="#dugc">DUGC</a></li>
@@ -55,14 +55,14 @@ const Navbar = () => {
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
-                            <a
+                            <button
                                 className="nav-link dropdown-toggle"
                                 href="#"
                                 id="facilitiesDropdown"
                                 role="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
-                            >Facilities</a>
+                            >Facilities</button>
                             <ul className="dropdown-menu" aria-labelledby="facilitiesDropdown">
                                 <li><a className="dropdown-item" href="#t-labs">Teaching Labs</a></li>
                                 <li><a className="dropdown-item" href="#r-labs">Research Labs</a></li>
