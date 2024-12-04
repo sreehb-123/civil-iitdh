@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import '../styles/Navbar.css';
 
@@ -5,9 +6,9 @@ const Navbar = () => {
     return(
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
             <div className="container">
-                <a className="navbar-brand" href="/">
+                <Link className="navbar-brand" to="/">
                     <i className="fas fa-home"></i>
-                </a>
+                </Link>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -22,7 +23,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <a className="nav-link" href="/#about">About</a>
+                            <Link className="nav-link" to="/#about">About</Link>
                         </li>
                         <li className="nav-item dropdown">
                             <button
@@ -33,9 +34,9 @@ const Navbar = () => {
                                 aria-expanded="false"
                             >People</button>
                             <ul className="dropdown-menu" aria-labelledby="peopleDropdown">
-                                <li><a className="dropdown-item" href="#staff">Staff</a></li>
-                                <li><a className="dropdown-item" href="/faculty">Faculty</a></li>
-                                <li><a className="dropdown-item" href="#phd">PhD Students</a></li>
+                                <li><Link className="dropdown-item" to="#staff">Staff</Link></li>
+                                <li><Link className="dropdown-item" to="/faculty">Faculty</Link></li>
+                                <li><Link className="dropdown-item" to="#phd">PhD Students</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
@@ -47,9 +48,9 @@ const Navbar = () => {
                                 aria-expanded="false"
                             >Academics</button>
                             <ul className="dropdown-menu" aria-labelledby="acadDropdown">
-                                <li><a className="dropdown-item" href="#programs">Programs</a></li>
-                                <li><a className="dropdown-item" href="#dugc">DUGC</a></li>
-                                <li><a className="dropdown-item" href="#dpgc">DPGC</a></li>
+                                <li><Link className="dropdown-item" to="#programs">Programs</Link></li>
+                                <li><Link className="dropdown-item" to="#dugc">DUGC</Link></li>
+                                <li><Link className="dropdown-item" to="#dpgc">DPGC</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
@@ -61,31 +62,31 @@ const Navbar = () => {
                                 aria-expanded="false"
                             >Facilities</button>
                             <ul className="dropdown-menu" aria-labelledby="facilitiesDropdown">
-                                <li><a className="dropdown-item" href="#t-labs">Teaching Labs</a></li>
-                                <li><a className="dropdown-item" href="#r-labs">Research Labs</a></li>
-                                <li><a className="dropdown-item" href="#c-labs">Computational Labs</a></li>
+                                <li><Link className="dropdown-item" to="#t-labs">Teaching Labs</Link></li>
+                                <li><Link className="dropdown-item" to="#r-labs">Research Labs</Link></li>
+                                <li><Link className="dropdown-item" to="#c-labs">Computational Labs</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/cea">CEA</a>
+                            <Link className="nav-link" to="/cea">CEA</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/sponsors">Sponsors</a>
+                            <Link className="nav-link" to="/sponsors">Sponsors</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/research">Research</a>
+                            <Link className="nav-link" to="/research">Research</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/consultancy">Consultancy</a>
+                            <Link className="nav-link" to="/consultancy">Consultancy</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/donate">Donate</a>
+                            <Link className="nav-link" to="/donate">Donate</Link>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-    )
+    );
 };
 
 export default Navbar;
