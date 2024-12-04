@@ -1,0 +1,24 @@
+.stepper-timeline {
+    padding: 2rem;
+  }
+  
+  .step {
+    margin: 1rem 0;
+  }
+  
+  .step-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    background: #272635;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .step-content {
+    padding: 1rem;
+    background: #e8e9f3;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+  }  

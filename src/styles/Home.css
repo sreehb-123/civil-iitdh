@@ -1,0 +1,36 @@
+/* Video Container to make it full screen */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+/* Video element to cover the entire container */
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: -1; /* Keep the video behind the content */
+}
+
+/* About Section Styling */
+.about-section {
+    padding: 60px 20px; /* Add padding to separate from the top */
+    background-color: #E8E9F3; /* Optional: give a solid background color to the section */
+    z-index: 1; /* Ensure it stays above the video */
+    position: relative;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 1rem;
+    text-align: center;
+}

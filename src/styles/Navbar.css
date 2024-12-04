@@ -1,0 +1,109 @@
+/* Transparent Floating Navbar */
+.navbar {
+    background-color: #B1E5F2;
+    transition: background-color 0.3s ease-in-out;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    color: #272635; /* Dark text on transparent background */
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: #272635; /* Dark text for links on transparent background */
+    margin: 0 15px; /* Add spacing between links */
+    transition: color 0.3s ease-in-out;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Hover and Active Link States */
+/* .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    border-bottom: 3px solid #B1E5F2;
+} */
+
+/* Dropdown Menus */
+.dropdown-menu {
+    background-color: rgba(206, 206, 206, 0.9); /* Light gray with slight transparency */
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+/* Dropdown Items */
+.dropdown-menu .dropdown-item {
+    color: #272635; /* Dark text for dropdown items */
+    font-size: 1rem;
+    font-weight: normal;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: transparent;
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.dropdown-menu .dropdown-item::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 0%;
+    height: 4px;
+    background-color: #B1E5F2;
+    transition: width 0.3s ease-in-out;
+}
+
+.dropdown-menu .dropdown-item:hover::after{
+    width: 80%;
+}
+
+/* Navbar Toggler (Mobile View) */
+.navbar-toggler {
+    border: 1px solid #A6A6A8; /* Gray border */
+}
+
+.navbar-toggler-icon {
+    background-image: linear-gradient(#272635, #272635); /* Dark bars */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        margin: 5px 0; /* Adjust spacing for smaller screens */
+        font-size: 1.1rem;
+    }
+}
+
+/* Transition on Scroll (Solid Background and Light Links) */
+.navbar.scrolled {
+    background-color: rgba(39, 38, 53, 1); /* Solid dark navy */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .nav-link {
+    color: #E8E9F3; /* Light text for links and brand */
+}
+
+.navbar.scrolled .navbar-toggler-icon {
+    background-image: linear-gradient(#E8E9F3, #E8E9F3); /* Light bars */
+}
+
