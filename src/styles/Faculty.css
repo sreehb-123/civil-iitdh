@@ -1,11 +1,26 @@
 .sidebar {
   position: sticky;
-  top: 80px; /* Sticks the sidebar to the top of the viewport */
+  top: 60px; /* Sticks the sidebar to the top of the viewport */
   height: 100vh; /* Ensures it spans the full height of the viewport */
-  overflow-y: auto; /* Allows scrolling within the sidebar if content overflows */
   border-right: 1px solid #CECECE; /* Optional: Adds a subtle divider */
   background-color: #f8f9fa; /* Matches Bootstrap's light background */
   padding: 1rem;
+  width: 80px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+}
+
+.sidebar:hover {
+  width: 300px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column; /* Ensure flex layout for the links */
+  flex-grow: 1; /* Push content to fill space */
+  gap: 10px; /* Add spacing between links */
 }
 
 .sidebar-link {
@@ -13,22 +28,61 @@
   font-weight: 500 !important;
   text-decoration: none;
   padding: 0.5rem 0;
-  display: block;
+  display: flex;
+  align-items: center;
   transition: color 0.3s ease;
+  position: relative;
 }
 
-.sidebar-link:hover {
-  color: #b1e5f2 !important; /* Highlight color on hover */
+.sidebar-link i {
+  font-size: 20px; /* Icon size */
 }
 
-.card-img-top{
+.card-img-top {
   height: 200px;
 }
 
-i{
+i {
   color: #272635;
 }
 
-.main-content{
+.main-content {
   padding-top: 70px;
+}
+
+.sidebar-link[data-label]:after {
+  content: attr(data-label); /* Show label dynamically */
+  opacity: 0;
+  white-space: nowrap;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #333;
+  transition: opacity 0.3s ease;
+  position: absolute;
+}
+
+.sidebar-link:hover,
+.quick-links a:hover{
+  transform: scale(1.1);
+}
+
+.sidebar:hover .sidebar-link[data-label]:after {
+  opacity: 1; /* Reveal label on hover */
+}
+
+/* Quick Links Section */
+.quick-links {
+  display: flex;
+  flex-direction: column; /* Start vertically */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #CECECE; /* Add border above quick links */
+  transition: flex-direction 0.3s ease, gap 0.3s ease; /* Smooth transformation */
+}
+
+.sidebar:hover .quick-links {
+  flex-direction: row; /* Change to horizontal on hover */
+  gap: 15px; /* Slightly increase gap for horizontal layout */
 }

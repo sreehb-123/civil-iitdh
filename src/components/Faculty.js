@@ -8,24 +8,53 @@ const Faculty = () => {
         <div className="d-flex">
             <nav className="bg-light sidebar">
                 <ul className="nav flex-column">
-                    <li className='nav-item'><a className='nav-link sidebar-link' href='#edu-exp'>Education & Experience</a></li>
-                    <li className="nav-item"><a className="nav-link sidebar-link" href='#research-team'>Research Team</a></li>
-                    <li className="nav-item"><a className="nav-link sidebar-link" href='#publications'>Publications</a></li>
-                    <li className="nav-item"><a className="nav-link sidebar-link" href='#prof-activities'>Professional Activites</a></li>
-                    <li className="nav-item"><a className="nav-link sidebar-link" href='#teaching'>Teaching</a></li>
-                    <li className="nav-item"><a className="nav-link sidebar-link" href='#projects'>Projects</a></li>
-                    <li className="nav-item"><a className="nav-link sidebar-link" href='#awards'>Awards</a></li>
-                    <li className='nav-item mt-2'>
+                    <li className="nav-item">
+                        <a className="nav-link sidebar-link" href="#edu-exp" data-label="Education & Experience">
+                            <i className="fas fa-graduation-cap"></i>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link sidebar-link" href="#research-team" data-label="Research Team">
+                            <i className="fas fa-users"></i>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link sidebar-link" href="#publications" data-label="Publications">
+                            <i className="fas fa-book"></i>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link sidebar-link" href="#prof-activities" data-label="Professional Activities">
+                            <i className="fas fa-briefcase"></i>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link sidebar-link" href="#teaching" data-label="Teaching">
+                            <i className="fas fa-chalkboard-teacher"></i>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link sidebar-link" href="#projects" data-label="Projects">
+                            <i className="fas fa-project-diagram"></i>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link sidebar-link" href="#awards" data-label="Awards">
+                            <i className="fas fa-trophy"></i>
+                        </a>
+                    </li>
+                    
+                    <div className='quick-links'>
                         <a href="https://www.linkedin.com" className="mx-2" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-linkedin fa-2x"></i>
                         </a>
                         <a href="https://scholar.google.com" className="mx-2" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-google-scholar fa-2x"></i>
+                            <i className="fab fa-google fa-2x"></i>
                         </a>
                         <a href="https://www.researchgate.net" className="mx-2" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-researchgate fa-2x"></i>
                         </a>
-                    </li>
+                    </div>
                 </ul>
             </nav>
 
