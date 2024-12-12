@@ -97,6 +97,14 @@
         margin: 5px 0; /* Adjust spacing for smaller screens */
         font-size: 1.1rem;
     }
+
+    .dropdown-menu .dropdown-item:hover{
+        transform: none;
+    }
+
+    .dropdown-menu .dropdown-item::after{
+        height: 0px;
+    }
 }
 
 /* Transition on Scroll (Solid Background and Light Links) */

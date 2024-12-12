@@ -15,7 +15,7 @@
     position: relative;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagonal clip-path */
     margin: 5px; /* Space between hexagons */
-    background-color: #89288f; /* Light blue background color for the hexagon */
+    background-color: transparent; /* Light blue background color for the hexagon */
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow effect */
     border-radius: 25px;
@@ -38,7 +38,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: transparent; /* Hide text by default */
-    opacity: 0; /* Make text invisible */
+    display: none;
     transition: opacity 0.3s ease;
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif; /* Font for the text */
@@ -50,7 +50,7 @@
 }
 
 .hexagon:hover .hexagon-text {
-    opacity: 1; /* Show text when hovered */
+    display: block;
     color: #272635; /* Dark gray text color on hover */
 }
 
@@ -113,4 +113,14 @@
 
 .hexagon:hover{
     cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .hexagon{
+        clip-path: none;
+    }
+
+    .hexagon-img{
+        clip-path: none;
+    }
 }
