@@ -2,11 +2,21 @@ import facultyImg from '../assets/intro-1587390568.jpg';
 import '../styles/Faculty.css';
 import Timeline from './Timeline';
 import ResearchTeam from './Team';
+import { useState } from 'react';
 
 const Faculty = () => {
+    const [isSidebarOpen,setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
+    
     return (
         <div className="d-flex">
-            <nav className="bg-light sidebar">
+            <button className='sidebar-toggle' onClick={toggleSidebar}>
+                <i className='fas fa-bars'></i>
+            </button>
+            <nav className={`bg-light sidebar ${isSidebarOpen ? 'sidebar-open' : ''}`}>
                 <ul className="nav flex-column">
                     <li className="nav-item">
                         <a className="nav-link sidebar-link" href="#edu-exp" data-label="Education & Experience">

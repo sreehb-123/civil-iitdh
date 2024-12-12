@@ -28,7 +28,7 @@
     top: 50%;
     width: 20px;
     height: 20px;
-    background-color: #b1e5f2;
+    background-color: #89288f;
     border: 3px solid #272635;
     border-radius: 50%;
     z-index: 1;
@@ -88,13 +88,13 @@
     }
 
     .timeline-marker {
-        left: 50%;
-        transform: translate(-50%, -50%);
+        display: none;
     }
 
     .timeline-item.left,
     .timeline-item.right {
         text-align: center;
         padding: 1rem 0;
+        left: 0%;
     }
 }

@@ -1,30 +1,32 @@
 /* Transparent Floating Navbar */
 .navbar {
-    background-color: #B1E5F2;
+    background-color: #89288f;
     transition: background-color 0.3s ease-in-out;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
 /* Navbar Brand */
-.navbar-brand {
-    color: #272635; /* Dark text on transparent background */
+.navbar-brand i{
+    color: #faa519; /* Dark text on transparent background */
     font-weight: bold;
     font-size: 1.5rem;
     transition: color 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover{
-    color: #272635;
+    color: #faa519;
+    transform: scale(1.1);
 }
 
 /* Navbar Links */
 .navbar-nav .nav-link {
-    color: #272635; /* Dark text for links on transparent background */
+    color: #E8E9F3; /* Dark text for links on transparent background */
     margin: 0 15px; /* Add spacing between links */
     transition: color 0.3s ease-in-out;
     font-size: 1.2rem;
     font-weight: bold;
+    transition: color 0.3s, transform 0.3s ease-in-out ;
 }
 
 /* Hover and Active Link States */
@@ -35,7 +37,7 @@
 
 /* Dropdown Menus */
 .dropdown-menu {
-    background-color: rgba(206, 206, 206, 0.9); /* Light gray with slight transparency */
+    background-color: rgba(206, 206, 206, 0.9) !important; /* Light gray with slight transparency */
     border: none;
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -70,8 +72,8 @@
     bottom: 0;
     left: 10px;
     width: 0%;
-    height: 4px;
-    background-color: #B1E5F2;
+    height: 2px;
+    background-color: #faa519;
     transition: width 0.3s ease-in-out;
 }
 
@@ -86,6 +88,7 @@
 
 .navbar-toggler-icon {
     background-image: linear-gradient(#272635, #272635); /* Dark bars */
+    font-size: 20px;
 }
 
 /* Responsive Adjustments */
