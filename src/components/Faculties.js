@@ -1,5 +1,4 @@
 import '../styles/FacultyPage.css';
-import facultyImg from '../assets/intro-1587390568.jpg';
 import facultyLogo from '../assets/download-removebg-preview.png';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';

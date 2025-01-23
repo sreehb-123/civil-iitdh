@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import facultyImg from '../assets/intro-1587390568.jpg';
+// import { useEffect, useState } from 'react';
+// import facultyImg from '../assets/intro-1587390568.jpg';
 
 
 const ResearchTeam = ({data}) => {

@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+//import { useEffect, useState } from 'react';
 import '../styles/Timeline.css';
-import axios from 'axios';
+//import axios from 'axios';
 
 const Timeline = ({data}) => {
     if (!data || data.length === 0) {

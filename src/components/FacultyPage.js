@@ -1,9 +1,7 @@
-import facultyImg from '../assets/intro-1587390568.jpg';
 import '../styles/Faculty.css';
 import Timeline from './Timeline';
 import ResearchTeam from './Team';
 import Publications from './Publications';
-import ProfActivities from './ProfActivities';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -13,7 +11,6 @@ import Logout from './Logout';
 const FacultyPage = () => {
     const [isSidebarOpen,setIsSidebarOpen] = useState(false);
     const [facultyData,setFacultyData] = useState([]);
-    const [error,setError] = useState(null);
     const [isEditable,setIsEditable] = useState(false);
 
     const { id } = useParams();
@@ -38,7 +35,6 @@ const FacultyPage = () => {
 
             } catch (err) {
                 console.error('Error fetching faculty data ', err);
-                setError(err);
             }
         };
 
@@ -52,21 +48,21 @@ const FacultyPage = () => {
     const awards = facultyData.awards;
     const addlRole = facultyData.addlRole;
 
-    const handleSave = async (fieldType,editedData) => {
-        try {
-            console.log(editedData);
+    // const handleSave = async (fieldType,editedData) => {
+    //     try {
+    //         console.log(editedData);
 
-            const response = await axios.put("http://localhost:5000/api/update", {
-                id,
-                field: fieldType,
-                editedData: editedData,
-            });
-            console.log("message:" , response.data.message);
-            console.log(editedData);
-        } catch (error) {
-            console.error("Error saving data:", error);
-        }
-    };
+    //         const response = await axios.put("http://localhost:5000/api/update", {
+    //             id,
+    //             field: fieldType,
+    //             editedData: editedData,
+    //         });
+    //         console.log("message:" , response.data.message);
+    //         console.log(editedData);
+    //     } catch (error) {
+    //         console.error("Error saving data:", error);
+    //     }
+    // };
 
     return (
         <div className="d-flex">
