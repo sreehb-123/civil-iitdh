@@ -12,6 +12,10 @@ const Faculties = () => {
         navigate(`/facultyPage/${facultyId}`);
     };
 
+    const handleLoginNav = () => {
+        navigate('/login');
+    };
+
     const [faculties,setFaculties] = useState([]);
     const [loading,setLoading] = useState(true);
     const [error,setError] = useState(null);
@@ -41,7 +45,14 @@ const Faculties = () => {
                 <h1 className="faculty-text-box">Faculty</h1>
             </div>
             <div className="hexagon-container">
-                {faculties.map(faculty => (
+            {faculties
+                .sort((a, b) => {
+                    // Remove prefixes "Dr. " or "Prof. " from the names
+                    const nameA = a.name.replace(/^(Dr\. |Prof\. )/, "").toLowerCase();
+                    const nameB = b.name.replace(/^(Dr\. |Prof\. )/, "").toLowerCase();
+                    return nameA.localeCompare(nameB); // Sort names alphabetically
+                })
+                .map(faculty => (
                     <div className="hexagon" key={faculty._id} onClick={() => handleClick(faculty._id)}>
                         <img src={faculty.image} alt={faculty.name} className="hexagon-img" />
                         <div className="hexagon-text">
@@ -50,7 +61,11 @@ const Faculties = () => {
                         </div>
                     </div>
                 ))}
+
             </div>
+
+            <button className='mt-4 login-btn' onClick={handleLoginNav}>Login</button>
+
         </div>
     );
 };

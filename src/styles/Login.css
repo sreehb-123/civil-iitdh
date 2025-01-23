@@ -1,0 +1,63 @@
+body {
+    background-color: #89288f; /* Primary background color */
+    font-family: "Arial", sans-serif;
+  }
+  
+  .login-container {
+    height: 100vh;
+    background: linear-gradient(to right, #89288f, #faa519);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-card {
+    background-color: #ffffff; /* White card background */
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    color: #000000 !important; /* Black text for better readability inside the card */
+  }
+  
+  .login-card h1 {
+    font-size: 28px;
+    color: #89288f; /* Title color matches the theme */
+    text-align: center;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    color: #000000; /* Explicitly set black for labels like Email and Password */
+  }
+  
+  input.form-control {
+    border: 1px solid #faa519; /* Input border color */
+    color: #000000; /* Ensure input text is visible */
+    background-color: #ffffff; /* Explicitly set white for input background */
+  }
+  
+  input.form-control::placeholder {
+    color: #666666; /* Placeholder text color */
+  }
+  
+  input.form-control:focus {
+    border-color: #89288f; /* Focus border color */
+    box-shadow: 0 0 5px rgba(137, 40, 143, 0.8);
+  }
+  
+  .text-danger {
+    font-size: 14px;
+    color: red; /* Error text color remains red */
+  }
+  
+  button.btn-primary {
+    background-color: #faa519; /* Button background color */
+    border: none;
+    font-size: 18px;
+    color: #ffffff; /* White button text */
+  }
+  
+  button.btn-primary:hover {
+    background-color: #cc8600; /* Darker shade on hover */
+  }  

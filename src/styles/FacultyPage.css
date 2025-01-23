@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     gap: 5px; /* Space between hexagons */
     justify-content: center;
-    background-color: #E8E9F3; /* Very light purple background for the container */
+    background-color: #F8F9FA; /* Very light purple background for the container */
     padding: 30px; /* Add padding around the container */
 }
 
@@ -123,4 +123,25 @@
     .hexagon-img{
         clip-path: none;
     }
+}
+
+.prof-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.prof-basic,
+.research-interests{
+    flex: 1;
+}
+
+.login-btn{
+    border: none;
+    background-color: #89288f;
+    color: #faa519;
+    padding: 10px;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10%; 
 }

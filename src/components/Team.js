@@ -10,7 +10,6 @@ const ResearchTeam = ({data}) => {
     return (
         <section id="research-team" className="my-5">
             <div className="container">
-                <h2 className="text-center pb-4">Research Team</h2>
                 <div className="row">
                     {data.map((member, index) => (
                         <div className="col-md-6" key={index}>
