@@ -15,9 +15,7 @@ const Publications = ({ data = [], isEditable }) => {
     // console.log(id);
 
     useEffect(() => {
-        if (data !== editedData) {
-            setEditedData(data);
-        }
+        setEditedData(data);
     }, [data]);
 
     const handleChange = (value, typeIndex, subTypeIndex, listIndex, field) => {
