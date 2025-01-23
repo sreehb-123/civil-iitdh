@@ -19,7 +19,7 @@ const Login = () => {
 
       const idToken = await user.getIdToken();
 
-      const response = await axios.post("http://localhost:5000/api/facultyId", { token: idToken });
+      const response = await axios.post("https://cea-backend-s6ye.onrender.com/api/facultyId", { token: idToken });
 
       if (response.data.success) {
         const { facultyId } = response.data;

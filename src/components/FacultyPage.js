@@ -22,7 +22,7 @@ const FacultyPage = () => {
     useEffect(() => {
         const fetchFacultyData = async() => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/faculty/${id}`);
+                const response = await axios.get(`https://cea-backend-s6ye.onrender.com/api/faculty/${id}`);
                 setFacultyData(response.data);
 
                 const auth = getAuth();

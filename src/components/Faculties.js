@@ -22,7 +22,7 @@ const Faculties = () => {
     useEffect(() => {
         const getFaculties = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/faculties');
+                const response = await axios.get('https://cea-backend-s6ye.onrender.com/api/faculties');
                 setFaculties(response.data);
                 setLoading(false);
             } catch (err) {

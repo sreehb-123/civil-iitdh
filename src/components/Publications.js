@@ -58,7 +58,7 @@ const Publications = ({ data = [], isEditable }) => {
         try {
             console.log(editedData);
 
-            const response = await axios.put("http://localhost:5000/api/update", {
+            const response = await axios.put("https://cea-backend-s6ye.onrender.com/api/update", {
                 id,
                 field: "publications",
                 editedData: editedData,
