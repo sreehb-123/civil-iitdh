@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase-config";
@@ -11,6 +11,45 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  const googleLogin = async () => {
+    const provider = new GoogleAuthProvider();
+  
+    try {
+      // Initiate Google login
+      const result = await signInWithPopup(auth, provider);
+
+      console.log(result);
+  
+      // Retrieve the authenticated user
+      const user = result.user;
+  
+      // Fetch the ID token for backend verification
+      const idToken = await user.getIdToken();
+      console.log(idToken);
+  
+      // Send the token to the backend to retrieve facultyId
+      const response = await axios.post("http://localhost:5000/api/facultyId", { token: idToken });
+
+      console.log(response);
+  
+      if (response.data.success) {
+        // Extract facultyId from the backend response
+        const { facultyId } = response.data;
+  
+        // Navigate to the faculty page using the facultyId
+        navigate(`/facultyPage/${facultyId}`);
+      } else {
+        // Handle unsuccessful responses
+        setError("No associated faculty or invalid login.");
+      }
+    } catch (error) {
+      // Log and display errors
+      console.error("Google login failed: ", error);
+      setError("An error occurred during Google login. Please try again.");
+    }
+  };
+  
+
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -19,7 +58,7 @@ const Login = () => {
 
       const idToken = await user.getIdToken();
 
-      const response = await axios.post("https://cea-backend-s6ye.onrender.com/api/facultyId", { token: idToken });
+      const response = await axios.post("http://localhost:5000/api/facultyId", { token: idToken });
 
       if (response.data.success) {
         const { facultyId } = response.data;
@@ -61,6 +100,8 @@ const Login = () => {
           <button type="submit" className="btn btn-primary w-100">
             Login
           </button>
+
+          {/* <button onClick={googleLogin}>Sign in with Google</button> */}
         </form>
         {error && <p className="text-center text-danger mt-3">{error}</p>}
       </div>

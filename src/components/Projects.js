@@ -2,45 +2,44 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-const ProfActivities = ({ professionalActivities, isEditable }) => {
+const Projects = ({ projects, isEditable }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [editedData, setEditedData] = useState([]);
     const { id } = useParams();
 
     useEffect(() => {
-        setEditedData(professionalActivities);
-    }, [professionalActivities]);
+        setEditedData(projects);
+    }, [projects]);
 
-    const handleAddHeading = () => {
-        const newHeading = { headings: "New Heading", activities: [] };
-        setEditedData([...editedData, newHeading]);
+    const handleAddProjectType = () => {
+        setEditedData([...editedData, { projectType: "New Project Type", listOfProjects: [] }]);
     };
 
-    const handleAddActivity = (headingIndex) => {
+    const handleAddProjectItem = (projectIndex) => {
         const updatedData = [...editedData];
-        updatedData[headingIndex].activities.push("New Activity");
+        updatedData[projectIndex].listOfProjects.push("New Project Item");
         setEditedData(updatedData);
     };
 
-    const handleEdit = (type, headingIndex, value, activityIndex = null) => {
+    const handleEdit = (type, projectIndex, value, itemIndex = null) => {
         const updatedData = [...editedData];
-        if (type === "heading") {
-            updatedData[headingIndex].headings = value;
-        } else if (type === "activity") {
-            updatedData[headingIndex].activities[activityIndex] = value;
+        if (type === "projectType") {
+            updatedData[projectIndex].projectType = value;
+        } else if (type === "projectItem") {
+            updatedData[projectIndex].listOfProjects[itemIndex] = value;
         }
         setEditedData(updatedData);
     };
 
-    const handleDeleteHeading = (headingIndex) => {
-        const updatedData = editedData.filter((_, index) => index !== headingIndex);
+    const handleDeleteProjectType = (projectIndex) => {
+        const updatedData = editedData.filter((_, index) => index !== projectIndex);
         setEditedData(updatedData);
     };
 
-    const handleDeleteActivity = (headingIndex, activityIndex) => {
+    const handleDeleteProjectItem = (projectIndex, itemIndex) => {
         const updatedData = [...editedData];
-        updatedData[headingIndex].activities = updatedData[headingIndex].activities.filter(
-            (_, index) => index !== activityIndex
+        updatedData[projectIndex].listOfProjects = updatedData[projectIndex].listOfProjects.filter(
+            (_, index) => index !== itemIndex
         );
         setEditedData(updatedData);
     };
@@ -49,7 +48,7 @@ const ProfActivities = ({ professionalActivities, isEditable }) => {
         try {
             const response = await axios.put("http://localhost:5000/api/update", {
                 id,
-                field: "activities",
+                field: "projects",
                 editedData: editedData,
             });
             console.log("message:", response.data.message);
@@ -60,63 +59,61 @@ const ProfActivities = ({ professionalActivities, isEditable }) => {
     };
 
     return (
-        <section id="prof-activities">
-            <div>
-                {editedData?.map((activity, headingIndex) => (
-                    <div key={headingIndex} className="mb-4">
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '12px' }}>
+        <section id="projects">
+            <div className="my-5">
+                <h2 className="text-center pb-4">Projects</h2>
+                {editedData?.map((project, projectIndex) => (
+                    <div key={projectIndex} className="mb-4">
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                             {isEditing ? (
                                 <input
                                     type="text"
-                                    value={activity.headings}
+                                    value={project.projectType}
                                     onChange={(e) =>
-                                        handleEdit("heading", headingIndex, e.target.value)
+                                        handleEdit("projectType", projectIndex, e.target.value)
                                     }
-                                    style={{ width: 'calc(100% - 120px)', marginRight: '10px', fontWeight: 'bold' }}
+                                    style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}
                                 />
                             ) : (
-                                <h4 style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}>{activity.headings}</h4>
+                                <h3 style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}>{project.projectType}</h3>
                             )}
-
                             {isEditing && (
                                 <button
                                     className="btn btn-danger"
-                                    onClick={() => handleDeleteHeading(headingIndex)}
+                                    onClick={() => handleDeleteProjectType(projectIndex)}
                                     style={{ width: '100px' }}
                                 >
                                     Delete
                                 </button>
                             )}
                         </div>
-
                         <ul>
-                            {activity.activities?.map((act, activityIndex) => (
-                                <li key={activityIndex} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '10px' }}>
+                            {project.listOfProjects?.map((projectItem, itemIndex) => (
+                                <li key={itemIndex} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     {isEditing ? (
                                         <input
                                             type="text"
-                                            value={act}
+                                            value={projectItem}
                                             onChange={(e) =>
                                                 handleEdit(
-                                                    "activity",
-                                                    headingIndex,
+                                                    "projectItem",
+                                                    projectIndex,
                                                     e.target.value,
-                                                    activityIndex
+                                                    itemIndex
                                                 )
                                             }
                                             style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}
                                         />
                                     ) : (
-                                        <span style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}>{act}</span>
+                                        <span style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}>{projectItem}</span>
                                     )}
-
                                     {isEditing && (
                                         <button
                                             className="btn btn-danger"
                                             onClick={() =>
-                                                handleDeleteActivity(headingIndex, activityIndex)
+                                                handleDeleteProjectItem(projectIndex, itemIndex)
                                             }
-                                            style={{ width: '100px'}}
+                                            style={{ width: '100px' }}
                                         >
                                             Delete
                                         </button>
@@ -124,42 +121,37 @@ const ProfActivities = ({ professionalActivities, isEditable }) => {
                                 </li>
                             ))}
                         </ul>
-
-                        <div className="d-flex align-items-start">
-                            {isEditing && (
-                                <button
-                                    className="btn btn-primary mb-3"
-                                    style={{ display: 'block', margin: '0 auto' }}
-                                    onClick={handleAddHeading}
-                                >
-                                    Add Heading
-                                </button>
-                            )}
-
-                            {isEditing && (
-                                <button
-                                    className="btn btn-secondary mt-2"
-                                    onClick={() => handleAddActivity(headingIndex)}
-                                    style={{ display: 'block', margin: '0 auto' }}
-                                >
-                                    Add Activity
-                                </button>
-                            )}
-                        </div>
+                        {isEditing && (
+                            <button
+                                className="btn btn-secondary mt-2"
+                                onClick={() => handleAddProjectItem(projectIndex)}
+                                style={{ display: 'block', margin: '0 auto' }}
+                            >
+                                Add Project Item
+                            </button>
+                        )}
                     </div>
                 ))}
-
+                {isEditing && (
+                    <button
+                        className="btn btn-primary mb-3"
+                        style={{ display: 'block', margin: '0 auto' }}
+                        onClick={handleAddProjectType}
+                    >
+                        Add Project Type
+                    </button>
+                )}
                 {isEditable && (
                     <div className="text-center mt-4">
                         {isEditing ? (
-                            <div className="d-flex justify-content-center gap-3">
+                            <>
                                 <button onClick={handleSave} className="btn btn-success mr-2">
                                     Save
                                 </button>
                                 <button onClick={() => setIsEditing(false)} className="btn btn-secondary">
                                     Cancel
                                 </button>
-                            </div>
+                            </>
                         ) : (
                             <button
                                 className="btn btn-primary"
@@ -175,4 +167,4 @@ const ProfActivities = ({ professionalActivities, isEditable }) => {
     );
 };
 
-export default ProfActivities;
+export default Projects;

@@ -7,6 +7,9 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { getAuth } from 'firebase/auth';
 import Logout from './Logout';
+import ProfActivities from './ProfActivities';
+import Teaching from './Teaching';
+import Projects from './Projects';
 
 const FacultyPage = () => {
     const [isSidebarOpen,setIsSidebarOpen] = useState(false);
@@ -22,7 +25,7 @@ const FacultyPage = () => {
     useEffect(() => {
         const fetchFacultyData = async() => {
             try {
-                const response = await axios.get(`https://cea-backend-s6ye.onrender.com/api/faculty/${id}`);
+                const response = await axios.get(`http://localhost:5000/api/faculty/${id}`);
                 setFacultyData(response.data);
 
                 const auth = getAuth();
@@ -42,7 +45,7 @@ const FacultyPage = () => {
     },[id]);
     
     const researchInterests = facultyData.researchInterests;
-    const professionalActivities = facultyData.professionalActivities;
+    //const professionalActivities = facultyData.professionalActivities;
     const teaching = facultyData.teaching;
     const projects = facultyData.projects;
     const awards = facultyData.awards;
@@ -198,12 +201,12 @@ const FacultyPage = () => {
                     </div>
                 </section>
 
-                {/* <section id="prof-activities">
+                <section id="prof-activities">
                     <div className="my-5">
                         <h2 className="text-center pb-4">Professional Activities</h2>
-                        <ProfActivities data={facultyData.professionalActivities} isEditable={isEditable} />
+                        <ProfActivities professionalActivities={facultyData.professionalActivities} isEditable={isEditable} />
                     </div>
-                </section> */}
+                </section>
 
                 {/* <section id="teaching">
                     <div className="my-5">
@@ -298,7 +301,7 @@ const FacultyPage = () => {
                     </div>
                 </section> */}
 
-                <section id='prof-activities'>
+                {/*<section id='prof-activities'>
                     <div className='my-5'>
                         <h2 className='text-center pb-4'>Professional Activities</h2>
                         {professionalActivities?.map((activity,index) => (
@@ -312,9 +315,9 @@ const FacultyPage = () => {
                             </div>
                         ))}
                     </div>
-                </section>
+                </section>*/}
 
-                <section id='teaching'>
+                {/* <section id='teaching'>
                     <div className='my-5'>
                         <h2 className='text-center pb-4'>Teaching</h2>
                         <ul>
@@ -323,9 +326,20 @@ const FacultyPage = () => {
                             ))}
                         </ul>
                     </div>
+                </section> */}
+                
+                <section id='teaching'>
+                    <div className='my-5'>
+                        <h2 className='text-center pb-4'>Teaching</h2>
+                        <Teaching teaching={teaching} isEditable={isEditable}/>
+                    </div>
                 </section>
 
                 <section id='projects'>
+                    <Projects projects={projects} isEditable={isEditable}/>
+                </section>
+
+                {/* <section id='projects'>
                     <div className='my-5'>
                         <h2 className='text-center pb-4'>Projects</h2>
                         {projects?.map((project,index) => (
@@ -339,7 +353,7 @@ const FacultyPage = () => {
                             </div>
                         ))}
                     </div>
-                </section>
+                </section> */}
 
                 <section id='awards'>
                     <div className='my-5'>
