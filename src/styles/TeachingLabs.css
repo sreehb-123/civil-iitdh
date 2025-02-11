@@ -1,12 +1,12 @@
 /* Container styling */
-.container {
+/* .container {
     display: flex;
     align-items: flex-start;
-    height: 100vh; /* Full height */
-  }
+    height: 100vh; Full height
+  } */
   
   /* Sidebar styles */
-  .timeline-sidebar {
+  .line-sidebar {
     width: 25%;
     background: #e8e9f3; /* Light grey */
     padding: 20px;
@@ -14,13 +14,13 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  .timeline-list {
+  .line-list {
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
-  .timeline-item {
+  .line-item {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -33,11 +33,11 @@
     transition: all 0.3s ease;
   }
   
-  .timeline-item:hover {
+  .line-item:hover {
     background: #faa519; /* Orange */
   }
   
-  .timeline-item.active {
+  .line-item.active {
     background: #faa519; /* Active state */
   }
   

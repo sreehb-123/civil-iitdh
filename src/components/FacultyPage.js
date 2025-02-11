@@ -25,7 +25,7 @@ const FacultyPage = () => {
     useEffect(() => {
         const fetchFacultyData = async() => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/faculty/${id}`);
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/faculty/${id}`);
                 setFacultyData(response.data);
 
                 const auth = getAuth();

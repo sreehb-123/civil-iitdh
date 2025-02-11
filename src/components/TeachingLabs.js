@@ -98,14 +98,14 @@ const TeachingLabs = () => {
 
   return (
     <div className="container mt-5 d-flex">
-      {/* Timeline (Left) */}
-      <div className="timeline-sidebar">
+      {/* line (Left) */}
+      <div className="line-sidebar">
         <h3 className="text-center mb-4">Teaching Labs</h3>
-        <ul className="timeline-list">
+        <ul className="line-list">
           {labs.map((lab) => (
             <li
               key={lab.id}
-              className={`timeline-item ${
+              className={`line-item ${
                 activeLab === lab.id ? "active" : ""
               }`}
               onClick={() => setActiveLab(lab.id)}

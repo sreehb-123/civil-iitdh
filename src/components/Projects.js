@@ -46,7 +46,7 @@ const Projects = ({ projects, isEditable }) => {
 
     const handleSave = async () => {
         try {
-            const response = await axios.put("http://localhost:5000/api/update", {
+            const response = await axios.put(`${process.env.REACT_APP_API_URL}/update`, {
                 id,
                 field: "projects",
                 editedData: editedData,

@@ -28,7 +28,7 @@ const Login = () => {
       console.log(idToken);
   
       // Send the token to the backend to retrieve facultyId
-      const response = await axios.post("http://localhost:5000/api/facultyId", { token: idToken });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/facultyId`, { token: idToken });
 
       console.log(response);
   
@@ -58,7 +58,7 @@ const Login = () => {
 
       const idToken = await user.getIdToken();
 
-      const response = await axios.post("http://localhost:5000/api/facultyId", { token: idToken });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/facultyId`, { token: idToken });
 
       if (response.data.success) {
         const { facultyId } = response.data;
