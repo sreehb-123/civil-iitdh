@@ -37,10 +37,10 @@
 
 /* Dropdown Menus */
 .dropdown-menu {
-    background-color: rgba(231, 234, 236, 0.9) !important; /* Light gray with slight transparency */
+    background-color: white !important; /* Light gray with slight transparency */
     border: none;
     border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     padding: 0;
     display: none;
 }
@@ -52,7 +52,7 @@
 /* Dropdown Items */
 .dropdown-menu .dropdown-item {
     color: #272635; /* Dark text for dropdown items */
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: normal;
     position: relative;
     transition: transform 0.2s ease-in-out;

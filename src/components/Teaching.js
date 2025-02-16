@@ -7,9 +7,13 @@ const Teaching = ({ teaching, isEditable }) => {
     const [editedData, setEditedData] = useState([]);
     const { id } = useParams();
 
+    
+
     useEffect(() => {
         setEditedData(teaching);
     }, [teaching]);
+
+    
 
     const handleAddTeaching = () => {
         setEditedData([...editedData, "New Teaching Item"]);
@@ -39,6 +43,10 @@ const Teaching = ({ teaching, isEditable }) => {
             console.error("Error saving data:", error);
         }
     };
+
+    if (!teaching || teaching.length === 0) {
+        return <div className="text-center">No data available.</div>;
+    }
 
     return (
         <section id="teaching">

@@ -61,3 +61,7 @@ body {
   button.btn-primary:hover {
     background-color: #cc8600; /* Darker shade on hover */
   }  
+
+  .login-heading{
+    border-bottom: 2px solid #faa519;
+  }

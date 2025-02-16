@@ -7,9 +7,13 @@ const Projects = ({ projects, isEditable }) => {
     const [editedData, setEditedData] = useState([]);
     const { id } = useParams();
 
+    
+
     useEffect(() => {
         setEditedData(projects);
     }, [projects]);
+
+    
 
     const handleAddProjectType = () => {
         setEditedData([...editedData, { projectType: "New Project Type", listOfProjects: [] }]);
@@ -58,10 +62,13 @@ const Projects = ({ projects, isEditable }) => {
         }
     };
 
+    if (!projects || projects.length === 0) {
+        return <div className="text-center">No data available.</div>;
+    }
+
     return (
-        <section id="projects">
-            <div className="my-5">
-                <h2 className="text-center pb-4">Projects</h2>
+        <section>
+            
                 {editedData?.map((project, projectIndex) => (
                     <div key={projectIndex} className="mb-4">
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -162,7 +169,6 @@ const Projects = ({ projects, isEditable }) => {
                         )}
                     </div>
                 )}
-            </div>
         </section>
     );
 };

@@ -1,8 +1,37 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import '../styles/Navbar.css';
 
+
 const Navbar = () => {
+        useEffect(() => {
+        const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarToggler.click(); // Simulate a click on the toggler to close it
+                }
+            });
+        });
+
+        return () => {
+            navLinks.forEach(link => {
+                link.removeEventListener('click', () => {
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarToggler.click();
+                    }
+                });
+            });
+        };
+    }, []);
+
+
     return(
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
             <div className="container">
@@ -62,7 +91,7 @@ const Navbar = () => {
                                 aria-expanded="false"
                             >Facilities</button>
                             <ul className="dropdown-menu" aria-labelledby="facilitiesDropdown">
-                                <li><Link className="dropdown-item" to="#t-labs">Teaching Labs</Link></li>
+                                <li><Link className="dropdown-item" to="/teaching-labs">Teaching Labs</Link></li>
                                 <li><Link className="dropdown-item" to="#r-labs">Research Labs</Link></li>
                                 <li><Link className="dropdown-item" to="#c-labs">Computational Labs</Link></li>
                             </ul>

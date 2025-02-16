@@ -1,0 +1,106 @@
+[
+    {
+      "id": 1,
+      "name": "Construction Materials Lab",
+      "image": "https://civil.iith.ac.in/wp-content/uploads/2016/05/1341404667_146579545_1-Pictures-of-Building-construction-materials-150x150.jpg",
+      "description": "Placeholder description for Construction Materials Lab.",
+      "equipment": [
+        {
+          "name": "Placeholder Equipment 1",
+          "image": "https://placehold.co/150",
+          "specifications": "Specifications for placeholder equipment 1."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Environmental Engineering Lab",
+      "image": "https://civil.iith.ac.in/wp-content/uploads/2016/05/civil_departmant_webpage_2014025025.jpg",
+      "description": "State-of-the-art facilities for environmental research.",
+      "equipment": [
+        {
+          "name": "Portable Multimeter",
+          "image": "/images/Multimeter Probe.JPG",
+          "specifications": "Model: Multi(pH, CDC, DO, ORP)"
+        },
+        {
+          "name": "pH Liquid Probe",
+          "image": "https://placehold.co/150",
+          "specifications": "Range: 0 - 14 pH | Accuracy: ±0.02 pH | Electrode Type: Non-Refillable Gel"
+        },
+        {
+          "name": "Conductivity Probe",
+          "image": "https://placehold.co/150",
+          "specifications": "Range: Conductivity: 0.0 µS/cm - 200 mS/cm | TDS: 0.00 mg/L - 50.0 g/L as NaCl"
+        },
+        {
+          "name": "LDO Probe",
+          "image": "https://placehold.co/150",
+          "specifications": "Range: 0.05 - 20.0 mg/L, 1 - 200% saturation | Accuracy: ±0.1 mg/L from 0 to 8 mg/L, ±0.2 mg/L for greater than 8 mg/L | Resolution: 0.01/0.1 (5 digits max.)"
+        },
+        {
+          "name": "Turbidity Meter",
+          "image": "https://placehold.co/150",
+          "specifications": "Range: 0 to 1000 NTU | Light Source: Tungsten filament lamp | Measurement Method: Ratio turbidimetric determination using a primary Nephelometric light scatter signal (90°) to the transmitted light scatter signal | Accuracy: ±2% of reading plus stray light from 0 to 1000 NTU"
+        },
+        {
+          "name": "Power Module",
+          "image": "https://placehold.co/150",
+          "specifications": "To support Turbidity Meter | Power Requirement: 110-230 Vac, 50/60 Hz"
+        },
+        {
+          "name": "Jar Test Apparatus",
+          "image": "https://placehold.co/150",
+          "specifications": "Model: 1926 for 6 stirrers | Material: MS Body with SS Spindle | Speed: 10-300 RPM"
+        },
+        {
+          "name": "BOD Incubator",
+          "image": "/images/BOD Incubator.JPG",
+          "specifications": "Double-walled chamber | Refrigeration with compressor, air-cooled condenser | Temperature Range: 5°C to 60°C | Chamber Size: 630 x 395 x 400 mm"
+        },
+        {
+          "name": "BOD Holder",
+          "image": "https://placehold.co/150",
+          "specifications": "BOD Bottle Storage Rack | Material: Epoxy-coated Steel | Capacity: 300 m"
+        },
+        {
+          "name": "COD Digester",
+          "image": "/images/COD Digester.JPG",
+          "specifications": "DRB200: Digital Reactor Block | 30 x 16mm vial wells, 230 V | Dimensions (H x W x D) : 145 mm x 250 mm x 310 mm"
+        },
+        {
+          "name": "Peristatic Pump",
+          "image": "/images/Peristaltic pump.JPG",
+          "specifications": "Flow rate: 0.5-500 ml/min, Speed range: 1-350 RPM, Display: LED screen"
+        },
+        {
+          "name": "UV-VIS Beer Ambers Spectrophotometry",
+          "image": "/images/UV visible Beer Amber spectrophotometer.JPG",
+          "specifications": "Optical Design: Dual Beam, Spectral Bandwidth: 2 nm, Light Source: Xenon Flash Lamp (>5 years typical), Detector: Dual Silicon Photodiodes, Wavelength Range: 190 – 1100 nm, Wavelength Accuracy: ±0.5 nm, Wavelength Repeatability: >±0.2 nm"
+        },
+        {
+          "name": "Hot Air Furnace",
+          "image": "https://placehold.co/150",
+          "specifications": "Temperature Range: Max: 800⁰C, Heating Duration: Min. 6 hours, Heating: Uniform heating on all surfaces and maintain the temperature for minimum 6 hours, Cavity: 250mm x 250mm x 550mm"
+        },
+        {
+          "name": "Refrigerator",
+          "image": "/images/Refrigerators.JPG",
+          "specifications": "Capacity: 1006 Liters, Shelves/Drawers: 12 shelves, Exterior Dimensions: 2010 x 730 x 1200 mm (H x D x W), Interior Dimensions: 1620 x 580 x 1110 mm (H x D x W)"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "GeoTechnical Engineering Lab",
+      "image": "https://civil.iith.ac.in/wp-content/uploads/2016/05/civil_departmant_webpage_2014025022.jpg",
+      "description": "Placeholder description for Structural Engineering Lab.",
+      "equipment": [
+        {
+          "name": "Placeholder Equipment 2",
+          "image": "https://placehold.co/150",
+          "specifications": "Specifications for placeholder equipment 2."
+        }
+      ]
+    }
+  ]  

@@ -75,7 +75,7 @@ const Login = () => {
   return (
     <div className="login-container d-flex justify-content-center align-items-center">
       <div className="login-card shadow">
-        <h1 className="text-center mb-4">LOGIN</h1>
+        <h1 className="text-center mb-4 login-heading">LOGIN</h1>
         <form onSubmit={handleLogin}>
           <div className="mb-3">
             <label className="form-label">Email</label>
