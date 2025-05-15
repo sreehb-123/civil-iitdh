@@ -8,7 +8,7 @@ import '../styles/Navbar.css';
 
 const Navbar = () => {
         useEffect(() => {
-        const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+        const navLinks = document.querySelectorAll('.toggle-link');
         const navbarToggler = document.querySelector('.navbar-toggler');
         const navbarCollapse = document.querySelector('.navbar-collapse');
 
@@ -19,6 +19,8 @@ const Navbar = () => {
                 }
             });
         });
+
+        
 
         return () => {
             navLinks.forEach(link => {
@@ -34,7 +36,7 @@ const Navbar = () => {
 
     return(
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
-            <div className="container">
+            <div className="navbar-container container">
                 <Link className="navbar-brand" to="/">
                     <i className="fas fa-home"></i>
                 </Link>
@@ -52,7 +54,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/#about">About</Link>
+                            <Link className="nav-link toggle-link" to="/#about">About</Link>
                         </li>
                         <li className="nav-item dropdown">
                             <button
@@ -63,9 +65,9 @@ const Navbar = () => {
                                 aria-expanded="false"
                             >People</button>
                             <ul className="dropdown-menu" aria-labelledby="peopleDropdown">
-                                <li><Link className="dropdown-item" to="/faculties">Faculty</Link></li>
-                                <li><Link className="dropdown-item" to="#phd">PhD Students</Link></li>
-                                <li><Link className="dropdown-item" to="#staff">Staff</Link></li>
+                                <li><Link className="dropdown-item toggle-link" to="/faculties">Faculty</Link></li>
+                                <li><Link className="dropdown-item toggle-link" to="/phd">PhD Students</Link></li>
+                                <li><Link className="dropdown-item toggle-link" to="/staff">Staff</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
@@ -77,9 +79,9 @@ const Navbar = () => {
                                 aria-expanded="false"
                             >Academics</button>
                             <ul className="dropdown-menu" aria-labelledby="acadDropdown">
-                                <li><Link className="dropdown-item" to="#programs">Programs</Link></li>
-                                <li><Link className="dropdown-item" to="#dugc">DUGC</Link></li>
-                                <li><Link className="dropdown-item" to="#dpgc">DPGC</Link></li>
+                                <li><Link className="dropdown-item toggle-link" to="/programs">Programs</Link></li>
+                                <li><Link className="dropdown-item toggle-link" to="/dugc">DUGC</Link></li>
+                                <li><Link className="dropdown-item toggle-link" to="/dpgc">DPGC</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
@@ -91,25 +93,25 @@ const Navbar = () => {
                                 aria-expanded="false"
                             >Facilities</button>
                             <ul className="dropdown-menu" aria-labelledby="facilitiesDropdown">
-                                <li><Link className="dropdown-item" to="/teaching-labs">Teaching Labs</Link></li>
-                                <li><Link className="dropdown-item" to="#r-labs">Research Labs</Link></li>
-                                <li><Link className="dropdown-item" to="#c-labs">Computational Labs</Link></li>
+                                <li><Link className="dropdown-item toggle-link" to="/teaching-labs">Teaching Labs</Link></li>
+                                <li><Link className="dropdown-item toggle-link" to="/research-labs">Research Labs</Link></li>
+                                <li><Link className="dropdown-item toggle-link" to="/c-labs">Computational Labs</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/cea">CEA</Link>
+                            <Link className="nav-link toggle-link" to="/cea">CEA</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/sponsors">Sponsors</Link>
+                            <Link className="nav-link toggle-link" to="/sponsors">Sponsors</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/research">Research</Link>
+                            <Link className="nav-link toggle-link" to="/research">Research</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/consultancy">Consultancy</Link>
+                            <Link className="nav-link toggle-link" to="/consultancy">Consultancy</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/donate">Donate</Link>
+                            <Link className="nav-link toggle-link" to="/donate">Donate</Link>
                         </li>
                     </ul>
                 </div>

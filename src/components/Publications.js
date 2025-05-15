@@ -80,7 +80,7 @@ const Publications = ({ data = [], isEditable }) => {
         <div>
             {editedData.map((publication, typeIndex) => (
                 <div key={typeIndex}>
-                    <h3>
+                    <h3 className="sec-headers">
                         {isEditing ? (
                             <input
                                 type="text"

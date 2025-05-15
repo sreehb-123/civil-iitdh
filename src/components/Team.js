@@ -13,7 +13,7 @@ const ResearchTeam = ({data}) => {
                 <div className="row">
                     {data.map((member, index) => (
                         <div className="col-md-6" key={index}>
-                            <div className="card mb-3">
+                            <div className="card mb-3 bg-light" style={{ boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)' , backgroundColor: '#f8f9fa', }}>
                                 <div className="d-flex justify-content-center py-3">
                                     {/* <img
                                         src={member.img}

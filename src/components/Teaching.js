@@ -51,28 +51,30 @@ const Teaching = ({ teaching, isEditable }) => {
     return (
         <section id="teaching">
             <div>
-            <ul style={{ listStyleType: 'disc', padding: '0', margin: '0' }}>                    
+            <ul>                    
                 {editedData?.map((teach, index) => (
-                        <li key={index} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                            {isEditing ? (
-                                <input
-                                    type="text"
-                                    value={teach}
-                                    onChange={(e) => handleEdit(index, e.target.value)}
-                                    style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}
-                                />
-                            ) : (
-                                <span style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}>{teach}</span>
-                            )}
-                            {isEditing && (
-                                <button
-                                    className="btn btn-danger"
-                                    onClick={() => handleDeleteTeaching(index)}
-                                    style={{ width: '100px' }}
-                                >
-                                    Delete
-                                </button>
-                            )}
+                        <li key={index}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                {isEditing ? (
+                                    <input
+                                        type="text"
+                                        value={teach}
+                                        onChange={(e) => handleEdit(index, e.target.value)}
+                                        style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}
+                                    />
+                                ) : (
+                                    <span style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}>{teach}</span>
+                                )}
+                                {isEditing && (
+                                    <button
+                                        className="btn btn-danger"
+                                        onClick={() => handleDeleteTeaching(index)}
+                                        style={{ width: '100px' }}
+                                    >
+                                        Delete
+                                    </button>
+                                )}
+                            </div>
                         </li>
                     ))}
                 </ul>

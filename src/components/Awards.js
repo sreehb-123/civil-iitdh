@@ -57,29 +57,31 @@ const Awards = ({ awards, isEditable }) => {
     return (
         <section id="awards">
             <div className="my-5">
-                <h2 className="text-center pb-4">Awards & Honors</h2>
+                <h2 className="text-center pb-4 main-headers">AWARDS - HONORS</h2>
                 {editedAwards.length > 0 ? (
                     <ul>
                         {editedAwards.map((award, index) => (
-                            <li key={index} className="d-flex align-items-center">
-                                {isEditing ? (
-                                    <input
-                                        type="text"
-                                        value={award}
-                                        onChange={(e) => handleAwardChange(index, e.target.value)}
-                                        className="form-control mx-2"
-                                    />
-                                ) : (
-                                    award
-                                )}
-                                {isEditing && (
-                                    <button
-                                        className="btn btn-danger btn-sm mx-2"
-                                        onClick={() => handleDeleteItem(index)}
-                                    >
-                                        Delete
-                                    </button>
-                                )}
+                            <li key={index}>
+                                <div className="d-flex align-items-center">
+                                    {isEditing ? (
+                                        <input
+                                            type="text"
+                                            value={award}
+                                            onChange={(e) => handleAwardChange(index, e.target.value)}
+                                            className="form-control mx-2"
+                                        />
+                                    ) : (
+                                        award
+                                    )}
+                                    {isEditing && (
+                                        <button
+                                            className="btn btn-danger btn-sm mx-2"
+                                            onClick={() => handleDeleteItem(index)}
+                                        >
+                                            Delete
+                                        </button>
+                                    )}
+                                </div>
                             </li>
                         ))}
                     </ul>

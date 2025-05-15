@@ -83,7 +83,7 @@ const ProfActivities = ({ professionalActivities, isEditable }) => {
                                     style={{ width: 'calc(100% - 120px)', marginRight: '10px', fontWeight: 'bold' }}
                                 />
                             ) : (
-                                <h4 style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}>{activity.headings}</h4>
+                                <h4 style={{ width: 'calc(100% - 120px)', marginRight: '10px' }} className="sec-headers">{activity.headings}</h4>
                             )}
 
                             {isEditing && (
@@ -99,37 +99,31 @@ const ProfActivities = ({ professionalActivities, isEditable }) => {
 
                         <ul>
                             {activity.activities?.map((act, activityIndex) => (
-                                <li key={activityIndex} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '10px' }}>
-                                    {isEditing ? (
-                                        <input
-                                            type="text"
-                                            value={act}
-                                            onChange={(e) =>
-                                                handleEdit(
-                                                    "activity",
-                                                    headingIndex,
-                                                    e.target.value,
-                                                    activityIndex
-                                                )
-                                            }
-                                            style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}
-                                        />
-                                    ) : (
-                                        <span style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}>{act}</span>
-                                    )}
-
-                                    {isEditing && (
-                                        <button
-                                            className="btn btn-danger"
-                                            onClick={() =>
-                                                handleDeleteActivity(headingIndex, activityIndex)
-                                            }
-                                            style={{ width: '100px'}}
-                                        >
-                                            Delete
-                                        </button>
-                                    )}
-                                </li>
+                                <li key={activityIndex}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '10px' }}>
+                                  {isEditing ? (
+                                    <input
+                                      type="text"
+                                      value={act}
+                                      onChange={(e) =>
+                                        handleEdit("activity", headingIndex, e.target.value, activityIndex)
+                                      }
+                                      style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}
+                                    />
+                                  ) : (
+                                    <span style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}>{act}</span>
+                                  )}
+                                  {isEditing && (
+                                    <button
+                                      className="btn btn-danger"
+                                      onClick={() => handleDeleteActivity(headingIndex, activityIndex)}
+                                      style={{ width: '100px' }}
+                                    >
+                                      Delete
+                                    </button>
+                                  )}
+                                </div>
+                              </li>                              
                             ))}
                         </ul>
 

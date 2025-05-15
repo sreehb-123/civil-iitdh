@@ -1,0 +1,196 @@
+[
+    {
+      "id": 1,
+      "name": "Concrete Technology Lab",
+      "image": "https://civil.iith.ac.in/wp-content/uploads/2016/05/1341404667_146579545_1-Pictures-of-Building-construction-materials-150x150.jpg",
+      "description": "Placeholder description for Construction Materials Lab.",
+      "equipment": [
+        {
+          "name": "Digital Rebound Hammer",
+          "image": "/images/Digital rebound hammer.JPG",
+          "specifications": "Measures concrete compressive strength in the range of 10-100 N/mm². Operates at temperatures between 0-50°C. Conforms to ASTM C805 and BS 1881: Part 202."
+        },
+        {
+          "name": "Ultrasonic Pulse Wave Tester",
+          "image": "/images/Ultrasonic pulse velocity tester.jpg",
+          "specifications": "Performs online data acquisition, waveform analysis, and pulse velocity measurements. Includes remote control features and crack depth analysis."
+        },
+        {
+          "name": "Concrete Permeability Apparatus",
+          "image": "/images/Concrete permeability.JPG",
+          "specifications": "Three-cell permeability tester for 150mm cube specimens. Includes a steel mold, metal cylinder, removable cover plate, and funnel."
+        },
+        {
+          "name": "V Funnel Apparatus",
+          "image": "/images/V funnel.png",
+          "specifications": "Stainless-steel V-shaped frame with a watertight sliding gate. Includes a hopper with top opening 515mm x 75mm, bottom opening 65mm x 75mm, and a tapered height of 450mm."
+        },
+        {
+          "name": "J Ring Apparatus",
+          "image": "",
+          "specifications": "Complete stainless-steel setup with 16 single rods (20mm dia). Includes a 300mm diameter ring, 10mm rods, and a 700mm x 700mm base plate."
+        },
+        {
+          "name": "Core Cutting Machine",
+          "image": "/images/Core cutting machine.JPG",
+          "specifications": "Can cut cores up to 100mm diameter. 1100W motor operates on 220V AC. Includes drill bit barrels of 75mm and 100mm dia."
+        },
+        {
+          "name": "Accelerated Curing Tank",
+          "image": "/images/Accelerate  tank.png",
+          "specifications": "Holds up to 12 concrete cubes (70.6mm size). Provides accelerated curing up to 100 ± 2°C. Conforms to IS: 9013."
+        },
+        {
+          "name": "Rapid Chloride Permeability Test Apparatus",
+          "image": "/images/Rapid Chloride Permeability Test.JPG",
+          "specifications": "Conforms to ASTM C1202-19, ASTM C1760-12, NT Build 492, AASHTO T 277, and EN 12390-18."
+        },
+        {
+          "name": "Large Scale 3D Concrete Printer",
+          "image": "/images/Lagre 3d concrete printer.png",
+          "specifications": "Operates with a noise level of max 70 dB. Electrical connection: 200-600V, 50/60 Hz. Includes a water pump with 75-750 L/h capacity."
+        }
+      ]      
+    },
+    {
+      "id": 2,
+      "name": "Transportation Engineering Lab",
+      "image": "",
+      "description": "State-of-the-art facilities for environmental research.",
+      "equipment": [
+        {
+          "name": "Rolling Thin Film Oven",
+          "image": "/images/Rolling thin film oven.JPG",
+          "specifications": "Double-walled electrically heated convection oven with high-density fiber glass insulation. Conforms to ASTM D2872, AASHTO T240, EN 12607-1, IS 15799-2008."
+        },
+        {
+          "name": "Vacuum Pycnometer for Rice Test",
+          "image": "/images/Vacum pycnometer for Rice test.png",
+          "specifications": "Large capacity vacuum pycnometer with oil-free vacuum pump, regulating valve, moisture trap, and silicon tubing. Conforms to ASTM D2041, AASHTO T209, and AASHTO T283."
+        },
+        {
+          "name": "Indirect Tensile Test Jig - 6 inch",
+          "image": "/images/Indirect tensile test jig 4 inch.JPG",
+          "specifications": "Lottman breaking head for tensile splitting tests on 150mm diameter compacted bituminous samples. Conforms to ASTM D6931."
+        },
+        {
+          "name": "Rotational Viscometer",
+          "image": "/images/22-rotational viscometer.JPG",
+          "specifications": "Measures viscosity with spindle options for different volume ranges. RPM range: 0.01 to 250, torque range: up to 1.5 mNm. Conforms to EN 13302, ASTM D2196, ASTM D4402, AASHTO T316."
+        },
+        {
+          "name": "CORELOK",
+          "image": "/images/R 07-corlok.JPG",
+          "specifications": "Determines bulk gravity, maximum gravity, porosity, permeability, and absorption of asphalt and aggregates. Conforms to ASTM D6752, D6857, D7063, and D7370."
+        },
+        {
+          "name": "Dynamic Shear Rheometer",
+          "image": "/images/R 08- Dynamic Shear Rheometer.JPG",
+          "specifications": "Direct current synchronous motor with wide angular frequency range. Measures normal force, torque rotation, and oscillation. Conforms to AASHTO, ASTM, DIN EN, and FGSV standards."
+        },
+        {
+          "name": "Gyratory Compactor",
+          "image": "/images/R 09-Gyratory compactor.JPG",
+          "specifications": "Electromechanical model for compacted specimens of Ø 100mm and 150mm, with adjustable gyratory angle and vertical load. Conforms to research mode testing standards."
+        },
+        {
+          "name": "Laboratory Drilling Machine",
+          "image": "",
+          "specifications": "Includes three drill bits (52mm, 102mm, 152mm). Operates on 230V power with adjustable RPM across three gears. Suitable for pavement and concrete core drilling."
+        },
+        {
+          "name": "Cutting Saw Machine",
+          "image": "",
+          "specifications": "Diamond blade with 450mm diameter for cutting concrete, rock, and asphalt specimens. Operates on 380V/50-60Hz/3ph."
+        },
+        {
+          "name": "UTM 16-16 KN",
+          "image": "/images/R 12- UTM16-16KN.JPG",
+          "specifications": "Universal testing machine for resilient modulus, indirect tensile fatigue, semi-circular bending, and cyclic compression tests. Conforms to ASTM and AASHTO standards."
+        },
+        {
+          "name": "Light Weight Deflectometer",
+          "image": "/images/Ligth weight deflectometer.JPG",
+          "specifications": "Measures pavement deflection with a drop weight system. Includes adjustable load plates (100mm, 150mm, 300mm) and loading range >15kN. Conforms to ASTM E2583."
+        },
+        {
+          "name": "Core Drilling Machine",
+          "image": "/images/Core drilling machine.png",
+          "specifications": "Core cutter for up to 150mm diameter cores. Three-speed drill with RPM options (460, 760, 1690). Operates on a rig-based system for pavement and concrete."
+        },
+        {
+          "name": "Steel Bar/Concrete Scanner",
+          "image": "/images/Concrete scanner.JPG",
+          "specifications": "Uses dual polarization antennas (HH, VV) for shallow and deep rebar detection. Integrated multi-touch color display with advanced laser-based positioning."
+        },
+        {
+          "name": "Heavy-Duty Laboratory Mixer for Bitumen",
+          "image": "/images/Heavy duty laboratory shear mixer.JPG",
+          "specifications": "High-speed bitumen shear mixer with digital tachometer, ammeter, and timer. Stirring speed up to 10,000 RPM with a temperature range of ambient to 300°C."
+        },
+        {
+          "name": "Wet and Dry Double Wheel Tracker",
+          "image": "/images/Wet and dry double wheel tracker controls.png",
+          "specifications": "Conforms to AASHTO T324, EN 12697-22, and DOT methods. Adjustable wheel speed (20-30 cycles/min), temperature control up to 80°C, and high-accuracy rut depth measurement."
+        },
+        {
+          "name": "Force Ductility Tester",
+          "image": "/images/R 18- Force ductility Tester.JPG",
+          "specifications": "Tests three specimens simultaneously with a tension line up to 1500mm. Speed adjustable from 5mm/min to 100mm/min, with 300N load cells."
+        },
+        {
+          "name": "Drop Shape Analysis System",
+          "image": "",
+          "specifications": "Measures contact angle (0° - 180°) with 0.1° accuracy and interfacial tensions from 0.01 - 2000 mN/m. Uses Young-Laplace model for analysis."
+        }
+      ]      
+    },
+    {
+      "id": 3,
+      "name": "Geotechnical Engineering Lab",
+      "image": "https://civil.iith.ac.in/wp-content/uploads/2016/05/civil_departmant_webpage_2014025022.jpg",
+      "description": "State-of-the-art facilities for environmental research.",
+      "equipment": [
+        {
+          "name": "Automatic Oedometer Apparatus",
+          "image": "/images/Automatic odometer apparatus.png",
+          "specifications": "Performs consolidation tests as per ASTM D2435, ASTM D3877, ASTM D4546, AASHTO T216, BS 1377:5, and EN 17892:5. Includes a 20 kN capacity load cell and 10 mm displacement transducers."
+        },
+        {
+          "name": "Automatic Direct and Residual Shear Machine",
+          "image": "/images/Automatic direct and residual shear machine .JPG",
+          "specifications": "Motorized microprocessor-based system with a 200kg capacity. Uses an S-shaped LVDT with a ±20mm stroke and repeatability of ±0.1% of rated capacity. Conforms to IS: 2720 Part XIII."
+        },
+        {
+          "name": "Swell Pressure Test Apparatus",
+          "image": "/images/R 03-Swell pressure test apparatus.JPG",
+          "specifications": "Includes a hand-operated 5000 kg capacity loading unit, 100mm dia gunmetal mould, perforated swell plate, spacer, and two porous stones. Used for determining soil swelling pressure."
+        },
+        {
+          "name": "Cyclic Simple Shear System",
+          "image": "/images/Cyclic simple shear test.png",
+          "specifications": "Performs cyclic shear tests conforming to ASTM D6528. Features a simple shear load frame with servo-controlled actuators, two 5 kN load cells, and a ±15mm displacement transducer. Sample size: 70mm (convertible to 50mm). Operating frequency: up to 10 Hz."
+        },
+        {
+          "name": "Plate Load Test Apparatus",
+          "image": "/images/Plate load test apparatus.png",
+          "specifications": "Hand-operated hydraulic jack (500 kN), hydraulic pump with 200 mm dia load gauge, high-pressure flexible metallic pipe (5m), and ball and socket steel plate arrangement. Conforms to IS: 1888."
+        },
+        {
+          "name": "In-Situ Vane Shear Apparatus",
+          "image": "/images/Insitu vane shear test apparatus.png",
+          "specifications": "Used for determining shear strength of cohesive soils in the field. Includes a torque applicator with a 200 N.m capacity and accuracy of 2.5 N.m. Vane sizes: 37.5 mm x 75 mm and 50 mm x 100 mm. Conforms to IS: 4434."
+        },
+        {
+          "name": "Geosynthetics Pull Out Test Apparatus",
+          "image": "/images/Geosynthetic pull out test.png",
+          "specifications": "Measures pull-out resistance of geosynthetics as per ASTM D6706-01. Features a 200 kN normal load, 100 kN pull-out load, static strain rate of 0.1-100 mm/min, and a pull-out box of 1000mm x 1000mm x 700mm. Includes two load cells and four displacement transducers."
+        },
+        {
+          "name": "3D Printer for Polymers",
+          "image": "",
+          "specifications": "Uses fused deposition modeling (FDM) technology. Build volume: 500mm x 500mm x 500mm, dimensional tolerance: ±0.2mm, print speed: 40-120 mm/sec, and extruder temperature up to 300°C."
+        }
+      ]      
+    }
+]

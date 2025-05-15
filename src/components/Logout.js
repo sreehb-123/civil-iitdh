@@ -24,27 +24,25 @@ const Logout = () => {
 
     const handleLogout = async () => {
         try {
-            const auth = getAuth();
-            await signOut(auth);
-            navigate('/faculties'); // Redirect after logout
+            if(isLoggedIn === true){
+                const auth = getAuth();
+                await signOut(auth);
+                navigate('/faculties');
+            } // Redirect after logout
         } catch (error) {
             console.error('Error logging out: ', error);
         }
     };
 
-    const handleLoginNav = () => {
-        navigate('/login');
-    }
+    // const handleLoginNav = () => {
+    //     navigate('/login');
+    // }
 
     return (
         <div className="text-center">
-            {isLoggedIn ? (
-                <button onClick={handleLogout} className="btn btn-danger">
-                    Logout
-                </button>
-            ) : (
-                <button onClick={handleLoginNav} className="btn login-btn"> Login </button>
-            )}
+            <button onClick={handleLogout} className="btn btn-danger">
+                Logout
+            </button>
         </div>
     );
 };

@@ -1,0 +1,36 @@
+.slider-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 0;
+    overflow: visible;
+  }
+  
+  .carousel-slide {
+    position: relative;
+    height: 86vh; /* or any height you prefer */
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.carousel-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 18px;
+  padding: 6px 14px;
+  max-width: 80%;
+  text-align: center;
+  border-radius: 6px;
+  white-space: normal; /* allows wrapping */
+}

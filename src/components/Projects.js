@@ -82,7 +82,7 @@ const Projects = ({ projects, isEditable }) => {
                                     style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}
                                 />
                             ) : (
-                                <h3 style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}>{project.projectType}</h3>
+                                <h3 style={{ width: 'calc(100% - 120px)', marginRight: '10px' }} className="sec-headers">{project.projectType}</h3>
                             )}
                             {isEditing && (
                                 <button
@@ -96,35 +96,37 @@ const Projects = ({ projects, isEditable }) => {
                         </div>
                         <ul>
                             {project.listOfProjects?.map((projectItem, itemIndex) => (
-                                <li key={itemIndex} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                    {isEditing ? (
-                                        <input
-                                            type="text"
-                                            value={projectItem}
-                                            onChange={(e) =>
-                                                handleEdit(
-                                                    "projectItem",
-                                                    projectIndex,
-                                                    e.target.value,
-                                                    itemIndex
-                                                )
-                                            }
-                                            style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}
-                                        />
-                                    ) : (
-                                        <span style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}>{projectItem}</span>
-                                    )}
-                                    {isEditing && (
-                                        <button
-                                            className="btn btn-danger"
-                                            onClick={() =>
-                                                handleDeleteProjectItem(projectIndex, itemIndex)
-                                            }
-                                            style={{ width: '100px' }}
-                                        >
-                                            Delete
-                                        </button>
-                                    )}
+                                <li key={itemIndex}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                        {isEditing ? (
+                                            <input
+                                                type="text"
+                                                value={projectItem}
+                                                onChange={(e) =>
+                                                    handleEdit(
+                                                        "projectItem",
+                                                        projectIndex,
+                                                        e.target.value,
+                                                        itemIndex
+                                                    )
+                                                }
+                                                style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}
+                                            />
+                                        ) : (
+                                            <span style={{ width: 'calc(100% - 120px)', marginRight: '10px' }}>{projectItem}</span>
+                                        )}
+                                        {isEditing && (
+                                            <button
+                                                className="btn btn-danger"
+                                                onClick={() =>
+                                                    handleDeleteProjectItem(projectIndex, itemIndex)
+                                                }
+                                                style={{ width: '100px' }}
+                                            >
+                                                Delete
+                                            </button>
+                                        )}
+                                    </div>
                                 </li>
                             ))}
                         </ul>

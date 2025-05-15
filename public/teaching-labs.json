@@ -1,15 +1,135 @@
 [
     {
       "id": 1,
-      "name": "Construction Materials Lab",
+      "name": "Concrete Technology Lab",
       "image": "https://civil.iith.ac.in/wp-content/uploads/2016/05/1341404667_146579545_1-Pictures-of-Building-construction-materials-150x150.jpg",
       "description": "Placeholder description for Construction Materials Lab.",
       "equipment": [
-        {
-          "name": "Placeholder Equipment 1",
-          "image": "https://placehold.co/150",
-          "specifications": "Specifications for placeholder equipment 1."
-        }
+            {
+              "name": "IS sieve sets (Fine Aggregates)",
+              "image": "/images/fine-aggr-sieve-set.jpg",
+              "specifications": "20cm brass sieves of various sizes confirming to IS: 2386 (Part I) - 1963."
+            },
+            {
+              "name": "IS sieve sets (Course Aggregate)",
+              "image": "/images/Aggregate-Coarse-Sieve-Set.jpg",
+              "specifications": "45cm brass sieves of various sizes confirming to IS: 2386 (Part I) - 1963. Includes pan and cover."
+            },
+            {
+              "name": "Electromagnetic Sieve Shaker",
+              "image": "/images/Electromagnetic Sieve shaker.JPG",
+              "specifications": "Suitable for sieves up to 300mm."
+            },
+            {
+              "name": "Cylindrical metal vessel for bulk density determination",
+              "image": "/images/Cylindrical metal vessel (bulk density determination).JPG",
+              "specifications": "Mild steel vessels with carrying handles in 3L, 10L, 15L, 20L, and 30L capacities."
+            },
+            {
+              "name": "Buoyancy Balance Apparatus",
+              "image": "/images/Buoyancy balance apparatus (2).JPG",
+              "specifications": "Includes 10kg weighing capacity, steel frame, wire basket, hook, and water tub."
+            },
+            {
+              "name": "Hot Air Oven",
+              "image": "/images/24-Hot air oven.JPG",
+              "specifications": "Chamber size: 1m x 1m x 1m. Temperature range: 50°C to 250°C as per IS: 2720 (Part 28)."
+            },
+            {
+              "name": "Vicat Apparatus with Dashpot",
+              "image": "/images/Vicat apparatus (Manufacturer-Heico).JPG",
+              "specifications": "Conforms to IS: 5513-1976. Has a 60mm internal diameter at the top and 70mm at the bottom."
+            },
+            {
+              "name": "Le Chatelier Apparatus",
+              "image": "/images/Le Chatlier apparatus.JPG",
+              "specifications": "Conforms to IS: 5514-1969. Includes a 30mm diameter brass split cylinder with indicator arms."
+            },
+            {
+              "name": "Flow Table Test",
+              "image": "/images/flow_table_test.jpeg",
+              "specifications": "Gun metal table top (250mm dia), vertical shaft, and conical mold as per IS: 5512-1983."
+            },
+            {
+              "name": "Automatic Compression & Flexural Testing Machine",
+              "image": "/images/Automatic Computerized compression testing machine.JPG",
+              "specifications": "3000 kN compression testing machine with 200 kN flexural testing frame."
+            },
+            {
+              "name": "Vibrating Machine",
+              "image": "/images/Vibrating Table.png",
+              "specifications": "Used for compacting 70.6mm cement mortar cube specimens."
+            },
+            {
+              "name": "Slump Test Apparatus",
+              "image": "/images/Slump test apparatus.JPG",
+              "specifications": "Slump cone with top dia: 100mm, bottom dia: 200mm, and height: 300mm."
+            },
+            {
+              "name": "Compaction Factor Apparatus",
+              "image": "/images/Compaction factor apparatus.JPG",
+              "specifications": "Includes two conical hoppers, a cylindrical receiver, and a steel stand."
+            },
+            {
+              "name": "Vee-Bee Consistometer",
+              "image": "/images/Vee-Bee Consistometer.JPG",
+              "specifications": "Slump cone with top dia: 100mm, base dia: 200mm, and height: 300mm."
+            },
+            {
+              "name": "Vibrating Table",
+              "image": "/images/Vibrating Table.png",
+              "specifications": "Table size: 100cm x 100cm, load capacity: 150 kg, stops to prevent mold sliding."
+            },
+            {
+              "name": "Needle Vibrator",
+              "image": "/images/Needle vibrator.JPG",
+              "specifications": "Motor-driven, 12000-20000 vibrations/min, includes 25mm and 40mm diameter needles."
+            },
+            {
+              "name": "Concrete Drum Mixer",
+              "image": "/images/concrete_drum_mixerjpeg.jpeg",
+              "specifications": "Tilting drum type, capacity to cast 50 cubes of 150mm size."
+            },
+            {
+              "name": "Aggregate Crushing Value Apparatus",
+              "image": "/images/aggr_crushing_value_apparatusjpeg.jpeg",
+              "specifications": "Includes a cylindrical container, base plate, and plunger as per IS: 2386 (Part IV)."
+            },
+            {
+              "name": "Aggregate Impact Tester",
+              "image": "/images/Aggregate Impact Tester.png",
+              "specifications": "Hammer weighs 13.5-14kg, falls from 380±5mm, includes automatic blow counter."
+            },
+            {
+              "name": "Loss Abrasion Testing Machine",
+              "image": "/images/Loss Abrasion Testing machine.JPG",
+              "specifications": "Steel drum, 700mm dia, 500mm length, rotates at 30-33 RPM with auto counter."
+            },
+            {
+              "name": "Thickness Gauge",
+              "image": "/images/Thickness gauge.png",
+              "specifications": "For determining flakiness index, meets IS: 2386 (Part I) - 1963."
+            },
+            {
+              "name": "Length Gauge",
+              "image": "/images/Length gauge.png",
+              "specifications": "Metal plate with 8 steel pins, used for elongation index measurement as per IS: 2386 (Part I) - 1963."
+            },
+            {
+              "name": "Combined Flat and Elongated Particles Device",
+              "image": "",
+              "specifications": "Includes a pivoting arm of 330mm and a base plate of 152x406mm as per ASTM D 4791."
+            },
+            {
+              "name": "Aggregate Stone Polishing Machine",
+              "image": "/images/Aggregate stone polishing machine.png",
+              "specifications": "Road wheel rotates at 320-325 RPM, includes specimen molds and polishing material."
+            },
+            {
+              "name": "British Pendulum",
+              "image": "",
+              "specifications": "ASTM E303, BS EN 1097-8 compliant, includes carrying case, tools, and calibration certificate."
+            }         
       ]
     },
     {
@@ -92,15 +212,336 @@
     },
     {
       "id": 3,
-      "name": "GeoTechnical Engineering Lab",
+      "name": "Geotechnical Engineering Lab",
       "image": "https://civil.iith.ac.in/wp-content/uploads/2016/05/civil_departmant_webpage_2014025022.jpg",
       "description": "Placeholder description for Structural Engineering Lab.",
       "equipment": [
         {
-          "name": "Placeholder Equipment 2",
-          "image": "https://placehold.co/150",
-          "specifications": "Specifications for placeholder equipment 2."
+          "name": "Digital hot air oven",
+          "image": "/images/1-Digital hot air oven.JPG",
+          "specifications": "Operates on 230V, 50Hz AC. Temperature range: 50-200ºC. Chamber size: 600mm x 600mm x 900mm with two stainless steel trays."
+        },
+        {
+          "name": "Sand bath",
+          "image": "/images/2-Sand bath.JPG",
+          "specifications": "Stainless steel tray, size 300x600mm. Temperature range: 0-300°C. Voltage: 220-250V."
+        },
+        {
+          "name": "IS sieve sets (Fine Aggregate)",
+          "image": "/images/fine-aggr-sieve-set.jpg",
+          "specifications": "20cm brass sieves of various sizes confirming to IS: 2386 (Part I) – 1963."
+        },
+        {
+          "name": "IS sieve sets (Course Aggregate)",
+          "image": "/images/Aggregate-Coarse-Sieve-Set.jpg",
+          "specifications": "45cm brass sieves of various sizes confirming to IS: 2386 (Part I) – 1963. Includes pan and cover."
+        },
+        {
+          "name": "Soil Hydrometers",
+          "image": "/images/Soil Hydrometers.JPG",
+          "specifications": "Specific gravity range: 0.995 to 1.030 at 27°C."
+        },
+        {
+          "name": "Cassagrande's Liquid Limit Device",
+          "image": "/images/Cassagrandes liquid limit test apparatus.JPG",
+          "specifications": "Hand-operated with counter, standard and ASTM types, confirming to IS: 9259 and IS: 2720 (Part V)."
+        },
+        {
+          "name": "Motorized Cassagrande's Liquid Limit Device",
+          "image": "/images/Motorized Cassagrandes liquid limit test apparatus.JPG",
+          "specifications": "Brass cup, crank and cam mechanism, mounted on a rubber base. Includes grooving tools and gauging block."
+        },
+        {
+          "name": "Liquid Limit: Automatic Cone Penetrometer",
+          "image": "/images/8-Liquid Limit Automatic Cone Penetrometer Apparatus with all accessories.JPG",
+          "specifications": "Confirms to IS: 2720 (Part 5) - 1985. Includes 30° penetration cone, test cone gauge, and stainless steel penetration cup."
+        },
+        {
+          "name": "Plastic Limit Apparatus",
+          "image": "",
+          "specifications": "Glass plate 200mm x 150mm x 3mm thick, brass rod 3mm dia., 100mm long."
+        },
+        {
+          "name": "Shrinkage Limit Apparatus",
+          "image": "",
+          "specifications": "Includes stainless steel shrinkage dish, glass cup, glass plates, and a graduated glass cylinder."
+        },
+        {
+          "name": "Field Density Kit",
+          "image": "/images/Field density kit.JPG",
+          "specifications": "Includes cylindrical core cutter, steel dolly, and rammer as per IS: 2720 (Part XXIX)."
+        },
+        {
+          "name": "Sand Replacement Kit",
+          "image": "/images/Sand Replacement kit.JPG",
+          "specifications": "Includes sand pouring cylinder, calibrating container, metal tray, and excavation tools as per IS: 2720 (Part XXVIII)."
+        },
+        {
+          "name": "Constant Head & Falling Head Apparatus",
+          "image": "/images/14-Constant head & Falling head (Permeability test).JPG",
+          "specifications": "Used for permeability tests as per IS: 2720 (Part-17), IS 11209. Includes brass permeability cell, overhead tank, and standpipes."
+        },
+        {
+          "name": "Light Weight/Standard Proctor Compaction Equipment",
+          "image": "",
+          "specifications": "Capacity: 944 cc, Internal Diameter: 10.2 cm, Height: 11.6 cm, Rammer weight: 2.5 kg."
+        },
+        {
+          "name": "Oedometers",
+          "image": "/images/16-Odeometer.JPG",
+          "specifications": "Fixed ring cell for 63.50mm diameter samples with porous stones and a calibration disc. Includes slotted steel weights up to 64kg."
+        },
+        {
+          "name": "Laboratory Motorized Vane Shear Apparatus",
+          "image": "/images/Laboratory motorized vane shear apparatus.png",
+          "specifications": "Electrically driven torque head, set of four springs, vane size 12.0 x 24.0 mm, and specimen container."
+        },
+        {
+          "name": "Unconfined Compression Test Apparatus",
+          "image": "/images/18- Unconfined Compression test apparatus.JPG",
+          "specifications": "Digital microprocessor-controlled load frame with 50 kN capacity. Includes triaxial cell and sample preparation accessories."
+        },
+        {
+          "name": "Standard Triaxial System with Data Acquisition",
+          "image": "/images/19-Standard triaxial system with data acquisition system.JPG",
+          "specifications": "50 kN capacity, capable of performing UU, CU tests. Standard triaxial cell for sample sizes 35 to 70 mm dia."
+        },
+        {
+          "name": "CBR Apparatus",
+          "image": "/images/20-CBR Apparatus.JPG",
+          "specifications": "Digital CBR system with load frame, CBR mould, compaction hammer, digital readout for flow and load."
+        },
+        {
+          "name": "Soil Sampler, Cutter, and Extruder",
+          "image": "/images/21-Soil sampler, cutter and extruder.JPG",
+          "specifications": "Includes constant volume mould, soil trimmer, and motorized hydraulic extruder."
+        },
+        {
+          "name": "Wheel Barrow",
+          "image": "",
+          "specifications": "Size: 760 x 450 x 300 mm. Capacity: 200 kg. Equipped with two pneumatic wheels."
+        },
+        {
+          "name": "Electronic Weighing Balance (1kg)",
+          "image": "",
+          "specifications": "Capacity: 1kg, Accuracy: 100 mg, LED display, power supply: 230V AC."
+        },
+        {
+          "name": "Electronic Weighing Balance (35kg)",
+          "image": "",
+          "specifications": "Capacity: 35kg, Accuracy: 5g, LED display, power supply: 230V AC."
+        },
+        {
+          "name": "Hot Air Oven",
+          "image": "/images/24-Hot air oven.JPG",
+          "specifications": "Temperature range: 50°C to 250°C. Operates on 230V AC, includes a digital temperature controller."
+        },
+        {
+          "name": "Universal compactor machine",
+          "image": "/images/25-Universal compactor machine.JPG",
+          "specifications": "Confirming to ASTM, AASHTO, EN, BS standards blow rate should be approximately 25 blows/min | Overall dimension 460x460x1390mm"
         }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Transportation Engineering Lab",
+      "image": "",
+      "description": "Placeholder description for Structural Engineering Lab.",
+      "equipment": [
+        {
+          "name": "Penetrometer for Bitumen Testing",
+          "image": "/images/01- Penetrometer for Bitumen testing.JPG",
+          "specifications": "Automatic digital timer with geared height adjustment and dial gauge. Controls fall time of plunger rod for 5 seconds. Conforms to IS 1203 and ASTM D5."
+        },
+        {
+          "name": "Ductilimeter",
+          "image": "/images/02 Ductilimeter.JPG",
+          "specifications": "Semi-automatic model with 10-100 mm/min speed and refrigeration. Conforms to IS:1208 and ASTM D113."
+        },
+        {
+          "name": "Ring and Ball Apparatus",
+          "image": "/images/Ring and ball apparatus.JPG",
+          "specifications": "Digital programmable temperature controller ensuring a 5°C rise. Conforms to EN 1427, ASTM D36, AASHTO T53, and IS 1205."
+        },
+        {
+          "name": "Cleveland Flash & Fire Point Apparatus",
+          "image": "/images/04-Cleveland Flash & Fire point Apparatus.JPG",
+          "specifications": "Determines flash and fire point of petroleum products. Suitable for 220V, 50Hz. Conforms to IS: 1448 P:69 and ASTM D-92."
+        },
+        {
+          "name": "Compression Testing Machine (50 kN)",
+          "image": "",
+          "specifications": "Capacity 50 kN, variable strain rate 0.50 - 51 mm/min, vertical clearance 600mm, horizontal clearance 450mm. High-strength aluminum load rings."
+        },
+        {
+          "name": "Buoyancy Balance",
+          "image": "/images/Buoyance balance .JPG",
+          "specifications": "Used for water absorption and specific gravity tests. Includes density basket, water-tight cylinder, and electronic balance (10 kg x 0.1 gm)."
+        },
+        {
+          "name": "Automatic Compactor Ejector",
+          "image": "/images/Automatic compactor and ejector.JPG",
+          "specifications": "Motor-driven compactor with automatic blow counter. Includes hydraulic pump, control valve, and jack for extracting samples up to 45 cm."
+        },
+        {
+          "name": "Marshall Compactor (4-inch Moulds)",
+          "image": "/images/Marshal Compactor moulds.JPG",
+          "specifications": "Galvanized steel construction with powder coating. Includes mould body, collar, and base plate (101.6mm diameter)."
+        },
+        {
+          "name": "Breaking Head - 4 inch for Marshall Test",
+          "image": "/images/Breaking head-4inch for Marshall test.png",
+          "specifications": "Bituminous Mix Marshall Stability Test Head. Lower segment mounted with two vertical guide rods for proper insertion."
+        },
+        {
+          "name": "Indirect Tensile Test Jig (4 inch)",
+          "image": "/images/Indirect tensile test jig 4 inch.JPG",
+          "specifications": "Lottman breaking head for tensile splitting tests on 100mm diameter compacted bituminous samples. Conforms to ASTM D6931."
+        },
+        {
+          "name": "Constant Temperature Water Bath",
+          "image": "/images/Constatnt temperature bath.JPG",
+          "specifications": "Holds at least 9 moulds of 150mm diameter. Temperature range: 5°C to 100°C with ±0.5°C accuracy. LED display and sensor included."
+        },
+        {
+          "name": "Stripping Value Test Apparatus",
+          "image": "/images/Stripping value apparatus.png",
+          "specifications": "Used for evaluating stripping values of aggregates in bitumen. Compliant with IS 6241 and AASHTO T283."
+        },
+        {
+          "name": "Centrifuge Extractor",
+          "image": "/images/13-centrifuge extractor.JPG",
+          "specifications": "Motorized, variable speed with digital RPM indicator. Conforms to ASTM D2172, AASHTO T58, T164, and EN 12697-1."
+        },
+        {
+          "name": "Rotary Evaporator",
+          "image": "/images/14- Rotary Evaporator.JPG",
+          "specifications": "Flask capacity 50-5000ml, motorized lift, condenser with 1500 cm² cooling surface, temperature range 20-210°C with 1°C accuracy."
+        },
+        {
+          "name": "MERLIN",
+          "image": "/images/MERLIN.JPG",
+          "specifications": "Rigid frame 1.8m long with front wheel, rear curved foot, and a probe midway for road surface assessment."
+        },
+        {
+          "name": "Capillary Viscometer - Bath & Tubes",
+          "image": "/images/16- Capillary viscometer- Bath&Tubes.JPG",
+          "specifications": "Measures absolute viscosity at 60°C and kinematic viscosity at 135°C. Includes digital stopwatch, vacuum pump, and Canon viscometers."
+        },
+        {
+          "name": "Asphalt Mixer",
+          "image": "/images/17-asphalt mixer.JPG",
+          "specifications": "10-litre capacity. Includes stainless-steel bowl, whisk, planetary action speed control (50-150 rpm), and revolving action (115-400 rpm)."
+        },
+        {
+          "name": "Oven and Tester",
+          "image": "/images/Oven and tester.png",
+          "specifications": "High-end lab oven with forced ventilation and digital thermostat. Capacity: 420 litres. Maximum temperature: 300°C. Conforms to multiple ASTM, BS, and EN standards."
+        }
+      ]      
+    },
+    {
+      "id": 5,
+      "name": "Instrumentation Technologies Lab",
+      "image": "",
+      "description": "Placeholder description for Instrumentation Technologies Lab.",
+      "equipment": [
+          {
+            "name": "Three Pinned Arch",
+            "image": "/3 Pinned arch.JPG",
+            "specifications": "Two arch supports, holding an arch of 0.45-0.5 m span x 0.1 m height. Nine evenly spaced hanging points. Nine Mass Hangers, 50 x 20 g masses, storage tray included. Force measurement using a load cell. Range 3–3.5 kg. Rated Output 2.0 mV/V. Rated Output Tolerance ±0.2 mV/V. Total error ±0.03% of rated output. Over force 4.5kg."
+          },
+          {
+            "name": "Portal Frame Deflections and Reactions",
+            "image": "/images/image2.jpg",
+            "specifications": "Two supports, one with a horizontal reaction load cell, the other with a fixing moment load cell. Uniform frame of approximately 250 mm height x 500 mm length and nominal cross-section: approximately 15 mm x 1.5–2 mm. Non-uniform frame of approximately 250 mm height x 500 mm length. Nominal cross-sections approximately 15 mm x 1.5–2 mm and one vertical of 15 x 1.5 mm. Three Mass Hangers, 25 x 20 g masses, Vernier Caliper, Hexagon Tool, and Storage Tray."
+          },
+          {
+            "name": "Bending Moments in a Portal Frame",
+            "image": "/Bending moments in a portal frame.JPG",
+            "specifications": "Backplate holding the Portal Frame of approximately 250 mm x 500 mm (section centre distances). Nominal cross section: approximately 19 x 3.2 mm. 16 strain gauges attached to the portal. Strain Gauge Amplifier, 16 input."
+          },
+          {
+            "name": "Model foundation tank",
+            "image": "/Model foundation tank.JPG",
+            "specifications": "Dimensions: 2.1 m × 1.2 m × 1.2 m, made up of 6 mm thick steel plates."
+          },
+          {
+            "name": "Loading frame with hydraulic jack (100kN)",
+            "image": "/Loading frame.JPG",
+            "specifications": "Loading Frame 100 kN Capacity. Stainless steel tank of 1 m x 1 m x 1 m. Hydraulic jack system (motorized). LVDT (4 Nos). Load Cell (1 No., 100 kN). 8 Channel Data logger. Suitable software with PC."
+          },
+          {
+            "name": "Soil pressure gauges for model experiments (200 kPa for wall surface)",
+            "image": "/Soil pressure gauges for model experiments.JPG",
+            "specifications": "50 mm in outside diameter. Measuring range: 200 kPa. Side input/output cable. Having a dual diaphragm structure."
+          },
+          {
+            "name": "Soil pressure transducer for model experiment (200 kPa for plain surface)",
+            "image": "/images/image7.jpg",
+            "specifications": "50 mm in outside diameter. Measuring Range: 200 kPa. Top input/output cable. Having a dual diaphragm structure."
+          },
+          {
+            "name": "Displacement transducer (Range: 0 to 50 mm)",
+            "image": "/images/image8.jpg",
+            "specifications": "Measuring Range: 50 mm. Resolution: 0.001 mm. Non-linearity: 0.1% RO. Suitable for both static and dynamic measurements. Sensitivity: 200 (x 10⁻⁶ strain)/mm. Spring force: 3.4 N. Frequency response: 6 Hz."
+          },
+          {
+            "name": "Compression load cell (Range: 10 kN)",
+            "image": "/Compression load cell.JPG",
+            "specifications": "Measuring Range: 10 kN."
+          },
+          {
+            "name": "Miniature Pore Pressure Transducer (Range: 2 Bar)",
+            "image": "/images/image10.jpg",
+            "specifications": "Range: 2 Bar. Rated Output: 1 mV/V. Input / Output resistance: 350 ohms. With 4-core shielded vinyl 5 meters cable."
+          },
+          {
+            "name": "Miniature Pore Pressure Transducer (Range: 5 Bar)",
+            "image": "/images/image11.jpg",
+            "specifications": "Range: 5 Bar. Rated Output: 1 mV/V. Input / Output resistance: 350 ohms. With 4-core shielded vinyl 5 meters cable."
+          },
+          {
+            "name": "16-channel Data Logger for Strain Gauge-based Transducer System",
+            "image": "/cDAQ Data logger for 16,8,4 channel data logger.JPG",
+            "specifications": "Total Number of Sensor Input Channels: 16. Inputs: strain in ¼, ½, or full bridge circuitry of 120/350 ohms / 1000 ohms in ½ & full bridge circuits. Resolution: 1 µstrain. Accuracy: ±0.05% FS. Measuring Range: ±25,000 µε. With High & Low pass filters."
+          },
+          {
+            "name": "8-channel Universal Data Logger for Dynamic Measurement",
+            "image": "/cDAQ Data logger for 16,8,4 channel data logger.JPG",
+            "specifications": "Light, compact, high sampling rate. No. of Channels: 8 (cascading 2 units). Inputs: Temperature, Voltage, Strain with CF card onboard memory. Software for system config and data viewing. Accessories: USB Hub, USB Cable, AC Adaptor Set (2 Nos), Synchronous cable (for cascading 2 units), Sensor Input Conversion Cables (4 Nos each)."
+          },
+          {
+            "name": "Volumetric Water Content Sensors",
+            "image": "/Volumetric water potential sensors.JPG",
+            "specifications": "Mineral Soil Calibration: 0.0000–0.5700 m³/m³ (0%–57% VWC). Soilless Media Calibration: 0.0000–0.6900 m³/m³ (0%–69% VWC). Apparent Dielectric Permittivity: 1 (air) to 80 (water). Resolution: 0.0008 m³/m³ (0.08% VWC)."
+          },
+          {
+            "name": "Dew Point Potential Meter (Water Potential Meter)",
+            "image": "/images/image15.jpg",
+            "specifications": "Water potential range: 0 to -300 kPa. Accuracy: ±0.05 MPa from 0 to −5 MPa; 1% from -5 to -300 MPa. Temperature range: 15 to -40 °C. Resolution: 0.1 °C. Accuracy: ±0.2 °C. Read time: Soil sample: ~10–15 min."
+          },
+          {
+            "name": "Water Potential Sensors",
+            "image": "/water potential sensors.JPG",
+            "specifications": "Range: −9 to −100 kPa. Accuracy of soil water potential: ±10%. Soil temperature: ±1 °C. Resolution: Soil water potential: 0.1 kPa. Accuracy of soil temperature: 0.1 °C. Soil temperature range: -40 to 60 °C."
+          },
+          {
+            "name": "Weighing Balance with Data Logging Facility",
+            "image": "/images/image17.jpg",
+            "specifications": "Capacity: 8.1 kg. Resolution: 0.01 g. Linearity: ±0.03 g. Weighing Pan: 270 x 210 mm. Calibration: External Calibration."
+          },
+          {
+            "name": "Simple Suspension Bridge",
+            "image": "/Simple suspension bridge.JPG",
+            "specifications": "Cable suspension bridge and deck: 0.5 m span and 0.1 m sag. Nine Mass Hangers, 50 x 20 g masses. Hexagon tool and Storage Tray included. Force measurement using a load cell. Range: ±25 N in free condition. Rated capacity: at least 3 kg. Rated output: 2.0 mV/V. Output tolerance: ±0.2 mV/V. Zero return (30 min): ±0.05% of applied load. Total error: ±0.03% of rated output. Temp range compensated: -10°C to +40°C. IP66 rated."
+          },
+          {
+            "name": "Plastic Bending of Portal Frame",
+            "image": "/images/image19.jpg",
+            "specifications": "Vertical and horizontal S-type load cells, max capacity at least 600 N. Electronic load cells load the specimen frame by wires and adjustable pulleys, ensuring the frame is pulled in the correct direction. Works with a data acquisition system (free to download)."
+          } 
       ]
     }
   ]  
