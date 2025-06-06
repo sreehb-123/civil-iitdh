@@ -14,6 +14,8 @@ import Cea from './pages/Cea';
 import AcadPrograms from './pages/AcadPrograms';
 import NotFound from './pages/NotFound';
 
+import Test from './Test.js';
+
 import './App.css';
 
 function App() {
@@ -33,6 +35,9 @@ function App() {
           <Route path='/donate' element={<Donate />} />
           <Route path='/cea' element={<Cea />} />
           <Route path='/programs' element={<AcadPrograms />} />
+
+          {/* <Route path='/test' element={<Test />} /> */}
+
           <Route path='*' element={<NotFound />} />
         </Routes>
       </div>

@@ -48,11 +48,6 @@ const Footer = () => {
         </div>
 
         <hr className="footer-divider" />
-
-        {/* Designed & Developed by */}
-        <div className="text-center">
-          <p>Designed & Developed by <span className="developer-name">Sai Sreeharsha Bolloju</span></p>
-        </div>
       </div>
     </footer>
   );

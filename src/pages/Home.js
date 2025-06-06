@@ -31,13 +31,16 @@ const Home = () => {
         <Carousel />
       </div>
 
-      <section id="about" className="about-section">
-        <div className="container my-5">
-          {about.content && (
-            <BlocksRenderer content={about.content} />
-          )}
+      <section id="about" className="py-10 bg-gray-100">
+        <div className="w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl xl:max-w-6xl mx-auto px-3">
+          <div className="bg-white shadow-xl rounded-2xl border border-gray-200 p-4 sm:p-8">
+            <div className="prose prose-slate max-w-none prose-sm sm:prose-base">
+              {about.content && <BlocksRenderer content={about.content} />}
+            </div>
+          </div>
         </div>
       </section>
+
     </div>
   );
 };
