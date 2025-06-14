@@ -10,7 +10,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
-      <ScrollToTop smooth style={{backgroundColor: "#faa519"}} color='white'/>
+      {/* <ScrollToTop smooth style={{backgroundColor: "#faa519"}} color='white'/> */}
     </BrowserRouter>
   </React.StrictMode>
 );

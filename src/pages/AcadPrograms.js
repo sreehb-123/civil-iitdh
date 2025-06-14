@@ -36,7 +36,7 @@ const AcadPrograms = () => {
         <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
         Academic Programs
         </h1>
-        <div className="flex flex-col gap-8 w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto">
+        <div className="flex flex-col gap-8 w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl xl:max-w-6xl mx-auto">
           {content.programs ? (
             <div className="bg-white shadow-2xl rounded-xl p-6 sm:p-8 border border-gray-200 prose prose-slate max-w-none prose-sm sm:prose-base">
               <BlocksRenderer content={content.programs} />
