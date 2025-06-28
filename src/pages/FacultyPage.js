@@ -47,30 +47,9 @@ const FacultyPage = () => {
     },[id]);
     
     const researchInterests = facultyData.researchInterests;
-    //const professionalActivities = facultyData.professionalActivities;
     const teaching = facultyData.teaching;
     const projects = facultyData.projects;
-    // const awards = facultyData.awards;
-    // const addlRole = facultyData.addlRole;
-
-    //console.log(facultyData.publicationsArray);
-
-    // const handleSave = async (fieldType,editedData) => {
-    //     try {
-    //         console.log(editedData);
-
-    //         const response = await axios.put("http://localhost:5000/api/update", {
-    //             id,
-    //             field: fieldType,
-    //             editedData: editedData,
-    //         });
-    //         console.log("message:" , response.data.message);
-    //         console.log(editedData);
-    //     } catch (error) {
-    //         console.error("Error saving data:", error);
-    //     }
-    // };
-
+    
     return (
         <div className="d-flex">
             <button className='sidebar-toggle' onClick={toggleSidebar}>
@@ -139,22 +118,14 @@ const FacultyPage = () => {
                                 className="mb-3"
                                 style={{ width: '200px', height: '200px' }}
                             />
-                            {/* <h2>{facultyData.name}</h2>
-                            <h4>{facultyData.role}</h4> */}
                             <div>
                             </div>
                         </div>
                         <div className="col-md-8">
                             <div className='prof-container'>
-                                {/* <h1>{facultyData.name}</h1> */}
                                 <div className='prof-basic'>
                                     <h2 className='name-header'>{facultyData.name}</h2>
                                     <h4>{facultyData.role}</h4>
-                                    {/* <ul>
-                                        {addlRole?.map((resp,index)=>(
-                                            <li key={index}>{resp}</li>
-                                        ))}
-                                    </ul> */}
                                     <p>
                                         <strong>Address: </strong>
                                         {facultyData.address?.length > 0 ? (
@@ -178,10 +149,6 @@ const FacultyPage = () => {
                                         <p>No research interests listed.</p>
                                     )}
                                 </div>
-
-
-                                {/* <Logout /> */}
-                                {/* <p>His work aims to bridge the gap between theoretical advancements and real-world applications in various domains.</p> */}
                             </div>
                         </div>
                     </div>
@@ -227,126 +194,6 @@ const FacultyPage = () => {
                     </div>
                 </section>
 
-                {/* <section id="teaching">
-                    <div className="my-5">
-                        <h2 className="text-center pb-4">Teaching</h2>
-                        {isEditable && <button className="btn btn-primary mb-3" onClick={() => handleAdd("teaching")}>Add</button>}
-                        {teaching?.length > 0 ? (
-                            <ul>
-                                {teaching.map((teach, index) => (
-                                    <li key={index}>
-                                        {teach}
-                                        {isEditable && (
-                                            <button
-                                                className="btn btn-link text-primary"
-                                                onClick={() => handleEdit("teaching", index)}
-                                            >
-                                                Edit
-                                            </button>
-                                        )}
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : (
-                            <p className="text-center">No teaching data available</p>
-                        )}
-                    </div>
-                </section>
-
-                <section id="projects">
-                    <div className="my-5">
-                        <h2 className="text-center pb-4">Projects</h2>
-                        {isEditable && <button className="btn btn-primary mb-3" onClick={() => handleAdd("projects")}>Add</button>}
-                        {projects?.length > 0 ? (
-                            projects.map((project, index) => (
-                                <div key={index}>
-                                    <h3>
-                                        {project.projectType}
-                                        {isEditable && (
-                                            <button
-                                                className="btn btn-link text-primary"
-                                                onClick={() => handleEdit("projects", index)}
-                                            >
-                                                Edit
-                                            </button>
-                                        )}
-                                    </h3>
-                                    <ul>
-                                        {project.listOfProjects?.map((projectItem, item) => (
-                                            <li key={item}>
-                                                {projectItem}
-                                                {isEditable && (
-                                                    <button
-                                                        className="btn btn-link text-primary"
-                                                        onClick={() => handleEdit("projects", index, item)}
-                                                    >
-                                                        Edit
-                                                    </button>
-                                                )}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))
-                        ) : (
-                            <p className="text-center">No projects data available</p>
-                        )}
-                    </div>
-                </section>
-
-                <section id="awards">
-                    <div className="my-5">
-                        <h2 className="text-center pb-4">Awards & Honors</h2>
-                        {isEditable && <button className="btn btn-primary mb-3" onClick={() => handleAdd("awards")}>Add</button>}
-                        {awards?.length > 0 ? (
-                            <ul>
-                                {awards.map((award, index) => (
-                                    <li key={index}>
-                                        {award}
-                                        {isEditable && (
-                                            <button
-                                                className="btn btn-link text-primary"
-                                                onClick={() => handleEdit("awards", index)}
-                                            >
-                                                Edit
-                                            </button>
-                                        )}
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : (
-                            <p className="text-center">No awards & honors data available</p>
-                        )}
-                    </div>
-                </section> */}
-
-                {/*<section id='prof-activities'>
-                    <div className='my-5'>
-                        <h2 className='text-center pb-4'>Professional Activities</h2>
-                        {professionalActivities?.map((activity,index) => (
-                            <div key={index}>
-                                <h4>{activity.headings}</h4>
-                                <ul>
-                                    {activity.activities?.map((act,actIndex) => (
-                                        <li key={actIndex}>{act}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                </section>*/}
-
-                {/* <section id='teaching'>
-                    <div className='my-5'>
-                        <h2 className='text-center pb-4'>Teaching</h2>
-                        <ul>
-                            {teaching?.map((teach,index) => (
-                                <li key={index}>{teach}</li>
-                            ))}
-                        </ul>
-                    </div>
-                </section> */}
-                
                 <section id='teaching'>
                     <div className='my-5'>
                         <h2 className='text-center pb-4 main-headers'>TEACHING</h2>
@@ -361,27 +208,10 @@ const FacultyPage = () => {
                     </div>
                 </section>
 
-                {/* <section id='projects'>
-                    <div className='my-5'>
-                        <h2 className='text-center pb-4'>Projects</h2>
-                        {projects?.map((project,index) => (
-                            <div key={index}>
-                                <h3>{project.projectType}</h3>
-                                <ul>
-                                    {project.listOfProjects?.map((projectItem,item) => (
-                                        <li key={item}>{projectItem}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                </section> */}
-
                 <section id="awards">
                     <Awards awards={facultyData.awards} isEditable={isEditable}/>
                 </section>
 
-                {/* <ScrollToTop smooth/> */}
             </div>
         </div>
     );

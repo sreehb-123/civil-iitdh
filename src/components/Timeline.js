@@ -15,8 +15,8 @@ const Timeline = ({data}) => {
                     key={index} 
                     className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
                     <div className='timeline-marker'></div>
-                    <div className='timeline-content'>
-                        <h3 className='timeline-title timeline-headers'>{item.role}</h3>
+                    <div className='timeline-content rounded-2xl shadow-xl'>
+                        <h3 className='timeline-title timeline-headers'>{item.degreeOrRole}</h3>
                         <span className='timeline-date'>{item.duration}</span>
                         <p className='title-description'>{item.description}</p>
                     </div>

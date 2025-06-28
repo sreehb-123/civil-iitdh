@@ -14,7 +14,9 @@ import Cea from './pages/Cea';
 import AcadPrograms from './pages/AcadPrograms';
 import NotFound from './pages/NotFound';
 
-import Test from './Test.js';
+import FacultyCards from './pages/FacultyCards';
+import FacultyProfile from './components/FacultyProfile';
+import AltFacultyPage from './pages/AltFacultyPage';
 
 import './App.css';
 
@@ -36,7 +38,8 @@ function App() {
           <Route path='/cea' element={<Cea />} />
           <Route path='/programs' element={<AcadPrograms />} />
 
-          {/* <Route path='/test' element={<Test />} /> */}
+          <Route path='/test' element={<AltFacultyPage />} />
+          <Route path='/check' element={<FacultyCards />} />
 
           <Route path='*' element={<NotFound />} />
         </Routes>
