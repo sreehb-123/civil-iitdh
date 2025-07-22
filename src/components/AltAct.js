@@ -11,7 +11,7 @@ const AltAct = () => {
       try {
         // Replace with your actual Strapi endpoint!
         const res = await axios.get(
-          "http://localhost:1337/api/faculties/xtbcl55dj7wi98zr1ey42vl2?populate[professionalActivities][populate][0]=activities"
+          `${process.env.REACT_APP_API_URL}/faculties/xtbcl55dj7wi98zr1ey42vl2?populate[professionalActivities][populate][0]=activities`
         );
         // Adjust this line according to your Strapi data structure
         // Example assumes: response.data.data = [{ heading, publications: [...] }, ...]

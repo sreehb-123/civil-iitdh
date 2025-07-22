@@ -8,7 +8,7 @@ const Cea = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:1337/api/cea?populate=*")
+      .get(`${process.env.REACT_APP_STRAPI_URL}/cea?populate=*`)
       .then((res) => {
         setContent(res.data.data); // If your API changes, adjust accordingly
         setLoading(false);

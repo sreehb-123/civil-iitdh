@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:1337/api/about?populate=*")
+      .get(`${process.env.REACT_APP_API_URL}/about?populate=*`)
       .then((res) => {
         setAbout(res.data.data); // NO ".attributes" here!
         setLoading(false);

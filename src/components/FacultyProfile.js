@@ -13,7 +13,7 @@ export default function FacultyProfile() {
 
   useEffect(() => {
     if (!documentId) return;
-    const API_URL = `http://localhost:1337/api/faculties/${documentId}?populate=*`;
+    const API_URL = `${process.env.REACT_APP_API_URL}/faculties/${documentId}?populate=*`;
     axios
       .get(API_URL)
       .then((res) => {

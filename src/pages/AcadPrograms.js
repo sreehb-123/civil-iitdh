@@ -8,7 +8,7 @@ const AcadPrograms = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:1337/api/program?populate=*")
+      .get(`${process.env.REACT_APP_API_URL}/program?populate=*`)
       .then((res) => {
         setContent(res.data.data); // If your API changes, adjust accordingly
         setLoading(false);

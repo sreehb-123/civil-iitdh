@@ -13,7 +13,7 @@ const FacultyPage = () => {
     useEffect(() => {
         const fetchFacultyData = async () => {
             try {
-                const response = await axios.get("http://localhost:1337/api/faculties/xtbcl55dj7wi98zr1ey42vl2?populate=*");
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/faculties/xtbcl55dj7wi98zr1ey42vl2?populate=*`);
                 setFacultyData(response.data.data);
             } catch (err) {
                 console.error('Error fetching faculty data ', err);
