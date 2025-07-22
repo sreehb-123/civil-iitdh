@@ -10,7 +10,7 @@ const AltTeam = () => {
         const fetchTeam = async () => {
             try {
                 const res = await axios.get(
-                    `${process.env.REACT_APP_API_URL}/faculties/xtbcl55dj7wi98zr1ey42vl2?populate[researchTeam][populate][0]=education`
+                    `${process.env.REACT_APP_STRAPI_URL}/faculties/xtbcl55dj7wi98zr1ey42vl2?populate[researchTeam][populate][0]=education`
                 );
                 setData(res.data?.data?.researchTeam || []);
             } catch (err) {

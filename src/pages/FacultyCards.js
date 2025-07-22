@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const API_URL =
-  `${process.env.REACT_APP_API_URL}/faculties?sort=name&fields[0]=name&fields[1]=role&fields[2]=imageUrl`;
+  `${process.env.REACT_APP_STRAPI_URL}/faculties?sort=name&fields[0]=name&fields[1]=role&fields[2]=imageUrl`;
 
 export default function FacultyCards() {
   const [faculties, setFaculties] = useState([]);
