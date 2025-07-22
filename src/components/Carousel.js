@@ -19,7 +19,7 @@ const Carousel = () => {
     };
 
     const slides = [
-        { img: "/carousel_images/DSC_3732.JPG", text: "Innovating Infrastructure, Building a Sustainable Tomorrow" },
+        { img: "/carousel_images/IMG-20250614-WA0008.jpg"},
         { img: "/carousel_images/IMG-20250419-WA0016.jpg", text: "Intra-Departmental Sports Event 2024-25" },
         { img: "/carousel_images/Screenshot 2025-04-21 110927.png", text: "Prof. Amarnath Hegde was nominated for the Prof. Satish Dhawan Young Engineers State Award in Engineering Sciences for 2023, instituted by the Government of Karnataka" },
         { img: "/carousel_images/WhatsApp Image 2025-04-19 at 11.39.01 AM.jpeg", text: "Our students Mr. Shubham Raj, Mr. Vivek Kumar, and Mr. Tanishq Singh have been awarded the prestigious Hyundai Hope Scholarship by Hyundai Motor India Foundation in collaboration with BharatCares for their innovative project Empowering Sustainable Mobility: Electrical Pavement for Smarter Cities."  },

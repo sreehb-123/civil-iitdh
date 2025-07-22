@@ -27,7 +27,7 @@ function App() {
       <div className="content-wrapper">
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/faculties' element={<Faculties />} />
+          <Route path='/faculties' element={<FacultyCards />} />
           <Route path='/facultyPage/:id' element={<FacultyPage />} />
           <Route path='/login' element={<Login />} />
           <Route path='/teaching-labs' element={<TeachingLabs />} />
@@ -39,7 +39,7 @@ function App() {
           <Route path='/programs' element={<AcadPrograms />} />
 
           <Route path='/test' element={<AltFacultyPage />} />
-          <Route path='/check' element={<FacultyCards />} />
+          {/* <Route path='/check' element={<FacultyCards />} /> */}
 
           <Route path='*' element={<NotFound />} />
         </Routes>

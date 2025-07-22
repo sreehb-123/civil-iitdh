@@ -2,15 +2,10 @@ import Timeline from '../components/Timeline';
 import AltTeam from '../components/AltTeam';
 import AltPub from '../components/AltPub';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { getAuth } from 'firebase/auth';
 import AltAct from '../components/AltAct';
-import Teaching from '../components/Teaching';
-import Projects from '../components/Projects';
-import PublicationsArray from '../components/PublicationsArray';
-import Awards from '../components/Awards';
 import AltTeach from '../components/AltTeach';
+import Sidebar from '../components/Sidebar';
 
 const FacultyPage = () => {
     const [facultyData, setFacultyData] = useState({});
@@ -34,9 +29,10 @@ const FacultyPage = () => {
 
 
     return (
+        <>
+        <Sidebar />
         <div className="min-h-screen bg-gray-50 flex flex-col items-center py-6">
-            {/* Profile Section */}
-            <section className="w-full max-w-5xl mx-auto mb-10">
+            <section id="profile" className="w-full max-w-5xl mx-auto mb-10">
                 <div className="rounded-2xl shadow-lg flex flex-col md:flex-row items-center p-8 md:p-12 gap-8">
                     <img
                         src={facultyData.imageUrl}
@@ -67,29 +63,10 @@ const FacultyPage = () => {
                                 <p className="italic text-gray-400">No research interests listed.</p>
                             )}
                         </div>
-                        {/* Social Links */}
-                        {/* <div className="flex space-x-4 mt-4">
-                            {facultyData.linkedin && (
-                                <a href={facultyData.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-800">
-                                    <i className="fab fa-linkedin fa-2x"></i>
-                                </a>
-                            )}
-                            {facultyData.googleScholar && (
-                                <a href={facultyData.googleScholar} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:text-green-800">
-                                    <i className="fab fa-google fa-2x"></i>
-                                </a>
-                            )}
-                            {facultyData.researchGate && (
-                                <a href={facultyData.researchGate} target="_blank" rel="noopener noreferrer" className="text-teal-700 hover:text-teal-800">
-                                    <i className="fab fa-researchgate fa-2x"></i>
-                                </a>
-                            )}
-                        </div> */}
                     </div>
                 </div>
             </section>
 
-            {/* Sections */}
             <section id='edu-exp' className="w-full max-w-5xl mx-auto my-10">
                 <div className="bg-white rounded-xl shadow-2xl p-6">
                     <h2 className='text-2xl font-bold mb-6 text-indigo-700'>Education & Experience</h2>
@@ -111,8 +88,6 @@ const FacultyPage = () => {
                 </div>
             </section>
 
-            
-
             <section id="prof-activities" className="w-full max-w-5xl mx-auto my-10">
                 <div className="bg-white rounded-2xl shadow-2xl p-6">
                     <h2 className="text-2xl font-bold mb-6 text-indigo-700">Professional Activities</h2>
@@ -133,30 +108,8 @@ const FacultyPage = () => {
                     <AltTeach data={awards}/>
                 </div>
             </section>
-
-             {/*
-
-            <section id='teaching' className="w-full max-w-5xl mx-auto my-10">
-                <div className="bg-white rounded-xl shadow p-6">
-                    <h2 className='text-2xl font-bold mb-6 text-indigo-700'>Teaching</h2>
-                    <Teaching teaching={teaching} isEditable={isEditable}/>
-                </div>
-            </section>
-
-            <section id='projects' className="w-full max-w-5xl mx-auto my-10">
-                <div className="bg-white rounded-xl shadow p-6">
-                    <h2 className="text-2xl font-bold mb-6 text-indigo-700">Projects</h2>
-                    <Projects projects={projects} isEditable={isEditable}/>
-                </div>
-            </section>
-
-            <section id="awards" className="w-full max-w-5xl mx-auto my-10">
-                <div className="bg-white rounded-xl shadow p-6">
-                    <h2 className="text-2xl font-bold mb-6 text-indigo-700">Awards</h2>
-                    <Awards awards={facultyData.awards} isEditable={isEditable}/>
-                </div>
-            </section> */}
         </div>
+        </>
     );
 };
 
