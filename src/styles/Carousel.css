@@ -2,7 +2,6 @@
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
-    padding: 30px 0;
     overflow: visible;
   }
   
@@ -34,3 +33,18 @@
   border-radius: 6px;
   white-space: normal; /* allows wrapping */
 }
+
+/* .slick-prev, .slick-next {
+  z-index: 2;
+  line-height: 1;
+  opacity: 1;
+  color: black; 
+}
+
+.slick-prev {
+  left: 5px !important;
+}
+
+.slick-next {
+  right: 5px !important;
+} */

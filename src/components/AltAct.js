@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const AltAct = () => {
   const [groups, setGroups] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const {id} = useParams();
+
   useEffect(() => {
     const fetchActivities = async () => {
       try {
         // Replace with your actual Strapi endpoint!
         const res = await axios.get(
-          `${process.env.REACT_APP_STRAPI_URL}/faculties/xtbcl55dj7wi98zr1ey42vl2?populate[professionalActivities][populate][0]=activities`
+          `${process.env.REACT_APP_STRAPI_URL}/faculties/${id}?populate[professionalActivities][populate][0]=activities`
         );
         // Adjust this line according to your Strapi data structure
         // Example assumes: response.data.data = [{ heading, publications: [...] }, ...]

@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import { useParams } from "react-router-dom";
+
 const AltTeam = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const {id} = useParams();
+
     useEffect(() => {
         const fetchTeam = async () => {
             try {
                 const res = await axios.get(
-                    `${process.env.REACT_APP_STRAPI_URL}/faculties/xtbcl55dj7wi98zr1ey42vl2?populate[researchTeam][populate][0]=education`
+                    `${process.env.REACT_APP_STRAPI_URL}/faculties/${id}?populate[researchTeam][populate][0]=education`
                 );
                 setData(res.data?.data?.researchTeam || []);
             } catch (err) {

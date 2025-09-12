@@ -1,32 +1,54 @@
+import { useState,useEffect } from "react";
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import axios from "axios";
+
 const Sponsors = () => {
-    return(
-        <div className='container sidepage-container'>
-            <p>
-                <strong>Civil Engineering Association (CEA)</strong> at IIT Dharwad invites industry partners and organizations to collaborate with us to empower the next generation of civil engineers. As part of our mission to bridge the gap between academic learning and real-world practice, CEA organizes a series of <strong>Industry Expert Talks</strong> every academic year. These talks feature leading professionals from the civil engineering sector sharing their experiences, insights, and knowledge on emerging trends and best practices.
-            </p>
+    const [sponsorData,setSponsorData] = useState([]);
+    const [loading,setLoading] = useState(true);
 
-            <p>
-                To make this initiative impactful and far-reaching, we welcome sponsorship support from visionary organizations that value innovation, education, and community engagement. Sponsorship opportunities are available in multiple tiers: <strong>Gold, Silver, Bronze</strong>, and <strong>Supporting Sponsorship</strong>, offering a range of benefits and visibility across our student and professional networks.
-            </p>
+    useEffect(() => {
+        axios
+            .get(`${process.env.REACT_APP_STRAPI_URL}/sponsor?populate=*`)
+            .then((res) => {
+            setSponsorData(res.data.data); // If your API changes, adjust accordingly
+            setLoading(false);
+            })
+            .catch((err) => {
+            console.error("Failed to fetch about data", err);
+            setLoading(false);
+            });
+        }, []);
 
-            <h4>Key Benefits for Sponsors:</h4>
-            <ul>
-                <li>Prominent display of brand logo on event materials such as posters, banners, and brochures</li>
-                <li>Brand mention and logo showcase in pre-session videos</li>
-                <li>Dedicated exposure on CEA's social media platforms and communication channels</li>
-                <li>Exclusive invitations to attend and participate in CEA-organized events</li>
-                <li>Opportunity to connect with students, researchers, and faculty for talent scouting and knowledge exchange</li>
-            </ul>
+    if (loading) return (
+    <div className="flex justify-center items-center min-h-[40vh]">
+        <span className="text-lg font-medium text-gray-500">Loading...</span>
+    </div>
+    );
+    if (!sponsorData) return (
+    <div className="flex justify-center items-center min-h-[40vh]">
+        <span className="text-lg text-red-500">Failed to load data.</span>
+    </div>
+    );
 
-            <p>
-                Your support will not only enhance the educational experience for our students but also contribute to meaningful industry-academia collaboration. We look forward to partnering with you to foster innovation, skill development, and future-ready engineering talent.
-            </p>
-
-            <p>
-                For sponsorship inquiries, please contact us at: <a href="mailto:cea@iitdh.ac.in">cea@iitdh.ac.in</a> and/or <a href="mailto:head.civil@iitdh.ac.in">head.civil@iitdh.ac.in</a>
-            </p>
+    // If "programs" is an array, map over it. If it's a single rich text, just render.
+    return (
+        <div className="sidepage-container min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-8 pt-6 pb-10">
+            <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
+            Sponsors
+            </h1>
+            <div className="flex flex-col gap-8 w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl xl:max-w-6xl mx-auto">
+                {sponsorData.sponsorContent ? (
+                <div className="bg-white shadow-2xl rounded-xl p-6 sm:p-8 border border-gray-200 prose prose-slate max-w-none prose-sm sm:prose-base">
+                    <BlocksRenderer content={sponsorData.sponsorContent} />
+                </div>
+                ) : (
+                <div className="bg-white rounded-2xl shadow p-6 text-gray-500 text-center">
+                    No content available.
+                </div>
+                )}
+            </div>
         </div>
-    )
+    );
 };
 
 export default Sponsors;

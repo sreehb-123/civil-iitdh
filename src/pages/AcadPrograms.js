@@ -1,6 +1,7 @@
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Circulum from '../components/Circulum';
 
 const AcadPrograms = () => {
   const [content, setContent] = useState(null);
@@ -37,15 +38,11 @@ const AcadPrograms = () => {
         Academic Programs
         </h1>
         <div className="flex flex-col gap-8 w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl xl:max-w-6xl mx-auto">
-          {content.programs ? (
-            <div className="bg-white shadow-2xl rounded-xl p-6 sm:p-8 border border-gray-200 prose prose-slate max-w-none prose-sm sm:prose-base">
-              <BlocksRenderer content={content.programs} />
-            </div>
-          ) : (
-            <div className="bg-white rounded-2xl shadow p-6 text-gray-500 text-center">
-              No program content available.
-            </div>
-          )}
+          <div className="bg-white shadow-2xl rounded-xl p-6 sm:p-8 border border-gray-200 prose prose-slate max-w-none prose-sm sm:prose-base">
+            <BlocksRenderer content={content.UgProgram} />
+            <Circulum />
+            <BlocksRenderer content={content.PgProgram} />
+          </div>
         </div>
     </div>
   );

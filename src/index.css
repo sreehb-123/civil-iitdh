@@ -4,9 +4,25 @@
 
 body {
   background-color: #F8F9FA !important; /* Light purple */
+  padding-top: 35px;
 }
 
 html{
   scroll-behavior: smooth;
   scroll-padding-top: 61px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }

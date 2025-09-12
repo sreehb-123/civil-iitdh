@@ -6,14 +6,16 @@ import axios from 'axios';
 import AltAct from '../components/AltAct';
 import AltTeach from '../components/AltTeach';
 import Sidebar from '../components/Sidebar';
+import { useParams } from 'react-router-dom';
 
 const FacultyPage = () => {
     const [facultyData, setFacultyData] = useState({});
+    const {id} = useParams();
 
     useEffect(() => {
         const fetchFacultyData = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_STRAPI_URL}/faculties/xtbcl55dj7wi98zr1ey42vl2?populate=*`);
+                const response = await axios.get(`${process.env.REACT_APP_STRAPI_URL}/faculties/${id}?populate=*`);
                 setFacultyData(response.data.data);
             } catch (err) {
                 console.error('Error fetching faculty data ', err);

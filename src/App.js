@@ -18,6 +18,9 @@ import FacultyCards from './pages/FacultyCards';
 import FacultyProfile from './components/FacultyProfile';
 import AltFacultyPage from './pages/AltFacultyPage';
 
+import Circulum from './components/Circulum';
+import AltCirculum from './components/AltCirculum';
+
 import './App.css';
 
 function App() {
@@ -28,7 +31,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/faculties' element={<FacultyCards />} />
-          <Route path='/facultyPage/:id' element={<FacultyPage />} />
+          <Route path='/facultyPage/:id' element={<AltFacultyPage />} />
           <Route path='/login' element={<Login />} />
           <Route path='/teaching-labs' element={<TeachingLabs />} />
           <Route path='/research-labs' element={<ResearchLabs />} />
@@ -38,9 +41,12 @@ function App() {
           <Route path='/cea' element={<Cea />} />
           <Route path='/programs' element={<AcadPrograms />} />
 
-          <Route path='/test' element={<AltFacultyPage />} />
+          {/* <Route path='/test' element={<AltFacultyPage />} /> */}
           {/* <Route path='/check' element={<FacultyCards />} /> */}
-
+          
+          <Route path='/circulum' element={<Circulum />} />
+          <Route path='/alt-circulum' element={<AltCirculum />} />
+          
           <Route path='*' element={<NotFound />} />
         </Routes>
       </div>

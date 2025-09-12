@@ -36,7 +36,7 @@ function MainSkeleton() {
 function EquipmentImage({ src, alt }) {
   const [loaded, setLoaded] = useState(false);
   return (
-    <div className="relative w-36 h-36">
+    <div className="relative w-48 h-48">
       {!loaded && (
         <div className="absolute inset-0 bg-gray-200 rounded-lg animate-pulse" />
       )}
@@ -45,7 +45,7 @@ function EquipmentImage({ src, alt }) {
         alt={alt}
         width={150}
         height={150}
-        className={`w-36 h-36 object-cover rounded-lg transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+        className={`w-48 h-48 object-cover rounded-lg transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
         loading="lazy"
         onLoad={() => setLoaded(true)}
         onError={e => { e.target.src = "https://via.placeholder.com/150?text=No+Image"; setLoaded(true); }}
@@ -58,6 +58,7 @@ const ResearchLabs = () => {
   const [activeLab, setActiveLab] = useState(null);
   const [labsData, setLabsData] = useState([]);
   const [sidebarOpenTeach, setSidebarOpenTeach] = useState(false);
+  const [expandedItem, setExpandedItem] = useState(null);
 
   useEffect(() => {
     fetch("/research-labs.json")
@@ -145,19 +146,45 @@ const ResearchLabs = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-[#89288f] drop-shadow-sm">
                 {labsData.find(lab => lab.id === activeLab)?.name}
               </h2>
-              <div className="flex flex-col gap-6 w-full max-w-3xl">
-                {labsData.find(lab => lab.id === activeLab)?.equipment.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex flex-col sm:flex-row items-center sm:items-start gap-5 p-5 bg-[#f8f9fa] rounded-xl shadow-lg transition-all hover:scale-[1.01]"
-                  >
-                    <EquipmentImage src={item.image} alt={item.name} />
-                    <div className="flex-1 mt-3 sm:mt-0">
-                      <h3 className="text-[#89288f] text-lg md:text-xl font-semibold mb-2">{item.name}</h3>
-                      <p className="text-[#272635] text-sm md:text-base">{item.specifications}</p>
+              <div className="flex flex-col gap-4 w-full max-w-3xl">
+                {labsData.find(lab => lab.id === activeLab)?.equipment.map((item, idx) => {
+                  const isOpen = expandedItem === idx;
+                  return (
+                    <div
+                      key={idx}
+                      className="p-4 bg-[#f8f9fa] rounded-xl shadow-lg cursor-pointer transition-all"
+                    >
+                      {/* Header (always visible) */}
+                      <div
+                        className="flex justify-between items-center"
+                        onClick={() => setExpandedItem(isOpen ? null : idx)}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" || e.key === " ") {
+                            setExpandedItem(isOpen ? null : idx);
+                          }
+                        }}
+                        tabIndex={0}
+                      >
+                        <h3 className="text-[#89288f] text-lg md:text-xl font-semibold">
+                          {item.name}
+                        </h3>
+                        <span className="text-[#272635] font-bold text-xl">
+                          {isOpen ? "−" : "+"}
+                        </span>
+                      </div>
+
+                      {/* Content (only visible when expanded) */}
+                      {isOpen && (
+                        <div className="mt-4 flex flex-col sm:flex-row items-center sm:items-start gap-5">
+                          <EquipmentImage src={item.image} alt={item.name} />
+                          <p className="text-[#272635] text-sm md:text-base">
+                            {item.specifications}
+                          </p>
+                        </div>
+                      )}
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </>
           ) : (

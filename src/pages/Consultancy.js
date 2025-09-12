@@ -1,32 +1,54 @@
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 const Consultancy = () => {
-    return(
-        <div className='container sidepage-container'>
-            <p>
-                The Department of Civil and Infrastructure Engineering at IIT Dharwad actively engages in
-                consultancy projects to provide technological expertise and innovative solutions to both
-                public and private sector organizations. Through these consultancy services, the department
-                contributes meaningfully to planning, designing, and implementing infrastructure projects
-                that support sustainable development and societal well-being.
-            </p>
+  const [content, setContent] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-            <h4>Our consultancy activities span a wide range of domains, including:</h4>
-            <ul>
-                <li>Structural Engineering</li>
-                <li>Energy-Efficient/Net-Zero Buildings</li>
-                <li>Infrastructure sustainability assessments</li>
-                <li>Transportation Engineering</li>
-                <li>Geotechnical Engineering</li>
-                <li>Water Resources Engineering</li>
-                <li>Construction management & Material testing</li>
-            </ul>
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_STRAPI_URL}/consultancy?populate=*`)
+      .then((res) => {
+        setContent(res.data.data); // If your API changes, adjust accordingly
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch about data", err);
+        setLoading(false);
+      });
+  }, []);
 
-            <p>
-                Kindly write to the following email address for queries regarding consultancy services.<br />
-                Email: <a href="mailto:head.civil@iitdh.ac.in">head.civil@iitdh.ac.in</a>
-            </p>
+  if (loading) return (
+    <div className="flex justify-center items-center min-h-[40vh]">
+      <span className="text-lg font-medium text-gray-500">Loading...</span>
+    </div>
+  );
+  if (!content) return (
+    <div className="flex justify-center items-center min-h-[40vh]">
+      <span className="text-lg text-red-500">Failed to load data.</span>
+    </div>
+  );
 
-        </div> 
-    )
+  // If "programs" is an array, map over it. If it's a single rich text, just render.
+  return (
+    <div className="sidepage-container min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-8 pt-6 pb-10">
+        <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
+        Consultancy
+        </h1>
+        <div className="flex flex-col gap-8 w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl xl:max-w-6xl mx-auto">
+          {content.consultancyContent ? (
+            <div className="bg-white shadow-2xl rounded-xl p-6 sm:p-8 border border-gray-200 prose prose-slate max-w-none prose-sm sm:prose-base">
+              <BlocksRenderer content={content.consultancyContent} />
+            </div>
+          ) : (
+            <div className="bg-white rounded-2xl shadow p-6 text-gray-500 text-center">
+              No content available.
+            </div>
+          )}
+        </div>
+    </div>
+  );
 };
 
 export default Consultancy;

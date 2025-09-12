@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 // ITEMS_PER_PAGE is number of heading groups to show per page
 const ITEMS_PER_PAGE = 2;
@@ -11,12 +12,14 @@ const AltPub = () => {
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
 
+  const {id} = useParams();
+
   useEffect(() => {
     const fetchPublications = async () => {
       try {
         // Replace with your actual Strapi endpoint!
         const res = await axios.get(
-          `${process.env.REACT_APP_STRAPI_URL}/faculties/xtbcl55dj7wi98zr1ey42vl2?populate[publications][populate][0]=list`
+          `${process.env.REACT_APP_STRAPI_URL}/faculties/${id}?populate[publications][populate][0]=list`
         );
         // Adjust this line according to your Strapi data structure
         // Example assumes: response.data.data = [{ heading, publications: [...] }, ...]
