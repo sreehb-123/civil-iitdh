@@ -189,7 +189,7 @@ const ResearchLabs = () => {
             </>
           ) : (
             <div className="flex justify-center items-center w-full h-80">
-              <video autoPlay muted loop className="rounded-lg shadow-xl max-w-full max-h-80 object-cover">
+              <video autoPlay muted loop className="rounded-lg shadow-xl max-w-full max-h-100 object-cover">
                 <source src={videoFile} type="video/mp4" />
                 Your browser doesn't support the video tag
               </video>

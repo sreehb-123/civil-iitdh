@@ -1,6 +1,6 @@
 .slider-container {
-    width: 90%;
-    max-width: 900px;
+    width: 95%;
+    max-width: none;
     margin: 0 auto;
     overflow: visible;
   }
@@ -48,3 +48,25 @@
 .slick-next {
   right: 5px !important;
 } */
+
+/* Carousel.css */
+.custom-arrow {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  cursor: pointer;
+  position: absolute; /* make sure they don't get messed up */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-arrow svg {
+  color: white;
+  font-size: 30px;
+}
+

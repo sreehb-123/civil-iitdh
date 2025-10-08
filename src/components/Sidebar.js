@@ -56,7 +56,7 @@ const Sidebar = () => {
           className="flex-1 flex flex-col items-center py-2"
           title={label}
         >
-          <Icon className="w-5 h-5 text-indigo-700" />
+          <Icon className="w-5 h-5 text-[#faa519]" />
           {/* You can comment out the next line for icons-only */}
           <span className="text-[10px] mt-1">{label.replace(/ &.*|Honours/, '')}</span>
         </button>
@@ -71,7 +71,7 @@ const Sidebar = () => {
       onMouseEnter={() => setExpanded(true)}
       onMouseLeave={() => setExpanded(false)}
       className={`
-        fixed left-0 top-0 h-full z-30 flex flex-col items-center
+        fixed left-0 top-0 h-5 z-30 flex flex-col items-center
         transition-all duration-300 bg-white shadow-lg
         ${expanded ? "w-48" : "w-16"}
       `}
@@ -89,7 +89,7 @@ const Sidebar = () => {
             `}
             title={label}
           >
-            <Icon className="w-6 h-6 text-indigo-700" />
+            <Icon className="w-6 h-6 text-[#faa519]" />
             {expanded && (
               <span className="text-md font-medium text-gray-700">
                 {label}

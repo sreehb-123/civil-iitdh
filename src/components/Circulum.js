@@ -69,6 +69,17 @@ export default function Circulum() {
         ],
     };
 
+    const semesterLinks = {
+        1: "https://www.iitdh.ac.in/sites/default/files/2024-12/BTECH2024-Civil%20and%20Infrastructure%20Engineering-Semester%20I_v2.pdf",
+        2: "https://www.iitdh.ac.in/sites/default/files/2024-09/BTECH2024-Civil%20and%20Infrastructure%20Engineering-Semester%20II.pdf",
+        3: "https://www.iitdh.ac.in/sites/default/files/2024-09/BTECH2024-Civil%20and%20Infrastructure%20Engineering-Semester%20III.pdf",
+        4: "https://www.iitdh.ac.in/sites/default/files/2024-09/BTECH2024-Civil%20and%20Infrastructure%20Engineering-Semester%20IV.pdf",
+        5: "https://www.iitdh.ac.in/sites/default/files/2024-09/BTECH2024-Civil%20and%20Infrastructure%20Engineering-Semester%20V.pdf",
+        6: "https://iitdh.ac.in/sites/default/files/2025-01/Semester%20VI.pdf",
+        7: "https://www.iitdh.ac.in/sites/default/files/2024-12/BTECH2024-Civil%20and%20Infrastructure%20Engineering-Semester%20VII_v2.pdf",
+        8: "https://www.iitdh.ac.in/sites/default/files/2024-09/BTECH2024-Civil%20and%20Infrastructure%20Engineering-Semester%20VIII.pdf",
+    };
+
 
     const [semester, setSemester] = useState(1);
 
@@ -79,7 +90,7 @@ export default function Circulum() {
             </h1>
 
             {/* Tabs for semesters */}
-            <div className="grid grid-cols-4 gap-2 sm:flex sm:flex-wrap sm:justify-center mb-6">
+            <div className="grid grid-cols-4 gap-2 sm:flex sm:flex-wrap sm:justify-center mb-3">
                 {Object.keys(curriculum).map((sem) => (
                 <button
                     key={sem}
@@ -94,6 +105,17 @@ export default function Circulum() {
                     Sem {sem}
                 </button>
                 ))}
+            </div>
+
+            <div className="flex justify-end">
+                <a
+                    href={semesterLinks[semester]}
+                    target="_blank"
+                    rel="noopener nonreferrer"
+                    className="text-[#faa519]"
+                >
+                    Click here for course contents
+                </a>
             </div>
 
             {/* Table of courses */}

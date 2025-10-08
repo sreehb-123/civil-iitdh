@@ -5,25 +5,18 @@ import "slick-carousel/slick/slick-theme.css";
 import '../styles/Carousel.css' // Create this CSS file or use inline styles
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 
-const NextArrow = ({ className, style, onClick }) => (
-    <div
-        className={className}
-        style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center", right: "15px", zIndex: 2 }}
-        onClick={onClick}
-    >
-        <FaChevronRight style={{ color: "white", fontSize: "30px" }} />
+const NextArrow = ({ onClick }) => (
+    <div className="custom-arrow" style={{ right: "15px" }} onClick={onClick}>
+        <FaChevronRight />
     </div>
 );
 
-const PrevArrow = ({ className, style, onClick }) => (
-    <div
-        className={className}
-        style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center", left: "15px", zIndex: 2 }}
-        onClick={onClick}
-    >
-        <FaChevronLeft style={{ color: "white", fontSize: "30px" }} />
+const PrevArrow = ({ onClick }) => (
+    <div className="custom-arrow" style={{ left: "15px" }} onClick={onClick}>
+        <FaChevronLeft />
     </div>
 );
+
 
 const Carousel = ({slides}) => {
     const settings = {

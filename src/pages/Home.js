@@ -47,8 +47,8 @@ const Home = () => {
   if (!about) return <div>Failed to load data.</div>;
 
   return (
-    <div>
-      <div className="flex flex-col md:flex-row gap-6 items-start">
+    <div className="min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-8 pb-10">
+      <div className="flex flex-col md:flex-row items-start">
         <div className="md:w-1/4">
           <Alerts data={alertsData} heading="Alerts & Updates"/>
         </div>
