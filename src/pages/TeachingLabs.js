@@ -176,8 +176,10 @@ const TeachingLabs = () => {
                       {/* Content (only visible when expanded) */}
                       {isOpen && (
                         <div className="mt-4 flex flex-col sm:flex-row items-center sm:items-start gap-5">
-                          <EquipmentImage src={item.image} alt={item.name} />
-                          <p className="text-[#272635] text-sm md:text-base">
+                          <div className="flex-shrink-0 min-w-[180px] sm:min-w-[200px] flex justify-center">
+                            <EquipmentImage src={item.image} alt={item.name} />
+                          </div>
+                          <p className="text-[#272635] text-sm md:text-base leading-relaxed text-justify w-full">
                             {item.specifications}
                           </p>
                         </div>

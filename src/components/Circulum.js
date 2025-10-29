@@ -107,17 +107,6 @@ export default function Circulum() {
                 ))}
             </div>
 
-            <div className="flex justify-end">
-                <a
-                    href={semesterLinks[semester]}
-                    target="_blank"
-                    rel="noopener nonreferrer"
-                    className="text-[#faa519]"
-                >
-                    Click here for course contents
-                </a>
-            </div>
-
             {/* Table of courses */}
             <div className="bg-white rounded-xl shadow-2xl p-4 overflow-x-auto">
                 <table className="min-w-full text-left text-sm">
@@ -141,6 +130,17 @@ export default function Circulum() {
                     ))}
                 </tbody>
                 </table>
+            </div>
+
+            <div className="flex justify-end mt-8">
+                <a
+                    href={semesterLinks[semester]}
+                    target="_blank"
+                    rel="noopener nonreferrer"
+                    className="text-[#faa519]"
+                >
+                    Click here for course contents
+                </a>
             </div>
         </div>
     );

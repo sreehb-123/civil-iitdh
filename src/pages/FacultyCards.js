@@ -33,18 +33,30 @@ export default function FacultyCards() {
           return (
             <Link to={`/facultyPage/${fac.documentId}`} key={fac.id} className="no-underline">
               <div
-                key={fac.id}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 flex flex-col items-center group"
+                className="
+                  bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 
+                  p-6 flex flex-col items-center group
+                  h-full min-h-[280px]    /* ensures consistent card height */
+                "
               >
                 <img
                   src={fac.imageUrl}
                   alt={fac.name}
-                  className="w-32 h-32 border-2 border-gray-200 rounded-full object-cover group-hover:scale-105 transition-transform"
-                  onError={e => { e.target.src = "https://via.placeholder.com/128?text=No+Image"; }}
+                  className="
+                    w-32 h-32 border-2 border-gray-200 rounded-full object-cover 
+                    group-hover:scale-105 transition-transform
+                  "
+                  onError={(e) => {
+                    e.target.src = 'https://via.placeholder.com/128?text=No+Image';
+                  }}
                 />
-                <div className="mt-4 text-center">
-                  <div className="text-xl font-semibold text-gray-800">{fac.name}</div>
-                  <div className="text-[#faa519] text-sm font-medium mt-1">{fac.role}</div>
+                <div className="mt-4 text-center flex flex-col justify-between flex-grow">
+                  <div className="text-xl font-semibold text-gray-800 leading-tight line-clamp-2">
+                    {fac.name}
+                  </div>
+                  <div className="text-[#faa519] text-sm font-medium mt-1 line-clamp-2">
+                    {fac.role}
+                  </div>
                 </div>
               </div>
             </Link>

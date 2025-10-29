@@ -61,10 +61,22 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between px-4">
         {/* Brand */}
-        <Link to="/" className="flex items-center gap-2">
-          <span className="text-[#faa519] font-bold text-2xl transition-colors duration-300">
+        <Link to="/" className="flex items-center gap-3 group">
+          {/* <span className="text-[#faa519] text-3xl sm:text-4xl transition-transform duration-300 group-hover:scale-110">
             <i className="fas fa-home"></i>
-          </span>
+          </span> */}
+          <div className="flex flex-col leading-tight -space-y-1">
+            <span className="text-[#faa519] group-hover:text-[#faa519] text-lg sm:text-xl font-semibold transition-colors duration-300">
+              Department of
+            </span>
+            <span 
+              className="text-[#faa519] group-hover:text-white text-xl sm:text-2xl font-bold transition-colors duration-300"
+              style={{
+                textShadow: "1px 1px 4px rgba(0,0,0,0.4)",
+              }} >
+              Civil & Infrastructure Engineering
+            </span>
+          </div>
         </Link>
         {/* Toggler */}
         <button
@@ -75,51 +87,52 @@ export default function Navbar() {
           <Menu className="w-6 h-6" />
         </button>
         {/* Desktop Nav */}
+        {/* Desktop Nav */}
         <ul className="hidden lg:flex items-center gap-1">
           {navLinks.map((item, idx) =>
             item.dropdown ? (
-              <li key={item.label} className="relative group">
+              <li key={item.label} className="relative">
                 <button
                   className={`
                     nav-link px-3 py-1.5 rounded-lg font-bold text-[1.2rem] transition-all duration-300
-                    text-[#E8E9F3] hover:text-[#faa519] hover:scale-110
+                    text-[#E8E9F3] hover:text-[#faa519] hover:scale-110 flex items-center gap-1
                   `}
-                  onMouseEnter={() => setOpenDropdown(idx)}
-                  onMouseLeave={() => setOpenDropdown(null)}
+                  onClick={() => setOpenDropdown(openDropdown === idx ? null : idx)}
                 >
                   {item.label}
-                  <ChevronDown className="w-4 h-4 inline ml-1" />
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-300 ${
+                      openDropdown === idx ? "rotate-180 text-[#faa519]" : ""
+                    }`}
+                  />
                 </button>
+
                 {/* Dropdown */}
-                <ul
-                  className={`
-                    absolute left-0 top-full mt-2 bg-white rounded-md shadow-lg min-w-[180px] border-0
-                    opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition
-                    pointer-events-none z-40
-                    ${openDropdown === idx ? "opacity-100 pointer-events-auto" : ""}
-                  `}
-                  onMouseEnter={() => setOpenDropdown(idx)}
-                  onMouseLeave={() => setOpenDropdown(null)}
-                >
-                  {item.dropdown.map((drop) => (
-                    <li key={drop.to}>
-                      <Link
-                        to={drop.to}
-                        className={`
-                          dropdown-item block px-5 py-2 text-[#272635] text-[1.1rem] font-normal relative whitespace-nowrap
-                          transition-all duration-200 hover:scale-110
-                          before:absolute before:bottom-0 before:left-2 before:h-0.5 before:bg-[#faa519] before:w-0 before:transition-all before:duration-300
-                          hover:before:w-[80%]
-                        `}
-                        style={{
-                          transition: "transform 0.2s ease-in-out"
-                        }}
-                      >
-                        {drop.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                {openDropdown === idx && (
+                  <ul
+                    className={`
+                      absolute left-0 top-full mt-2 bg-white rounded-md shadow-lg min-w-[180px] border-0 z-40
+                    `}
+                  >
+                    {item.dropdown.map((drop) => (
+                      <li key={drop.to}>
+                        <Link
+                          to={drop.to}
+                          className={`
+                            block px-5 py-2 text-[#272635] text-[1.1rem] font-normal relative whitespace-nowrap
+                            transition-all duration-200 hover:scale-110
+                            before:absolute before:bottom-0 before:left-2 before:h-0.5 before:bg-[#faa519] before:w-0 before:transition-all before:duration-300
+                            hover:before:w-[80%]
+                          `}
+                          style={{ transition: "transform 0.2s ease-in-out" }}
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          {drop.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ) : (
               <li key={item.to}>
@@ -129,6 +142,7 @@ export default function Navbar() {
                     nav-link px-3 py-1.5 rounded-lg font-bold text-[1.2rem] transition-all duration-300
                     text-[#E8E9F3] hover:text-[#faa519] hover:scale-110
                   `}
+                  onClick={() => setOpenDropdown(null)}
                 >
                   {item.label}
                 </Link>
@@ -136,6 +150,7 @@ export default function Navbar() {
             )
           )}
         </ul>
+
       </div>
       {/* Mobile Nav */}
         <div
