@@ -8,7 +8,7 @@ import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import Alerts from "../components/Alerts";
 
 const slides = [
-        { img: "/carousel_images/IMG-20250614-WA0008.jpg"},
+        { img: "/carousel_images/landing.jpeg"},
         { img: "/carousel_images/1.png", text: "Intra-Departmental Sports Event 2024-25" },
         { img: "/carousel_images/2.png", text: "Prof. Amarnath Hegde was nominated for the Prof. Satish Dhawan Young Engineers State Award in Engineering Sciences for 2023, instituted by the Government of Karnataka" },
         { img: "/carousel_images/3.png", text: "Our students Mr. Shubham Raj, Mr. Vivek Kumar, and Mr. Tanishq Singh have been awarded the prestigious Hyundai Hope Scholarship by Hyundai Motor India Foundation in collaboration with BharatCares for their innovative project Empowering Sustainable Mobility: Electrical Pavement for Smarter Cities."  },

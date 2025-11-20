@@ -46,7 +46,7 @@ const FacultyPage = () => {
                         <h2 className="text-3xl font-bold text-gray-800 mb-1">{facultyData.name}</h2>
                         <h4 className="text-xl text-gray-600 font-semibold mb-3">{facultyData.role}</h4>
                         <p className="mb-2">
-                            <span className="font-semibold">Address: </span>
+                            <span className="font-semibold">Office Address: </span>
                             <span>{facultyData.address?.length > 0 ? facultyData.address : "Address not available"}</span>
                         </p>
                         <p className="mb-2">

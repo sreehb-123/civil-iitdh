@@ -33,15 +33,15 @@ const AcadPrograms = () => {
 
   // If "programs" is an array, map over it. If it's a single rich text, just render.
   return (
-    <div className="sidepage-container min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-8 pt-6 pb-10">
+    <div className="sidepage-container min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-8 pt-8 pb-10">
         <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
-        Academic Programs
+        Undergraduate Program
         </h1>
         <div className="flex flex-col gap-8 w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl xl:max-w-6xl mx-auto">
           <div className="bg-white shadow-2xl rounded-xl p-6 sm:p-8 border border-gray-200 prose prose-slate max-w-none prose-sm sm:prose-base">
             <BlocksRenderer content={content.UgProgram} />
             <Circulum />
-            <BlocksRenderer content={content.PgProgram} />
+            {/* <BlocksRenderer content={content.PgProgram} /> */}
           </div>
         </div>
     </div>

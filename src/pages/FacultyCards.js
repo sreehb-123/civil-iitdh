@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const API_URL =
-  `${process.env.REACT_APP_STRAPI_URL}/faculties?sort=name&fields[0]=name&fields[1]=role&fields[2]=imageUrl`;
+  `${process.env.REACT_APP_STRAPI_URL}/faculties?sort=name&fields[0]=name&fields[1]=role&fields[2]=imageUrl&fields[3]=personalUrl`;
 
 export default function FacultyCards() {
   const [faculties, setFaculties] = useState([]);
@@ -29,9 +29,21 @@ export default function FacultyCards() {
       <h2 className="text-3xl font-bold mb-8 text-gray-800">Our Faculty</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full max-w-6xl px-4">
         {faculties.map((fac) => {
-        //   const { name, role, imageUrl } = fac.attributes;
+          const {name, role, imageUrl, personalUrl, documentId} = fac;
+
+          const Wrapper = ({children}) => 
+            personalUrl ? (
+              <a href={personalUrl} target="_blank" rel="noopener noreferrer" className="no-underline">
+                {children}
+              </a>
+            ) : (
+              <Link to={`/facultyPage/${documentId}`} className="no-underline">
+                {children}
+              </Link>
+            );
+
           return (
-            <Link to={`/facultyPage/${fac.documentId}`} key={fac.id} className="no-underline">
+            <Wrapper key={documentId}>
               <div
                 className="
                   bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 
@@ -40,8 +52,8 @@ export default function FacultyCards() {
                 "
               >
                 <img
-                  src={fac.imageUrl}
-                  alt={fac.name}
+                  src={imageUrl}
+                  alt={name}
                   className="
                     w-32 h-32 border-2 border-gray-200 rounded-full object-cover 
                     group-hover:scale-105 transition-transform
@@ -52,15 +64,15 @@ export default function FacultyCards() {
                 />
                 <div className="mt-4 text-center flex flex-col justify-between flex-grow">
                   <div className="text-xl font-semibold text-gray-800 leading-tight line-clamp-2">
-                    {fac.name}
+                    {name}
                   </div>
                   <div className="text-[#faa519] text-sm font-medium mt-1 line-clamp-2">
-                    {fac.role}
+                    {role}
                   </div>
                 </div>
               </div>
-            </Link>
-          );
+            </Wrapper>
+          )
         })}
       </div>
     </div>

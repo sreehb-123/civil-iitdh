@@ -11,8 +11,9 @@ import Consultancy from './pages/Consultancy';
 import Sponsors from './pages/Sponsors';
 import Donate from './pages/Donate';
 import Cea from './pages/Cea';
-import AcadPrograms from './pages/AcadPrograms';
+import AcadPrograms from './pages/Ug';
 import NotFound from './pages/NotFound';
+import Phd from './pages/Phd';
 
 import FacultyCards from './pages/FacultyCards';
 import FacultyProfile from './components/FacultyProfile';
@@ -39,7 +40,8 @@ function App() {
           <Route path='/sponsors' element={<Sponsors />} />
           <Route path='/donate' element={<Donate />} />
           <Route path='/cea' element={<Cea />} />
-          <Route path='/programs' element={<AcadPrograms />} />
+          <Route path='/ug' element={<AcadPrograms />} />
+          <Route path='/phd' element={<Phd />} />
 
           {/* <Route path='/test' element={<AltFacultyPage />} /> */}
           {/* <Route path='/check' element={<FacultyCards />} /> */}

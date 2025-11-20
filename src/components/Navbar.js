@@ -26,9 +26,8 @@ const navLinks = [
   {
     label: "Academics",
     dropdown: [
-      { label: "Programs", to: "/programs" },
-      { label: "DUGC", to: "/dugc" },
-      { label: "DPGC", to: "/dpgc" }
+      { label: "Undergraduate", to: "/ug" },
+      { label: "Ph.D.", to: "/phd" },
     ]
   },
   {
@@ -60,6 +59,13 @@ export default function Navbar() {
       `}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
+        <a href="https://iitdh.ac.in" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/insti_fav_white.jpg"
+            alt="IIT Dharwad Logo"
+            className="h-12 w-auto mr-3"
+          />
+        </a>
         {/* Brand */}
         <Link to="/" className="flex items-center gap-3 group">
           {/* <span className="text-[#faa519] text-3xl sm:text-4xl transition-transform duration-300 group-hover:scale-110">
@@ -86,7 +92,6 @@ export default function Navbar() {
         >
           <Menu className="w-6 h-6" />
         </button>
-        {/* Desktop Nav */}
         {/* Desktop Nav */}
         <ul className="hidden lg:flex items-center gap-1">
           {navLinks.map((item, idx) =>

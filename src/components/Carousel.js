@@ -40,7 +40,7 @@ const Carousel = ({slides}) => {
                 {slides.map((slide, index) => (
                     <div key={index} className="carousel-slide">
                         <img src={slide.img} alt={`slide-${index}`} className="carousel-image" />
-                        {slide.text && <p className="carousel-text">{slide.text}</p>}
+                        {/* {slide.text && <p className="carousel-text">{slide.text}</p>} */}
                     </div>
                 ))}
             </Slider>
