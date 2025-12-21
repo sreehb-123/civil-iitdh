@@ -9,7 +9,7 @@ const StaffInfo = () => {
     const fetchStaff = async () => {
       try {
         const response = await fetch(
-          "http://localhost:1337/api/staffs?populate=photo"
+          `${process.env.REACT_APP_API_URL}/staffs?populate=photo`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch Staff data");

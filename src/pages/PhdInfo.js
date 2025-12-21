@@ -9,7 +9,7 @@ const PhdInfo = () => {
     const fetchPhds = async () => {
       try {
         const response = await fetch(
-          "http://localhost:1337/api/phds?populate=photo"
+          `${process.env.REACT_APP_API_URL}/phds?populate=photo`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch PhD data");
