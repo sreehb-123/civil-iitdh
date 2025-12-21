@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "name": "Concrete Technology Lab",
+      "name": "Concrete Materials Lab",
       "image": "https://civil.iith.ac.in/wp-content/uploads/2016/05/1341404667_146579545_1-Pictures-of-Building-construction-materials-150x150.jpg",
       "description": "Placeholder description for Construction Materials Lab.",
       "equipment": [
@@ -117,7 +117,7 @@
             },
             {
               "name": "Combined Flat and Elongated Particles Device",
-              "image": "",
+              
               "specifications": "Includes a pivoting arm of 330mm and a base plate of 152x406mm as per ASTM D 4791."
             },
             {
@@ -127,7 +127,7 @@
             },
             {
               "name": "British Pendulum",
-              "image": "",
+              
               "specifications": "ASTM E303, BS EN 1097-8 compliant, includes carrying case, tools, and calibration certificate."
             }         
       ]
@@ -145,32 +145,26 @@
         },
         {
           "name": "pH Liquid Probe",
-          "image": "https://placehold.co/150",
           "specifications": "Range: 0 - 14 pH | Accuracy: ±0.02 pH | Electrode Type: Non-Refillable Gel"
         },
         {
           "name": "Conductivity Probe",
-          "image": "https://placehold.co/150",
           "specifications": "Range: Conductivity: 0.0 µS/cm - 200 mS/cm | TDS: 0.00 mg/L - 50.0 g/L as NaCl"
         },
         {
           "name": "LDO Probe",
-          "image": "https://placehold.co/150",
           "specifications": "Range: 0.05 - 20.0 mg/L, 1 - 200% saturation | Accuracy: ±0.1 mg/L from 0 to 8 mg/L, ±0.2 mg/L for greater than 8 mg/L | Resolution: 0.01/0.1 (5 digits max.)"
         },
         {
           "name": "Turbidity Meter",
-          "image": "https://placehold.co/150",
           "specifications": "Range: 0 to 1000 NTU | Light Source: Tungsten filament lamp | Measurement Method: Ratio turbidimetric determination using a primary Nephelometric light scatter signal (90°) to the transmitted light scatter signal | Accuracy: ±2% of reading plus stray light from 0 to 1000 NTU"
         },
         {
           "name": "Power Module",
-          "image": "https://placehold.co/150",
           "specifications": "To support Turbidity Meter | Power Requirement: 110-230 Vac, 50/60 Hz"
         },
         {
           "name": "Jar Test Apparatus",
-          "image": "https://placehold.co/150",
           "specifications": "Model: 1926 for 6 stirrers | Material: MS Body with SS Spindle | Speed: 10-300 RPM"
         },
         {
@@ -180,7 +174,6 @@
         },
         {
           "name": "BOD Holder",
-          "image": "https://placehold.co/150",
           "specifications": "BOD Bottle Storage Rack | Material: Epoxy-coated Steel | Capacity: 300 m"
         },
         {
@@ -190,7 +183,6 @@
         },
         {
           "name": "Peristatic Pump",
-          "image": "/images/Peristaltic pump.JPG",
           "specifications": "Flow rate: 0.5-500 ml/min, Speed range: 1-350 RPM, Display: LED screen"
         },
         {
@@ -200,7 +192,6 @@
         },
         {
           "name": "Hot Air Furnace",
-          "image": "https://placehold.co/150",
           "specifications": "Temperature Range: Max: 800⁰C, Heating Duration: Min. 6 hours, Heating: Uniform heating on all surfaces and maintain the temperature for minimum 6 hours, Cavity: 250mm x 250mm x 550mm"
         },
         {
@@ -258,12 +249,12 @@
         },
         {
           "name": "Plastic Limit Apparatus",
-          "image": "",
+          
           "specifications": "Glass plate 200mm x 150mm x 3mm thick, brass rod 3mm dia., 100mm long."
         },
         {
           "name": "Shrinkage Limit Apparatus",
-          "image": "",
+          
           "specifications": "Includes stainless steel shrinkage dish, glass cup, glass plates, and a graduated glass cylinder."
         },
         {
@@ -283,7 +274,7 @@
         },
         {
           "name": "Light Weight/Standard Proctor Compaction Equipment",
-          "image": "",
+          
           "specifications": "Capacity: 944 cc, Internal Diameter: 10.2 cm, Height: 11.6 cm, Rammer weight: 2.5 kg."
         },
         {
@@ -318,17 +309,17 @@
         },
         {
           "name": "Wheel Barrow",
-          "image": "",
+          
           "specifications": "Size: 760 x 450 x 300 mm. Capacity: 200 kg. Equipped with two pneumatic wheels."
         },
         {
           "name": "Electronic Weighing Balance (1kg)",
-          "image": "",
+          
           "specifications": "Capacity: 1kg, Accuracy: 100 mg, LED display, power supply: 230V AC."
         },
         {
           "name": "Electronic Weighing Balance (35kg)",
-          "image": "",
+          
           "specifications": "Capacity: 35kg, Accuracy: 5g, LED display, power supply: 230V AC."
         },
         {
@@ -371,7 +362,7 @@
         },
         {
           "name": "Compression Testing Machine (50 kN)",
-          "image": "",
+          
           "specifications": "Capacity 50 kN, variable strain rate 0.50 - 51 mm/min, vertical clearance 600mm, horizontal clearance 450mm. High-strength aluminum load rings."
         },
         {

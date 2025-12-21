@@ -115,13 +115,13 @@ const ResearchLabs = () => {
                     }
                   }}
                 >
-                  <img
+                  {/* <img
                     src={lab.image}
                     alt={`${lab.name} icon`}
                     className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-md"
                     loading="lazy"
                     onError={e => { e.target.src = "https://via.placeholder.com/40?text=No+Image"; }}
-                  />
+                  /> */}
                   <span className="text-base">{lab.name}</span>
                 </li>
               ))}
@@ -190,7 +190,7 @@ const ResearchLabs = () => {
               </div>
             </>
           ) : (
-            <div className="flex justify-center items-center w-full h-100">
+            <div className="flex justify-center items-center w-full h-full">
               <video autoPlay muted loop className="rounded-lg shadow-xl max-w-full max-h-100 object-cover">
                 <source src={videoFile} type="video/mp4" />
                 Your browser doesn't support the video tag

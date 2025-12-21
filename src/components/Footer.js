@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#89288f] text-white pt-6 pb-2">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-4">
+        <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-4">
           {/* Department & College Name */}
           <div className="md:w-1/3 w-full footer-section text-left">
             <h5 className="text-[#faa519] font-bold mb-2 text-xl">Civil & Infrastructure Engineering</h5>
@@ -43,18 +43,18 @@ const Footer = () => {
             <div className="flex flex-col gap-2 w-full">
               <div className="flex items-center gap-2">
                 <FaEnvelope className="text-[#faa519] text-lg" />
-                <a href="mailto:department@example.com" className="text-white hover:text-[#faa519] transition">department@example.com</a>
+                <a href="mailto:department@example.com" className="text-white hover:text-[#faa519] transition">civiloffice@iitdh.ac.in</a>
               </div>
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <FaPhone className="text-[#faa519] text-lg" />
                 <span>+91 98765 43210</span>
-              </div>
-              <button
+              </div> */}
+              {/* <button
                 className="mt-2 px-7 py-2 rounded-lg bg-[#faa519] text-[#e8e9f3] font-semibold text-base hover:bg-[#d28a15] transition self-start"
                 onClick={handleLoginNav}
               >
                 LOGIN
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

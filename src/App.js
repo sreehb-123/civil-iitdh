@@ -14,6 +14,8 @@ import Cea from './pages/Cea';
 import AcadPrograms from './pages/Ug';
 import NotFound from './pages/NotFound';
 import Phd from './pages/Phd';
+import PhdInfo from './pages/PhdInfo';
+import StaffInfo from './pages/StaffInfo';
 
 import FacultyCards from './pages/FacultyCards';
 import FacultyProfile from './components/FacultyProfile';
@@ -42,6 +44,8 @@ function App() {
           <Route path='/cea' element={<Cea />} />
           <Route path='/ug' element={<AcadPrograms />} />
           <Route path='/phd' element={<Phd />} />
+          <Route path='/phd-info' element={<PhdInfo />} />
+          <Route path='/staff' element={<StaffInfo />} />
 
           {/* <Route path='/test' element={<AltFacultyPage />} /> */}
           {/* <Route path='/check' element={<FacultyCards />} /> */}

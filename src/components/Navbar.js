@@ -19,7 +19,7 @@ const navLinks = [
     label: "People",
     dropdown: [
       { label: "Faculty", to: "/faculties" },
-      { label: "PhD Students", to: "/phd" },
+      { label: "PhD Students", to: "/phd-info" },
       { label: "Staff", to: "/staff" }
     ]
   },
