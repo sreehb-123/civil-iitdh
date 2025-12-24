@@ -1,7 +1,7 @@
 //import { useEffect, useState } from 'react';
-import '../styles/Timeline.css';
+import '../../styles/Timeline.css';
 //import axios from 'axios';
-import '../styles/Headers.css';
+import '../../styles/Headers.css';
 
 const Timeline = ({data}) => {
     if (!data || data.length === 0) {

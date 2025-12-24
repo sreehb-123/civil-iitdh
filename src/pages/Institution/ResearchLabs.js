@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowCircleRight } from "react-icons/fa";
-import videoFile from '../assets/videoBackground.mp4';
+import videoFile from '../../assets/videoBackground.mp4';
 
 // Skeleton components as above...
 function SidebarSkeleton() {

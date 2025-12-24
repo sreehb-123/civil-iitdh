@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../styles/Carousel.css' // Create this CSS file or use inline styles
+import '../../styles/Carousel.css' // Create this CSS file or use inline styles
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 
 const NextArrow = ({ onClick }) => (

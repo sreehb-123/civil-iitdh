@@ -1,8 +1,7 @@
-import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import StrapiEmailRenderer from "../components/StrapiEmailRenderer";
+import StrapiEmailRenderer from "../../components/Renderers/StrapiContentRenderer";
 
 const Consultancy = () => {
   const [content, setContent] = useState(null);

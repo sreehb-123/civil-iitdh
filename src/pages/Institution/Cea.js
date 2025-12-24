@@ -1,8 +1,8 @@
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Carousel from "../components/Carousel";
-import Alerts from "../components/Alerts";
+import Carousel from "../../components/Common/Carousel";
+import Alerts from "../../components/Common/Alerts";
 
 const slides = [
         { img: "/carousel_images/cea.JPG"},

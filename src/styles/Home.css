@@ -19,9 +19,9 @@
 
 /* About Section Styling */
 .about-section {
-    padding: 60px 20px; /* Add padding to separate from the top */
-    background-color: #E8E9F3; /* Optional: give a solid background color to the section */
-    z-index: 1; /* Ensure it stays above the video */
+    padding: 60px 20px;
+    background-color: #E8E9F3;
+    z-index: 1;
     position: relative;
 }
 
@@ -34,6 +34,7 @@
     font-size: 1rem;
 }
 
+/* Carousel Container - Fully Responsive */
 .carousel-home-container{
     margin-top: 35px;
 }

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/Home.css";
-import Carousel from "../components/Carousel";
+import Carousel from "../components/Common/Carousel";
 
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
-import Alerts from "../components/Alerts";
+import Alerts from "../components/Common/Alerts";
 
 const slides = [
         { img: "/carousel_images/landing.jpeg"},
@@ -47,23 +47,28 @@ const Home = () => {
   if (!about) return <div>Failed to load data.</div>;
 
   return (
-    <div className="min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-8 pb-10">
-      <div className="flex flex-col md:flex-row items-start">
-        <div className="md:w-1/4">
-          <Alerts data={alertsData} heading="Alerts & Updates"/>
+    <div className="min-h-screen bg-gray-100 pb-10">
+      <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8 px-3 sm:px-4 md:px-6 lg:px-8 pt-4">
+        {/* Alerts Sidebar - Responsive */}
+        <div className="w-full lg:w-1/4 order-2 lg:order-1">
+          <div className="sticky top-4">
+            <Alerts data={alertsData} heading="Alerts & Updates"/>
+          </div>
         </div>
 
-        <div className="md:w-3/4">
+        {/* Carousel Section - Responsive */}
+        <div className="w-full lg:w-3/4 order-1 lg:order-2">
           <div className="carousel-home-container">
             <Carousel slides={slides} />
           </div>
         </div>
       </div>
 
+      {/* About Section - Fully Responsive */}
       <section id="about" className="py-10 bg-gray-100">
         <div className="w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl xl:max-w-7xl mx-auto px-3">
           <div className="bg-white shadow-xl rounded-2xl border border-gray-200 p-4 sm:p-8">
-            <div className="prose prose-slate max-w-none prose-sm sm:prose-base text-justify">
+            <div className="prose prose-slate max-w-none prose-sm text-justify">
               {about.content && <BlocksRenderer content={about.content} />}
             </div>
           </div>

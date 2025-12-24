@@ -1,28 +1,24 @@
 import Home from './pages/Home';
-import Faculties from './pages/Faculties';
+import FacultyCards from './pages/Faculty/FacultyCards';
 import { Routes, Route } from 'react-router-dom';
-import FacultyPage from './pages/FacultyPage';
-import Navbar from './components/Navbar';
-import Login from './pages/Login';
-import TeachingLabs from './pages/TeachingLabs';
-import Footer from './components/Footer';
-import ResearchLabs from './pages/ResearchLabs';
-import Consultancy from './pages/Consultancy';
-import Sponsors from './pages/Sponsors';
-import Donate from './pages/Donate';
-import Cea from './pages/Cea';
-import AcadPrograms from './pages/Ug';
+import FacultyDetail from './pages/Faculty/FacultyDetail';
+import Navbar from './components/Layout/Navbar';
+import Login from './pages/Auth/Login';
+import TeachingLabs from './pages/Institution/TeachingLabs';
+import Footer from './components/Layout/Footer';
+import ResearchLabs from './pages/Institution/ResearchLabs';
+import Consultancy from './pages/Institution/Consultancy';
+import Sponsors from './pages/Institution/Sponsors';
+import Donate from './pages/Institution/Donate';
+import Cea from './pages/Institution/Cea';
+import AcadPrograms from './pages/Academic/UG';
 import NotFound from './pages/NotFound';
-import Phd from './pages/Phd';
-import PhdInfo from './pages/PhdInfo';
-import StaffInfo from './pages/StaffInfo';
+import Phd from './pages/Academic/Phd';
+import PhdInfo from './pages/Academic/PhdInfo';
+import StaffInfo from './pages/Staff/StaffInfo';
 
-import FacultyCards from './pages/FacultyCards';
-import FacultyProfile from './components/FacultyProfile';
-import AltFacultyPage from './pages/AltFacultyPage';
-
-import Circulum from './components/Circulum';
-import AltCirculum from './components/AltCirculum';
+import Circulum from './components/Common/Curriculum';
+import AltCirculum from './components/Common/AlternativeCurriculum';
 
 import './App.css';
 
@@ -34,7 +30,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/faculties' element={<FacultyCards />} />
-          <Route path='/facultyPage/:id' element={<AltFacultyPage />} />
+          <Route path='/facultyPage/:id' element={<FacultyDetail />} />
           <Route path='/login' element={<Login />} />
           <Route path='/teaching-labs' element={<TeachingLabs />} />
           <Route path='/research-labs' element={<ResearchLabs />} />
@@ -47,7 +43,7 @@ function App() {
           <Route path='/phd-info' element={<PhdInfo />} />
           <Route path='/staff' element={<StaffInfo />} />
 
-          {/* <Route path='/test' element={<AltFacultyPage />} /> */}
+          {/* <Route path='/test' element={<FacultyDetail />} /> */}
           {/* <Route path='/check' element={<FacultyCards />} /> */}
           
           <Route path='/circulum' element={<Circulum />} />

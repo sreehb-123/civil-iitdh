@@ -1,11 +1,11 @@
-import Timeline from '../components/Timeline';
-import AltTeam from '../components/AltTeam';
-import AltPub from '../components/AltPub';
+import Timeline from '../../components/Common/Timeline';
+import FacultyTeam from '../../components/Faculty/FacultyTeam';
+import Publications from '../../components/Faculty/Publications';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import AltAct from '../components/AltAct';
-import AltTeach from '../components/AltTeach';
-import Sidebar from '../components/Sidebar';
+import FacultyActivities from '../../components/Faculty/FacultyActivities';
+import Teaching from '../../components/Faculty/Teaching';
+import Sidebar from '../../components/Layout/Sidebar';
 import { useParams } from 'react-router-dom';
 
 const FacultyPage = () => {
@@ -79,35 +79,35 @@ const FacultyPage = () => {
             <section id='research-team' className="w-full max-w-5xl mx-auto my-10">
                 <div className="bg-white rounded-2xl shadow-2xl p-6">
                     {/* <h2 className='text-2xl font-bold mb-6 text-indigo-700'>Research Team</h2> */}
-                    <AltTeam/>
+                    <FacultyTeam/>
                 </div>
             </section>
 
             <section id="publications" className='w-full max-w-5xl mx-auto my-10'>
                 <div className="bg-white rounded-2xl shadow-2xl p-6">
                     {/* <h2 className="text-2xl font-bold mb-6 text-indigo-700">Publications</h2> */}
-                    <AltPub />
+                    <Publications />
                 </div>
             </section>
 
             <section id="prof-activities" className="w-full max-w-5xl mx-auto my-10">
                 <div className="bg-white rounded-2xl shadow-2xl p-6">
                     {/* <h2 className="text-2xl font-bold mb-6 text-indigo-700">Professional Activities</h2> */}
-                    <AltAct />
+                    <FacultyActivities />
                 </div>
             </section>
 
             <section id="teaching" className="w-full max-w-5xl mx-auto my-10">
                 <div className="bg-white rounded-2xl shadow-2xl p-6">
                     <h2 className="text-2xl font-bold mb-6 text-black">Teaching</h2>
-                    <AltTeach data={teaching}/>
+                    <Teaching data={teaching}/>
                 </div>
             </section>
 
             <section id="awards" className="w-full max-w-5xl mx-auto my-10">
                 <div className="bg-white rounded-2xl shadow-2xl p-6">
                     <h2 className="text-2xl font-bold mb-6 text-black">Awards & Honours</h2>
-                    <AltTeach data={awards}/>
+                    <Teaching data={awards}/>
                 </div>
             </section>
         </div>

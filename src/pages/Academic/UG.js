@@ -1,7 +1,7 @@
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Circulum from '../components/Circulum';
+import Circulum from '../../components/Common/Curriculum';
 
 const AcadPrograms = () => {
   const [content, setContent] = useState(null);
