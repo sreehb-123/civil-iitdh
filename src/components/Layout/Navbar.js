@@ -55,8 +55,9 @@ export default function Navbar() {
       className={`
         fixed top-0 left-0 w-full z-40 transition-colors duration-300
         bg-[#89288f]/95 shadow 
-        py-1.5 min-h-[46px]
+        py-1 sm:py-1.5 min-h-[40px] sm:min-h-[46px]
       `}
+      id="navbar"
     >
       <div className="container mx-auto flex items-center justify-between px-4">
         <a href="https://iitdh.ac.in" target="_blank" rel="noopener noreferrer">

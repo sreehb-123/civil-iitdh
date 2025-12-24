@@ -41,7 +41,7 @@ const PhdInfo = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-100 flex justify-center items-center pt-20">
+      <div className="min-h-screen bg-gray-100 flex justify-center items-center pt-14 sm:pt-16">
         <span className="text-lg font-medium text-gray-600">Loading...</span>
       </div>
     );
@@ -49,14 +49,14 @@ const PhdInfo = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-100 flex justify-center items-center pt-20">
+      <div className="min-h-screen bg-gray-100 flex justify-center items-center pt-14 sm:pt-16">
         <span className="text-lg text-red-600">Error: {error}</span>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center pt-14 sm:pt-16 px-4 sm:px-6 lg:px-8 pb-10">
       <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">
         PhD Students
       </h1>

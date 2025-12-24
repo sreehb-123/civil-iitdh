@@ -25,7 +25,7 @@ export default function FacultyCards() {
   if (loading) return <div className="text-center py-8">Loading...</div>;
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-12">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center pt-14 sm:pt-16 pb-10">
       <h2 className="text-3xl font-bold mb-8 text-gray-800">Our Faculty</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full max-w-6xl px-4">
         {faculties.map((fac) => {

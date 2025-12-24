@@ -33,7 +33,7 @@ const FacultyPage = () => {
     return (
         <>
         <Sidebar />
-        <div className="min-h-screen bg-gray-50 flex flex-col items-center py-6">
+        <div className="min-h-screen bg-gray-50 flex flex-col items-center pt-14 sm:pt-16 pb-6">
             <section id="profile" className="w-full max-w-5xl mx-auto mb-10">
                 <div className="rounded-2xl shadow-lg flex flex-col md:flex-row items-center p-8 md:p-12 gap-8">
                     <img

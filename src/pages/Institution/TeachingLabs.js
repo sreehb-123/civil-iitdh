@@ -70,7 +70,7 @@ const TeachingLabs = () => {
   const loading = labsData.length === 0;
 
   return (
-    <div className="min-h-screen bg-[#f4f4f9] flex flex-col pt-10">
+    <div className="min-h-screen bg-[#f4f4f9] flex flex-col pt-14 sm:pt-16">
       {/* Sidebar Toggle Button (mobile only) */}
       <button
         className="fixed top-6 left-4 z-30 md:hidden bg-[#89288f] hover:bg-[#faa519] text-white p-3 text-2xl rounded-full shadow-md focus:outline-none focus:ring-4 focus:ring-[#faa519] transition"
