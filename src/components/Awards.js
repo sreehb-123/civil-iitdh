@@ -36,7 +36,7 @@ const Awards = ({ awards, isEditable }) => {
     // Handle Save
     const handleSave = async () => {
         try {
-            const response = await axios.put(`${process.env.REACT_APP_API_URL}/update`, {
+            const response = await axios.put(`${process.env.REACT_APP_STRAPI_URL}/update`, {
                 id,
                 field: "awards",
                 editedData: editedAwards,

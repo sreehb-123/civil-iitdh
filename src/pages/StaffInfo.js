@@ -9,7 +9,7 @@ const StaffInfo = () => {
     const fetchStaff = async () => {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_URL}/staffs?populate=photo`
+          `${process.env.REACT_APP_STRAPI_URL}/staffs?populate=photo`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch Staff data");
@@ -28,13 +28,15 @@ const StaffInfo = () => {
   }, []);
 
   const getImageUrl = (photoField) => {
-    if (!photoField) return null;
-    if (photoField.url) {
-      return photoField.url.startsWith("http")
-        ? photoField.url
-        : `http://localhost:1337${photoField.url}`;
+    if (!photoField || !photoField.url) return null;
+    
+    if (photoField.url.startsWith("http")) {
+      return photoField.url;
     }
-    return null;
+    
+    // Remove /api from REACT_APP_STRAPI_URL to get the /strapi base path
+    const baseUrl = process.env.REACT_APP_STRAPI_URL.replace(/\/api$/, '');
+    return `${baseUrl}${photoField.url}`;
   };
 
   if (loading) {

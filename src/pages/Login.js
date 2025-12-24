@@ -58,7 +58,7 @@ const Login = () => {
 
       const idToken = await user.getIdToken();
 
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/facultyId`, { token: idToken });
+      const response = await axios.post(`${process.env.REACT_APP_STRAPI_URL}/facultyId`, { token: idToken });
 
       if (response.data.success) {
         const { facultyId } = response.data;
