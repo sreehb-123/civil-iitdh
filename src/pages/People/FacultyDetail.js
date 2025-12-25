@@ -1,10 +1,10 @@
 import Timeline from '../../components/Common/Timeline';
-import FacultyTeam from '../../components/Faculty/FacultyTeam';
-import Publications from '../../components/Faculty/Publications';
+import FacultyTeam from '../../components/Faculty/AltTeam';
+import Publications from '../../components/Faculty/AltPub';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import FacultyActivities from '../../components/Faculty/FacultyActivities';
-import Teaching from '../../components/Faculty/Teaching';
+import Teaching from '../../components/Faculty/AltTeach';
 import Sidebar from '../../components/Layout/Sidebar';
 import { useParams } from 'react-router-dom';
 

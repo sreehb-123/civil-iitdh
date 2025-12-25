@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import RAiPDF from "./RAiPDF";
+import RAiPDF from "../../components/Faculty/RAiPDF";
 
 const API_URL =
   `${process.env.REACT_APP_STRAPI_URL}/faculties?sort=name&fields[0]=name&fields[1]=role&fields[2]=imageUrl&fields[3]=personalUrl&fields[4]=isHOD`;

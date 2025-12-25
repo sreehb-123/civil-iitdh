@@ -1,9 +1,8 @@
 import Home from './pages/Home';
-import FacultyCards from './pages/Faculty/FacultyCards';
+import FacultyCards from './pages/People/FacultyCards';
 import { Routes, Route } from 'react-router-dom';
-import FacultyDetail from './pages/Faculty/FacultyDetail';
+import FacultyDetail from './pages/People/FacultyDetail';
 import Navbar from './components/Layout/Navbar';
-import Login from './pages/Auth/Login';
 import TeachingLabs from './pages/Institution/TeachingLabs';
 import Footer from './components/Layout/Footer';
 import ResearchLabs from './pages/Institution/ResearchLabs';
@@ -14,11 +13,9 @@ import Cea from './pages/Institution/Cea';
 import AcadPrograms from './pages/Academic/UG';
 import NotFound from './pages/NotFound';
 import Phd from './pages/Academic/Phd';
-import PhdInfo from './pages/Academic/PhdInfo';
-import StaffInfo from './pages/Staff/StaffInfo';
-
+import PhdInfo from './pages/People/PhdInfo';
+import StaffInfo from './pages/People/StaffInfo';
 import Circulum from './components/Common/Curriculum';
-import AltCirculum from './components/Common/AlternativeCurriculum';
 
 import './App.css';
 
@@ -31,7 +28,6 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/faculties' element={<FacultyCards />} />
           <Route path='/facultyPage/:id' element={<FacultyDetail />} />
-          <Route path='/login' element={<Login />} />
           <Route path='/teaching-labs' element={<TeachingLabs />} />
           <Route path='/research-labs' element={<ResearchLabs />} />
           <Route path='/consultancy' element={<Consultancy />} />
@@ -42,13 +38,7 @@ function App() {
           <Route path='/phd' element={<Phd />} />
           <Route path='/phd-info' element={<PhdInfo />} />
           <Route path='/staff' element={<StaffInfo />} />
-
-          {/* <Route path='/test' element={<FacultyDetail />} /> */}
-          {/* <Route path='/check' element={<FacultyCards />} /> */}
-          
           <Route path='/circulum' element={<Circulum />} />
-          <Route path='/alt-circulum' element={<AltCirculum />} />
-          
           <Route path='*' element={<NotFound />} />
         </Routes>
       </div>
