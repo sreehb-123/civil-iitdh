@@ -54,6 +54,54 @@
     },
     {
       "id": 2,
+      "name": "Geotechnical Engineering Lab",
+      "image": "https://civil.iith.ac.in/wp-content/uploads/2016/05/civil_departmant_webpage_2014025022.jpg",
+      "description": "State-of-the-art facilities for environmental research.",
+      "equipment": [
+        {
+          "name": "Automatic Oedometer Apparatus",
+          "image": "/images/Automatic odometer apparatus.png",
+          "specifications": "Performs consolidation tests as per ASTM D2435, ASTM D3877, ASTM D4546, AASHTO T216, BS 1377:5, and EN 17892:5. Includes a 20 kN capacity load cell and 10 mm displacement transducers."
+        },
+        {
+          "name": "Automatic Direct and Residual Shear Machine",
+          "image": "/images/Automatic direct and residual shear machine .JPG",
+          "specifications": "Motorized microprocessor-based system with a 200kg capacity. Uses an S-shaped LVDT with a ±20mm stroke and repeatability of ±0.1% of rated capacity. Conforms to IS: 2720 Part XIII."
+        },
+        {
+          "name": "Swell Pressure Test Apparatus",
+          "image": "/images/R 03-Swell pressure test apparatus.JPG",
+          "specifications": "Includes a hand-operated 5000 kg capacity loading unit, 100mm dia gunmetal mould, perforated swell plate, spacer, and two porous stones. Used for determining soil swelling pressure."
+        },
+        {
+          "name": "Cyclic Simple Shear System",
+          "image": "/images/Cyclic simple shear test.png",
+          "specifications": "Performs cyclic shear tests conforming to ASTM D6528. Features a simple shear load frame with servo-controlled actuators, two 5 kN load cells, and a ±15mm displacement transducer. Sample size: 70mm (convertible to 50mm). Operating frequency: up to 10 Hz."
+        },
+        {
+          "name": "Plate Load Test Apparatus",
+          "image": "/images/Plate load test apparatus.png",
+          "specifications": "Hand-operated hydraulic jack (500 kN), hydraulic pump with 200 mm dia load gauge, high-pressure flexible metallic pipe (5m), and ball and socket steel plate arrangement. Conforms to IS: 1888."
+        },
+        {
+          "name": "In-Situ Vane Shear Apparatus",
+          "image": "/images/Insitu vane shear test apparatus.png",
+          "specifications": "Used for determining shear strength of cohesive soils in the field. Includes a torque applicator with a 200 N.m capacity and accuracy of 2.5 N.m. Vane sizes: 37.5 mm x 75 mm and 50 mm x 100 mm. Conforms to IS: 4434."
+        },
+        {
+          "name": "Geosynthetics Pull Out Test Apparatus",
+          "image": "/images/Geosynthetic pull out test.png",
+          "specifications": "Measures pull-out resistance of geosynthetics as per ASTM D6706-01. Features a 200 kN normal load, 100 kN pull-out load, static strain rate of 0.1-100 mm/min, and a pull-out box of 1000mm x 1000mm x 700mm. Includes two load cells and four displacement transducers."
+        },
+        {
+          "name": "3D Printer for Polymers",
+          
+          "specifications": "Uses fused deposition modeling (FDM) technology. Build volume: 500mm x 500mm x 500mm, dimensional tolerance: ±0.2mm, print speed: 40-120 mm/sec, and extruder temperature up to 300°C."
+        }
+      ]      
+    },
+    {
+      "id": 3,
       "name": "Transportation Engineering Lab",
       "image": "",
       "description": "State-of-the-art facilities for environmental research.",
@@ -142,54 +190,6 @@
           "name": "Drop Shape Analysis System",
           
           "specifications": "Measures contact angle (0° - 180°) with 0.1° accuracy and interfacial tensions from 0.01 - 2000 mN/m. Uses Young-Laplace model for analysis."
-        }
-      ]      
-    },
-    {
-      "id": 3,
-      "name": "Geotechnical Engineering Lab",
-      "image": "https://civil.iith.ac.in/wp-content/uploads/2016/05/civil_departmant_webpage_2014025022.jpg",
-      "description": "State-of-the-art facilities for environmental research.",
-      "equipment": [
-        {
-          "name": "Automatic Oedometer Apparatus",
-          "image": "/images/Automatic odometer apparatus.png",
-          "specifications": "Performs consolidation tests as per ASTM D2435, ASTM D3877, ASTM D4546, AASHTO T216, BS 1377:5, and EN 17892:5. Includes a 20 kN capacity load cell and 10 mm displacement transducers."
-        },
-        {
-          "name": "Automatic Direct and Residual Shear Machine",
-          "image": "/images/Automatic direct and residual shear machine .JPG",
-          "specifications": "Motorized microprocessor-based system with a 200kg capacity. Uses an S-shaped LVDT with a ±20mm stroke and repeatability of ±0.1% of rated capacity. Conforms to IS: 2720 Part XIII."
-        },
-        {
-          "name": "Swell Pressure Test Apparatus",
-          "image": "/images/R 03-Swell pressure test apparatus.JPG",
-          "specifications": "Includes a hand-operated 5000 kg capacity loading unit, 100mm dia gunmetal mould, perforated swell plate, spacer, and two porous stones. Used for determining soil swelling pressure."
-        },
-        {
-          "name": "Cyclic Simple Shear System",
-          "image": "/images/Cyclic simple shear test.png",
-          "specifications": "Performs cyclic shear tests conforming to ASTM D6528. Features a simple shear load frame with servo-controlled actuators, two 5 kN load cells, and a ±15mm displacement transducer. Sample size: 70mm (convertible to 50mm). Operating frequency: up to 10 Hz."
-        },
-        {
-          "name": "Plate Load Test Apparatus",
-          "image": "/images/Plate load test apparatus.png",
-          "specifications": "Hand-operated hydraulic jack (500 kN), hydraulic pump with 200 mm dia load gauge, high-pressure flexible metallic pipe (5m), and ball and socket steel plate arrangement. Conforms to IS: 1888."
-        },
-        {
-          "name": "In-Situ Vane Shear Apparatus",
-          "image": "/images/Insitu vane shear test apparatus.png",
-          "specifications": "Used for determining shear strength of cohesive soils in the field. Includes a torque applicator with a 200 N.m capacity and accuracy of 2.5 N.m. Vane sizes: 37.5 mm x 75 mm and 50 mm x 100 mm. Conforms to IS: 4434."
-        },
-        {
-          "name": "Geosynthetics Pull Out Test Apparatus",
-          "image": "/images/Geosynthetic pull out test.png",
-          "specifications": "Measures pull-out resistance of geosynthetics as per ASTM D6706-01. Features a 200 kN normal load, 100 kN pull-out load, static strain rate of 0.1-100 mm/min, and a pull-out box of 1000mm x 1000mm x 700mm. Includes two load cells and four displacement transducers."
-        },
-        {
-          "name": "3D Printer for Polymers",
-          
-          "specifications": "Uses fused deposition modeling (FDM) technology. Build volume: 500mm x 500mm x 500mm, dimensional tolerance: ±0.2mm, print speed: 40-120 mm/sec, and extruder temperature up to 300°C."
         }
       ]      
     }

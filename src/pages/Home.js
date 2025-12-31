@@ -18,12 +18,9 @@ const slides = [
 ];
 
 const alertsData = [
-    { message: "New feature: Dark Mode now live!" },
-    { message: "Scheduled maintenance: Sep 15, 12 AM - 2 AM" },
-    { message: "50% discount on premium plans till end of month!" },
-    { message: "Upcoming workshop: React Advanced Patterns - 20th Sep." },
-    { message: "Office closed on 30th Sep for a public holiday." },
-    { message: "New research published by faculty members." },
+    { message: "Recent publications" },
+    { message: "Upcoming seminars/workshops" },
+    { message: "Funded projects" },
   ]
 
 const Home = () => {

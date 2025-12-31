@@ -336,104 +336,6 @@
     },
     {
       "id": 4,
-      "name": "Transportation Engineering Lab",
-      "image": "",
-      "description": "Placeholder description for Structural Engineering Lab.",
-      "equipment": [
-        {
-          "name": "Penetrometer for Bitumen Testing",
-          "image": "/images/01- Penetrometer for Bitumen testing.JPG",
-          "specifications": "Automatic digital timer with geared height adjustment and dial gauge. Controls fall time of plunger rod for 5 seconds. Conforms to IS 1203 and ASTM D5."
-        },
-        {
-          "name": "Ductilimeter",
-          "image": "/images/02 Ductilimeter.JPG",
-          "specifications": "Semi-automatic model with 10-100 mm/min speed and refrigeration. Conforms to IS:1208 and ASTM D113."
-        },
-        {
-          "name": "Ring and Ball Apparatus",
-          "image": "/images/Ring and ball apparatus.JPG",
-          "specifications": "Digital programmable temperature controller ensuring a 5°C rise. Conforms to EN 1427, ASTM D36, AASHTO T53, and IS 1205."
-        },
-        {
-          "name": "Cleveland Flash & Fire Point Apparatus",
-          "image": "/images/04-Cleveland Flash & Fire point Apparatus.JPG",
-          "specifications": "Determines flash and fire point of petroleum products. Suitable for 220V, 50Hz. Conforms to IS: 1448 P:69 and ASTM D-92."
-        },
-        {
-          "name": "Compression Testing Machine (50 kN)",
-          
-          "specifications": "Capacity 50 kN, variable strain rate 0.50 - 51 mm/min, vertical clearance 600mm, horizontal clearance 450mm. High-strength aluminum load rings."
-        },
-        {
-          "name": "Buoyancy Balance",
-          "image": "/images/Buoyance balance .JPG",
-          "specifications": "Used for water absorption and specific gravity tests. Includes density basket, water-tight cylinder, and electronic balance (10 kg x 0.1 gm)."
-        },
-        {
-          "name": "Automatic Compactor Ejector",
-          "image": "/images/Automatic compactor and ejector.JPG",
-          "specifications": "Motor-driven compactor with automatic blow counter. Includes hydraulic pump, control valve, and jack for extracting samples up to 45 cm."
-        },
-        {
-          "name": "Marshall Compactor (4-inch Moulds)",
-          "image": "/images/Marshal Compactor moulds.JPG",
-          "specifications": "Galvanized steel construction with powder coating. Includes mould body, collar, and base plate (101.6mm diameter)."
-        },
-        {
-          "name": "Breaking Head - 4 inch for Marshall Test",
-          "image": "/images/Breaking head-4inch for Marshall test.png",
-          "specifications": "Bituminous Mix Marshall Stability Test Head. Lower segment mounted with two vertical guide rods for proper insertion."
-        },
-        {
-          "name": "Indirect Tensile Test Jig (4 inch)",
-          "image": "/images/Indirect tensile test jig 4 inch.JPG",
-          "specifications": "Lottman breaking head for tensile splitting tests on 100mm diameter compacted bituminous samples. Conforms to ASTM D6931."
-        },
-        {
-          "name": "Constant Temperature Water Bath",
-          "image": "/images/Constatnt temperature bath.JPG",
-          "specifications": "Holds at least 9 moulds of 150mm diameter. Temperature range: 5°C to 100°C with ±0.5°C accuracy. LED display and sensor included."
-        },
-        {
-          "name": "Stripping Value Test Apparatus",
-          "image": "/images/Stripping value apparatus.png",
-          "specifications": "Used for evaluating stripping values of aggregates in bitumen. Compliant with IS 6241 and AASHTO T283."
-        },
-        {
-          "name": "Centrifuge Extractor",
-          "image": "/images/13-centrifuge extractor.JPG",
-          "specifications": "Motorized, variable speed with digital RPM indicator. Conforms to ASTM D2172, AASHTO T58, T164, and EN 12697-1."
-        },
-        {
-          "name": "Rotary Evaporator",
-          "image": "/images/14- Rotary Evaporator.JPG",
-          "specifications": "Flask capacity 50-5000ml, motorized lift, condenser with 1500 cm² cooling surface, temperature range 20-210°C with 1°C accuracy."
-        },
-        {
-          "name": "MERLIN",
-          "image": "/images/MERLIN.JPG",
-          "specifications": "Rigid frame 1.8m long with front wheel, rear curved foot, and a probe midway for road surface assessment."
-        },
-        {
-          "name": "Capillary Viscometer - Bath & Tubes",
-          "image": "/images/16- Capillary viscometer- Bath&Tubes.JPG",
-          "specifications": "Measures absolute viscosity at 60°C and kinematic viscosity at 135°C. Includes digital stopwatch, vacuum pump, and Canon viscometers."
-        },
-        {
-          "name": "Asphalt Mixer",
-          "image": "/images/17-asphalt mixer.JPG",
-          "specifications": "10-litre capacity. Includes stainless-steel bowl, whisk, planetary action speed control (50-150 rpm), and revolving action (115-400 rpm)."
-        },
-        {
-          "name": "Oven and Tester",
-          "image": "/images/Oven and tester.png",
-          "specifications": "High-end lab oven with forced ventilation and digital thermostat. Capacity: 420 litres. Maximum temperature: 300°C. Conforms to multiple ASTM, BS, and EN standards."
-        }
-      ]      
-    },
-    {
-      "id": 5,
       "name": "Instrumentation Technologies Lab",
       "image": "",
       "description": "Placeholder description for Instrumentation Technologies Lab.",
@@ -534,5 +436,103 @@
             "specifications": "Vertical and horizontal S-type load cells, max capacity at least 600 N. Electronic load cells load the specimen frame by wires and adjustable pulleys, ensuring the frame is pulled in the correct direction. Works with a data acquisition system (free to download)."
           } 
       ]
+    },
+    {
+      "id": 5,
+      "name": "Transportation Engineering Lab",
+      "image": "",
+      "description": "Placeholder description for Structural Engineering Lab.",
+      "equipment": [
+        {
+          "name": "Penetrometer for Bitumen Testing",
+          "image": "/images/01- Penetrometer for Bitumen testing.JPG",
+          "specifications": "Automatic digital timer with geared height adjustment and dial gauge. Controls fall time of plunger rod for 5 seconds. Conforms to IS 1203 and ASTM D5."
+        },
+        {
+          "name": "Ductilimeter",
+          "image": "/images/02 Ductilimeter.JPG",
+          "specifications": "Semi-automatic model with 10-100 mm/min speed and refrigeration. Conforms to IS:1208 and ASTM D113."
+        },
+        {
+          "name": "Ring and Ball Apparatus",
+          "image": "/images/Ring and ball apparatus.JPG",
+          "specifications": "Digital programmable temperature controller ensuring a 5°C rise. Conforms to EN 1427, ASTM D36, AASHTO T53, and IS 1205."
+        },
+        {
+          "name": "Cleveland Flash & Fire Point Apparatus",
+          "image": "/images/04-Cleveland Flash & Fire point Apparatus.JPG",
+          "specifications": "Determines flash and fire point of petroleum products. Suitable for 220V, 50Hz. Conforms to IS: 1448 P:69 and ASTM D-92."
+        },
+        {
+          "name": "Compression Testing Machine (50 kN)",
+          
+          "specifications": "Capacity 50 kN, variable strain rate 0.50 - 51 mm/min, vertical clearance 600mm, horizontal clearance 450mm. High-strength aluminum load rings."
+        },
+        {
+          "name": "Buoyancy Balance",
+          "image": "/images/Buoyance balance .JPG",
+          "specifications": "Used for water absorption and specific gravity tests. Includes density basket, water-tight cylinder, and electronic balance (10 kg x 0.1 gm)."
+        },
+        {
+          "name": "Automatic Compactor Ejector",
+          "image": "/images/Automatic compactor and ejector.JPG",
+          "specifications": "Motor-driven compactor with automatic blow counter. Includes hydraulic pump, control valve, and jack for extracting samples up to 45 cm."
+        },
+        {
+          "name": "Marshall Compactor (4-inch Moulds)",
+          "image": "/images/Marshal Compactor moulds.JPG",
+          "specifications": "Galvanized steel construction with powder coating. Includes mould body, collar, and base plate (101.6mm diameter)."
+        },
+        {
+          "name": "Breaking Head - 4 inch for Marshall Test",
+          "image": "/images/Breaking head-4inch for Marshall test.png",
+          "specifications": "Bituminous Mix Marshall Stability Test Head. Lower segment mounted with two vertical guide rods for proper insertion."
+        },
+        {
+          "name": "Indirect Tensile Test Jig (4 inch)",
+          "image": "/images/Indirect tensile test jig 4 inch.JPG",
+          "specifications": "Lottman breaking head for tensile splitting tests on 100mm diameter compacted bituminous samples. Conforms to ASTM D6931."
+        },
+        {
+          "name": "Constant Temperature Water Bath",
+          "image": "/images/Constatnt temperature bath.JPG",
+          "specifications": "Holds at least 9 moulds of 150mm diameter. Temperature range: 5°C to 100°C with ±0.5°C accuracy. LED display and sensor included."
+        },
+        {
+          "name": "Stripping Value Test Apparatus",
+          "image": "/images/Stripping value apparatus.png",
+          "specifications": "Used for evaluating stripping values of aggregates in bitumen. Compliant with IS 6241 and AASHTO T283."
+        },
+        {
+          "name": "Centrifuge Extractor",
+          "image": "/images/13-centrifuge extractor.JPG",
+          "specifications": "Motorized, variable speed with digital RPM indicator. Conforms to ASTM D2172, AASHTO T58, T164, and EN 12697-1."
+        },
+        {
+          "name": "Rotary Evaporator",
+          "image": "/images/14- Rotary Evaporator.JPG",
+          "specifications": "Flask capacity 50-5000ml, motorized lift, condenser with 1500 cm² cooling surface, temperature range 20-210°C with 1°C accuracy."
+        },
+        {
+          "name": "MERLIN",
+          "image": "/images/MERLIN.JPG",
+          "specifications": "Rigid frame 1.8m long with front wheel, rear curved foot, and a probe midway for road surface assessment."
+        },
+        {
+          "name": "Capillary Viscometer - Bath & Tubes",
+          "image": "/images/16- Capillary viscometer- Bath&Tubes.JPG",
+          "specifications": "Measures absolute viscosity at 60°C and kinematic viscosity at 135°C. Includes digital stopwatch, vacuum pump, and Canon viscometers."
+        },
+        {
+          "name": "Asphalt Mixer",
+          "image": "/images/17-asphalt mixer.JPG",
+          "specifications": "10-litre capacity. Includes stainless-steel bowl, whisk, planetary action speed control (50-150 rpm), and revolving action (115-400 rpm)."
+        },
+        {
+          "name": "Oven and Tester",
+          "image": "/images/Oven and tester.png",
+          "specifications": "High-end lab oven with forced ventilation and digital thermostat. Capacity: 420 litres. Maximum temperature: 300°C. Conforms to multiple ASTM, BS, and EN standards."
+        }
+      ]      
     }
   ]  
