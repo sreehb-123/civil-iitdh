@@ -46,16 +46,19 @@ const AcadPrograms = () => {
             <BlocksRenderer content={content.UgProgram} />
             <Circulum />
             {/* <BlocksRenderer content={content.PgProgram} /> */}
+            
+            <div style={{background: 'red', color: 'white', padding: '20px', margin: '20px 0'}}>
+              <h2>TEST INSIDE CARD - If you see this red box, the issue is with sibling divs</h2>
+            </div>
           </div>
 
-          {/* Testing components one by one */}
           <div className="bg-white shadow-2xl rounded-xl p-6 sm:p-8 border border-gray-200">
-            <h2 className="text-2xl font-bold mb-4">Test Section</h2>
-            <p>If you see this, the problem is with the imported components.</p>
+            <h2 className="text-2xl font-bold mb-4">Test Section OUTSIDE</h2>
+            <p>If you see this, sibling divs work fine.</p>
           </div>
 
-          <TimeTable />
-          {/* <AcademicRules />
+          {/* <TimeTable />
+          <AcademicRules />
           <FAQ />
           <ContactUs /> */}
         </div>
