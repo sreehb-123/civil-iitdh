@@ -47,20 +47,20 @@ const AcadPrograms = () => {
             <Circulum />
             {/* <BlocksRenderer content={content.PgProgram} /> */}
             
-            <div style={{background: 'red', color: 'white', padding: '20px', margin: '20px 0'}}>
+            {/* <div style={{background: 'red', color: 'white', padding: '20px', margin: '20px 0'}}>
               <h2>TEST INSIDE CARD - If you see this red box, the issue is with sibling divs</h2>
-            </div>
+            </div> */}
           </div>
 
-          <div className="bg-white shadow-2xl rounded-xl p-6 sm:p-8 border border-gray-200">
+          {/* <div className="bg-white shadow-2xl rounded-xl p-6 sm:p-8 border border-gray-200">
             <h2 className="text-2xl font-bold mb-4">Test Section OUTSIDE</h2>
             <p>If you see this, sibling divs work fine.</p>
-          </div>
+          </div> */}
 
-          {/* <TimeTable />
+          <TimeTable />
           <AcademicRules />
           <FAQ />
-          <ContactUs /> */}
+          <ContactUs />
         </div>
     </div>
   );
