@@ -1,5 +1,4 @@
 const AcademicRules = () => {
-  const academicRulesPdfUrl = "/path-to-academic-rules.pdf";
 
   return (
     <div className="bg-white shadow-2xl rounded-xl p-6 sm:p-8 border border-gray-200">
