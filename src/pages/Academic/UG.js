@@ -11,6 +11,8 @@ const AcadPrograms = () => {
   const [content, setContent] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  console.log('UG Page - Components loaded:', { TimeTable, AcademicRules, FAQ, ContactUs });
+
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_STRAPI_URL}/program?populate=*`)
@@ -48,10 +50,17 @@ const AcadPrograms = () => {
             {/* <BlocksRenderer content={content.PgProgram} /> */}
           </div>
 
-          <TimeTable />
-          <AcademicRules />
-          <FAQ />
-          <ContactUs />
+          {console.log('About to render TimeTable')}
+          {TimeTable && <TimeTable />}
+          
+          {console.log('About to render AcademicRules')}
+          {AcademicRules && <AcademicRules />}
+          
+          {console.log('About to render FAQ')}
+          {FAQ && <FAQ />}
+          
+          {console.log('About to render ContactUs')}
+          {ContactUs && <ContactUs />}
         </div>
     </div>
   );
