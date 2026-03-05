@@ -15,7 +15,6 @@ import NotFound from './pages/NotFound';
 import Phd from './pages/Academic/Phd';
 import PhdInfo from './pages/People/PhdInfo';
 import StaffInfo from './pages/People/StaffInfo';
-import Circulum from './components/Common/Curriculum';
 
 import './App.css';
 
@@ -38,7 +37,6 @@ function App() {
           <Route path='/phd' element={<Phd />} />
           <Route path='/phd-info' element={<PhdInfo />} />
           <Route path='/staff' element={<StaffInfo />} />
-          <Route path='/circulum' element={<Circulum />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </div>

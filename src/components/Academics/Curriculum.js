@@ -45,21 +45,21 @@ export default function Circulum() {
                             className="absolute left-0 mt-2 w-44 sm:w-48 bg-gray-100 border border-gray-300 
                             rounded-xl shadow-lg z-10 overflow-hidden animate-fadeIn"
                         >
-                            {batches.map((batch) => (
+                            {batches.map((batchItem) => (
                                 <button
-                                    key={batch}
+                                    key={batchItem}
                                     onClick={() => {
-                                        setBatch(batch);
+                                        setBatch(batchItem);
                                         setSemester(1);
                                         setOpen(false);
                                     }}
                                     className={`w-full text-left px-4 py-2 transition ${
-                                        batch === batch
+                                        batchItem === batch
                                             ? "bg-gray-200 text-[#89288f]"
                                             : "hover:bg-gray-200"
                                     }`}
                                 >
-                                    {batch}
+                                    {batchItem}
                                 </button>
                             ))}
                         </div>
@@ -114,7 +114,7 @@ export default function Circulum() {
                 <a
                     href={semesterLinks[semester]}
                     target="_blank"
-                    rel="noopener nonreferrer"
+                    rel="noopener noreferrer"
                     className="text-[#faa519]"
                 >
                     Click here for course contents

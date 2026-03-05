@@ -1,7 +1,11 @@
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Circulum from '../../components/Common/Curriculum';
+import Circulum from '../../components/Academics/Curriculum';
+import TimeTable from '../../components/Academics/TimeTable';
+import AcademicRules from '../../components/Academics/AcademicRules';
+import FAQ from '../../components/Academics/FAQ';
+import ContactUs from '../../components/Academics/ContactUs';
 
 const AcadPrograms = () => {
   const [content, setContent] = useState(null);
@@ -43,6 +47,11 @@ const AcadPrograms = () => {
             <Circulum />
             {/* <BlocksRenderer content={content.PgProgram} /> */}
           </div>
+
+          <TimeTable />
+          <AcademicRules />
+          <FAQ />
+          <ContactUs />
         </div>
     </div>
   );
