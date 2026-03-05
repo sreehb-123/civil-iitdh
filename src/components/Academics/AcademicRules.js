@@ -10,7 +10,7 @@ const AcademicRules = () => {
       
       <div className="flex justify-center">
         <a
-          href={academicRulesPdfUrl}
+          href="https://res.cloudinary.com/dncpxsaxa/image/upload/v1753990375/UG_Rulebook_23Jul24_ibzl9c.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="px-8 py-3 bg-[#faa519] text-white rounded-xl font-medium 
