@@ -11,8 +11,6 @@ const AcadPrograms = () => {
   const [content, setContent] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  console.log('UG Page - Components loaded:', { TimeTable, AcademicRules, FAQ, ContactUs });
-
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_STRAPI_URL}/program?populate=*`)
@@ -50,17 +48,16 @@ const AcadPrograms = () => {
             {/* <BlocksRenderer content={content.PgProgram} /> */}
           </div>
 
-          {console.log('About to render TimeTable')}
-          {TimeTable && <TimeTable />}
-          
-          {console.log('About to render AcademicRules')}
-          {AcademicRules && <AcademicRules />}
-          
-          {console.log('About to render FAQ')}
-          {FAQ && <FAQ />}
-          
-          {console.log('About to render ContactUs')}
-          {ContactUs && <ContactUs />}
+          {/* Testing components one by one */}
+          <div className="bg-white shadow-2xl rounded-xl p-6 sm:p-8 border border-gray-200">
+            <h2 className="text-2xl font-bold mb-4">Test Section</h2>
+            <p>If you see this, the problem is with the imported components.</p>
+          </div>
+
+          <TimeTable />
+          {/* <AcademicRules />
+          <FAQ />
+          <ContactUs /> */}
         </div>
     </div>
   );
