@@ -16,9 +16,9 @@ export default function Circulum() {
     return(
         <div className="max-w-5xl mx-auto p-4">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
-                <h1 className="text-2xl font-bold text-center sm:text-left mb-3 sm:mb-0">
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">
                     UG Curriculum
-                </h1>
+                </h2>
 
                 {/* Custom Batch Dropdown */}
                 {/* Batch Dropdown (Left-aligned, gray theme) */}
