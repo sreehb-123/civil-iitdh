@@ -15,6 +15,7 @@ import NotFound from './pages/NotFound';
 import Phd from './pages/Academic/Phd';
 import PhdInfo from './pages/People/PhdInfo';
 import StaffInfo from './pages/People/StaffInfo';
+import ScrollToTopButton from './components/Common/ScrollToTopButton';
 
 import './App.css';
 
@@ -41,6 +42,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }

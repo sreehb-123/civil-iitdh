@@ -11,22 +11,32 @@ export default function Alerts({ data, heading }) {
   }, []);
   */
 
+  const loopedData = [...data, ...data];
+
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md border border-gray-200 overflow-y-auto"
+    <div className="bg-white p-4 rounded-lg shadow-md border border-gray-200 overflow-hidden alerts-panel"
     style={{ height: "91vh" }}>
       {heading && (
-        <h2 className="text-lg font-bold mb-4 mt-3 " style={{ color: "#89288f" }}>
+        <h2 className="text-lg font-bold mb-4 mt-3 alerts-heading" style={{ color: "#89288f" }}>
           {heading}
         </h2>
       )}
       
-      <div className="flex flex-col space-y-3">
-        {data.map((alert, idx) => (
-          <div key={idx} className="p-3 rounded border-l-4"
-               style={{ borderColor: "#faa519", backgroundColor: "#f9f9f9", color: "#000" }}>
-            {alert.message}
-          </div>
-        ))}
+      <div className="alerts-marquee">
+        <div className="alerts-track">
+          {loopedData.map((alert, idx) => (
+            <a
+              key={`${alert.link}-${idx}`}
+              href={alert.link}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="alerts-item p-3 rounded border-l-4 block transition-transform hover:-translate-y-0.5 hover:shadow-md"
+              style={{ borderColor: "#faa519", backgroundColor: "#f9f9f9", color: "#000" }}
+            >
+              {alert.title}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );

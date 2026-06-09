@@ -38,3 +38,55 @@
 .carousel-home-container{
     margin-top: 35px;
 }
+
+.alerts-panel {
+    position: relative;
+}
+
+.alerts-marquee {
+    height: calc(91vh - 4.5rem);
+    overflow: hidden;
+}
+
+.alerts-track {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    animation: alerts-scroll 45s linear infinite;
+    will-change: transform;
+}
+
+.alerts-panel:hover .alerts-track {
+    animation-play-state: paused;
+}
+
+.alerts-item {
+    min-height: 4.75rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    line-height: 1.35;
+}
+
+.alerts-heading {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: white;
+    padding-bottom: 0.5rem;
+}
+
+@keyframes alerts-scroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .alerts-track {
+        animation: none;
+    }
+}

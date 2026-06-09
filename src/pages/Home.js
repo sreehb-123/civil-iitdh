@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 import "../styles/Home.css";
 import Carousel from "../components/Common/Carousel";
 
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 import Alerts from "../components/Common/Alerts";
+import { useNavbarHeight } from "../hooks/useNavbarHeight";
 
 const slides = [
         { img: "/carousel_images/landing.jpeg"},
@@ -18,14 +20,73 @@ const slides = [
 ];
 
 const alertsData = [
-    { message: "Recent publications" },
-    { message: "Upcoming seminars/workshops" },
-    { message: "Funded projects" },
-  ]
+  {
+    title: "Life Cycle and Transport Distance Sensitivity Analysis for the Practical Selection of Vertical Cutoff Walls",
+    link: "https://ascelibrary.org/doi/full/10.1061/JHTRBP.HZENG-1638",
+  },
+  {
+    title: "A Finite Difference Model for Heavy Metal Contaminant Transport in a Sand-Bentonite Cutoff Wall",
+    link: "https://doi.org/10.1061/JHTRBP.HZENG-1572",
+  },
+  {
+    title: "Effect of Glass-Fiber on Mechanical Performance and Microstructure of Bentonite-Fly Ash and Bentonite-Sand Mixes for Landfill Liner Application",
+    link: "https://doi.org/10.1007/s10064-026-04808-3",
+  },
+  {
+    title: "Study on Multiscale Evaluation of Moisture Resistance of a High-Performance Cold Stone Matrix Asphalt: An Extensive Laboratory Investigation",
+    link: "https://doi.org/10.1016/j.conbuildmat.2026.145514",
+  },
+  {
+    title: "Assessing Moisture Resistance of Calcium Lignosulphonate Modified Bitumen Through SFE, BBS, and ITS Approaches",
+    link: "https://doi.org/10.1016/j.ijadhadh.2026.104305",
+  },
+  {
+    title: "Effect of Various Fibers and Filler Materials on the Mechanical Performance of Stone Matrix Asphalt Mixtures",
+    link: "https://doi.org/10.1061/JMCEE7.MTENG-21444",
+  },
+  {
+    title: "Adhesion Characteristics of Natural Aggregate or Slag with Water Based Warm Mix Asphalt Modified Binder Using Surface Free Energy Method",
+    link: "https://doi.org/10.1080/01694243.2025.2460645",
+  },
+  {
+    title: "Macro-Micro-Nano Scale Investigation of Moisture Resistant Performance of Warm Asphalt Mixes Prepared with Different Asphalt Binder and Aggregate Types",
+    link: "https://doi.org/10.1016/j.conbuildmat.2026.145115",
+  },
+  {
+    title: "Sensitivity of Binder-Aggregate Compatibility, Rutting and Moisture Resistance Performance of Warm-Stone Matrix Asphalt Mixes in Dry and Wet Condition",
+    link: "https://doi.org/10.1016/j.conbuildmat.2026.145112",
+  },
+  {
+    title: "A Study on Influence of Carbon Curing on the Performance of Agro Biochar Based Geopolymer Mortars",
+    link: "https://doi.org/10.1016/j.conbuildmat.2026.146072",
+  },
+  {
+    title: "Valorisation of Clay Mine Waste as a Precursor for Low Carbon Alkali Activated Bricks",
+    link: "https://doi.org/10.1016/j.jobe.2026.115643",
+  },
+  {
+    title: "Assessing the Efficacy of Alkali-Activated Rice Husk Ash Amended Bauxite Residue Composites for Pavement Applications",
+    link: "https://doi.org/10.1016/j.dibe.2026.100876",
+  },
+  {
+    title: "Landslide Susceptibility Assessment of Western Ghats of Karnataka Region in India: A Case Study of Ankola Landslide",
+    link: "https://doi.org/10.1016/j.ghm.2026.01.003",
+  },
+  {
+    title: "Hybrid Approach for Landslide Susceptibility Mapping and Socio-Economic Landslide Risk Assessment in Meghalaya, India",
+    link: "https://doi.org/10.1016/j.pes.2026.100207",
+  },
+  {
+    title: "Engineering Soil, Water and Environment for Sustainable Infrastructure",
+    link: "https://doi.org/10.1007/978-981-96-7552-4",
+  },
+];
 
 const Home = () => {
   const [about, setAbout] = useState(null);
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
+  const { height: navbarHeight } = useNavbarHeight();
 
   useEffect(() => {
     axios
@@ -40,6 +101,21 @@ const Home = () => {
       });
   }, []);
 
+  useEffect(() => {
+    if (location.hash !== "#about") return;
+
+    const scrollToAbout = () => {
+      const aboutSection = document.getElementById("about");
+      if (!aboutSection) return;
+
+      const top = aboutSection.getBoundingClientRect().top + window.scrollY - navbarHeight - 12;
+      window.scrollTo({ top: Math.max(top, 0), behavior: "smooth" });
+    };
+
+    const frame = window.requestAnimationFrame(scrollToAbout);
+    return () => window.cancelAnimationFrame(frame);
+  }, [location.hash, navbarHeight]);
+
   if (loading) return <div>Loading...</div>;
   if (!about) return <div>Failed to load data.</div>;
 
@@ -49,7 +125,7 @@ const Home = () => {
         {/* Alerts Sidebar - Responsive */}
         <div className="w-full lg:w-1/4 order-2 lg:order-1">
           <div className="sticky top-4">
-            <Alerts data={alertsData} heading="Alerts & Updates"/>
+            <Alerts data={alertsData} heading="Journals"/>
           </div>
         </div>
 
