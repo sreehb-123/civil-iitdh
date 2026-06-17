@@ -21,6 +21,7 @@ export const API_ENDPOINTS = {
 // Route Paths
 export const ROUTES = {
   HOME: '/',
+  RESEARCH: '/research',
   FACULTIES: '/faculties',
   FACULTY_DETAIL: '/facultyPage/:id',
   LOGIN: '/login',

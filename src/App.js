@@ -1,4 +1,5 @@
 import Home from './pages/Home';
+import Research from './pages/Research';
 import FacultyCards from './pages/People/FacultyCards';
 import { Routes, Route } from 'react-router-dom';
 import FacultyDetail from './pages/People/FacultyDetail';
@@ -26,6 +27,7 @@ function App() {
       <div className="content-wrapper">
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/research' element={<Research />} />
           <Route path='/faculties' element={<FacultyCards />} />
           <Route path='/facultyPage/:id' element={<FacultyDetail />} />
           <Route path='/teaching-labs' element={<TeachingLabs />} />

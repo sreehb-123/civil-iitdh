@@ -7,6 +7,7 @@ import { ROUTES } from '../utils/constants';
 
 // Import pages
 import Home from '../pages/Home';
+import Research from '../pages/Research';
 import FacultyCards from '../pages/Faculty/FacultyCards';
 import AltFacultyPage from '../pages/Faculty/FacultyDetail';
 import Login from '../pages/Auth/Login';
@@ -29,6 +30,11 @@ export const appRoutes = [
     path: ROUTES.HOME,
     element: Home,
     name: 'Home',
+  },
+  {
+    path: ROUTES.RESEARCH,
+    element: Research,
+    name: 'Research',
   },
   {
     path: ROUTES.FACULTIES,
