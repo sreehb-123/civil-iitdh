@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
+import { FaAward, FaBookOpen, FaFlask, FaUserGraduate, FaUsers } from "react-icons/fa";
 import "../styles/Home.css";
 import Carousel from "../components/Common/Carousel";
 
@@ -19,7 +20,34 @@ const slides = [
         { img: "/carousel_images/6.png", text: "Launch of the Civil Engineering Association and the Inaugural Ceremony of the Hands-on Training Program on STAAD.Pro and RCDC, held from 4th to 6th October 2024." },
 ];
 
-const alertsData = [
+const homeSidebarData = [
+  {
+    title: "Upcoming workshops & talks",
+    link: "#",
+  },
+  {
+    title: "PG admission updates",
+    link: "#",
+  },
+  {
+    title: "Students achievements",
+    link: "#",
+  },
+  {
+    title: "Faculty accomplishments",
+    link: "#",
+  },
+  {
+    title: "Research positions",
+    link: "#",
+  },
+  {
+    title: "Other news",
+    link: "#",
+  },
+];
+
+export const alertsData = [
   {
     title: "Life Cycle and Transport Distance Sensitivity Analysis for the Practical Selection of Vertical Cutoff Walls",
     link: "https://ascelibrary.org/doi/full/10.1061/JHTRBP.HZENG-1638",
@@ -82,6 +110,34 @@ const alertsData = [
   },
 ];
 
+const departmentStats = [
+  {
+    label: "Faculty",
+    value: "9",
+    icon: FaUsers,
+  },
+  {
+    label: "PhD scholars",
+    value: "30",
+    icon: FaUserGraduate,
+  },
+  {
+    label: "Research Grants",
+    value: "10+",
+    icon: FaFlask,
+  },
+  {
+    label: "Publications",
+    value: "250+",
+    icon: FaBookOpen,
+  },
+  {
+    label: "Patents",
+    value: "5+",
+    icon: FaAward,
+  },
+];
+
 const Home = () => {
   const [about, setAbout] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -120,30 +176,54 @@ const Home = () => {
   if (!about) return <div>Failed to load data.</div>;
 
   return (
-    <div className="min-h-screen bg-gray-100 pb-10">
-      <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8 px-3 sm:px-4 md:px-6 lg:px-8 pt-4">
-        {/* Alerts Sidebar - Responsive */}
-        <div className="w-full lg:w-1/4 order-2 lg:order-1">
-          <div className="sticky top-4">
-            <Alerts data={alertsData} heading="Journals"/>
+    <div className="min-h-screen bg-gray-100 pb-10 overflow-x-hidden">
+      <div className="home-shell container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 pt-4">
+        <div className="grid grid-cols-1 lg:grid-cols-[clamp(320px,30vw,420px)_minmax(0,1fr)] gap-4 sm:gap-6 lg:gap-8 items-start">
+          {/* Alerts Sidebar - Responsive */}
+          <div className="min-w-0 order-2 lg:order-1">
+            <div className="sticky top-4">
+              <Alerts data={homeSidebarData} heading="News & Updates"/>
+            </div>
           </div>
-        </div>
 
-        {/* Carousel Section - Responsive */}
-        <div className="w-full lg:w-3/4 order-1 lg:order-2">
-          <div className="carousel-home-container">
-            <Carousel slides={slides} />
+          {/* Carousel Section - Responsive */}
+          <div className="min-w-0 order-1 lg:order-2">
+            <div className="carousel-home-container">
+              <Carousel slides={slides} />
+            </div>
           </div>
         </div>
       </div>
 
       {/* About Section - Fully Responsive */}
       <section id="about" className="py-10 bg-gray-100">
-        <div className="w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl xl:max-w-7xl mx-auto px-3">
+        <div className="home-shell container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="bg-white shadow-xl rounded-2xl border border-gray-200 p-4 sm:p-8">
             <div className="prose prose-slate max-w-none prose-sm text-justify">
               {about.content && <BlocksRenderer content={about.content} />}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-6 bg-gray-100">
+        <div className="home-shell container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="department-stats-grid">
+            {departmentStats.map((stat) => {
+              const Icon = stat.icon;
+
+              return (
+                <article key={stat.label} className="department-stat-card">
+                  <div className="department-stat-icon">
+                    <Icon />
+                  </div>
+                  <div>
+                    <div className="department-stat-value">{stat.value}</div>
+                    <h3 className="department-stat-label">{stat.label}</h3>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>

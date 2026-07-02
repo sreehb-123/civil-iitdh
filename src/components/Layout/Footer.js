@@ -34,6 +34,7 @@ const Footer = () => {
               <li><a href="/teaching-labs" className="text-white text-base hover:text-[#faa519] transition">Teaching Labs</a></li>
               <li><a href="/research-labs" className="text-white text-base hover:text-[#faa519] transition">Research Labs</a></li>
               <li><a href="/computational-labs" className="text-white text-base hover:text-[#faa519] transition">Computational Labs</a></li>
+              <li><a href="https://cims.iitdh.ac.in/" target="_blank" rel="noreferrer noopener" className="text-white text-base hover:text-[#faa519] transition">CIMS</a></li>
             </ul>
           </div>
 

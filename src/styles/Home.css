@@ -37,6 +37,57 @@
 /* Carousel Container - Fully Responsive */
 .carousel-home-container{
     margin-top: 35px;
+    min-width: 0;
+}
+
+.home-shell {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.department-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.department-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 12rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #e5e7eb;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f4ff 100%);
+    box-shadow: 0 12px 30px rgba(137, 40, 143, 0.08);
+}
+
+.department-stat-icon {
+    display: grid;
+    place-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 9999px;
+    background: rgba(250, 165, 25, 0.15);
+    color: #89288f;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+
+.department-stat-value {
+    font-size: 2.1rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #89288f;
+}
+
+.department-stat-label {
+    margin-top: 0.35rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #374151;
 }
 
 .alerts-panel {

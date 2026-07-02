@@ -25,16 +25,26 @@ export default function Alerts({ data, heading }) {
       <div className="alerts-marquee">
         <div className="alerts-track">
           {loopedData.map((alert, idx) => (
-            <a
-              key={`${alert.link}-${idx}`}
-              href={alert.link}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="alerts-item p-3 rounded border-l-4 block transition-transform hover:-translate-y-0.5 hover:shadow-md"
-              style={{ borderColor: "#faa519", backgroundColor: "#f9f9f9", color: "#000" }}
-            >
-              {alert.title}
-            </a>
+            alert.link && alert.link !== "#" ? (
+              <a
+                key={`${alert.link}-${idx}`}
+                href={alert.link}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="alerts-item p-3 rounded border-l-4 block transition-transform hover:-translate-y-0.5 hover:shadow-md"
+                style={{ borderColor: "#faa519", backgroundColor: "#f9f9f9", color: "#000" }}
+              >
+                {alert.title}
+              </a>
+            ) : (
+              <div
+                key={`${alert.title}-${idx}`}
+                className="alerts-item p-3 rounded border-l-4 block transition-transform hover:-translate-y-0.5 hover:shadow-md"
+                style={{ borderColor: "#faa519", backgroundColor: "#f9f9f9", color: "#000" }}
+              >
+                {alert.title}
+              </div>
+            )
           ))}
         </div>
       </div>

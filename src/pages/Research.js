@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Alerts from "../components/Common/Alerts";
+import { alertsData as homeAlertsData } from "./Home";
 
 const researchSlides = [
   {
@@ -93,23 +95,22 @@ export default function Research() {
 
   return (
     <section className="min-h-screen bg-gray-100 pt-14 sm:pt-16 pb-8 sm:pb-10">
-      <div className="mx-auto flex min-h-[calc(100vh-7.5rem)] w-full max-w-7xl flex-col gap-3 px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="shrink-0 text-center">
-          <h1 className="text-2xl font-bold text-gray-800 sm:text-3xl lg:text-4xl">
-            Research
-          </h1>
-          <p className="mt-1 text-xs font-medium text-[#89288f] sm:text-sm lg:text-base">
-            Abstracts Gallery
-          </p>
-        </div>
+      <div className="mx-auto flex min-h-[calc(100vh-7.5rem)] w-full max-w-7xl flex-col gap-4 px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[clamp(320px,30vw,420px)_minmax(0,1fr)] lg:items-start">
+          <div className="min-w-0 order-2 lg:order-1">
+            <div className="sticky top-4">
+              <Alerts data={homeAlertsData} heading="Recent Publications" />
+            </div>
+          </div>
 
-        <div className="flex min-h-0 flex-1 items-stretch">
-          <div className="relative flex w-full min-h-[20rem] flex-[1_1_0%] items-stretch sm:min-h-[24rem] lg:min-h-[32rem]">
-            <Slider {...settings} className="research-slider h-full w-full">
-              {researchSlides.map((slide) => (
-                <ResearchSlide key={slide.src} src={slide.src} alt={slide.alt} />
-              ))}
-            </Slider>
+          <div className="min-w-0 order-1 lg:order-2">
+            <div className="relative flex w-full min-h-[20rem] items-stretch sm:min-h-[24rem] lg:min-h-[32rem]">
+              <Slider {...settings} className="research-slider h-full w-full">
+                {researchSlides.map((slide) => (
+                  <ResearchSlide key={slide.src} src={slide.src} alt={slide.alt} />
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
       </div>
