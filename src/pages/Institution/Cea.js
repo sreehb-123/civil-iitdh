@@ -154,26 +154,24 @@ const Cea = () => {
               </div>
 
               <div className="mt-auto pt-6">
-                <div className="rounded-3xl border border-gray-200 bg-gradient-to-br from-white to-[#f8f4ff] p-4 shadow-[0_12px_30px_rgba(39,38,53,0.08)]">
-                  <div className="flex items-center gap-3">
+                {/* <div className="rounded-3xl border border-gray-200 bg-gradient-to-br from-white to-[#f8f4ff] p-4 shadow-[0_12px_30px_rgba(39,38,53,0.08)]"> */}
+                  {/* <div className="flex items-center gap-3">
                     <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#faa519]/15 text-[#89288f]">
                       <FaUsers className="h-5 w-5" />
                     </div>
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                        CEA Logo
-                      </p>
-                    </div>
-                  </div>
+                  </div> */}
 
-                  <div className="mt-4 rounded-2xl border border-dashed border-[#89288f]/20 bg-white p-4">
+                  <div className="mt-4 rounded-2xl border border-dashed border-[#89288f]/20 bg-white p-3 sm:p-4">
                     <img
                       src="/cea-logo.png"
                       alt="CEA Logo"
-                      className="mx-auto h-24 w-auto object-contain"
+                      className="mx-auto h-28 w-full max-w-[220px] object-contain sm:h-32 sm:max-w-[250px]"
                     />
+                    <p className="mt-3 text-center text-xs font-medium tracking-wide text-gray-600 sm:text-sm">
+                      Official logo of the CEA
+                    </p>
                   </div>
-                </div>
+                {/* </div> */}
               </div>
             </div>
           </aside>
