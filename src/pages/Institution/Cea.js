@@ -1,136 +1,250 @@
-import { BlocksRenderer } from "@strapi/blocks-react-renderer";
-import { useState, useEffect } from "react";
-import axios from "axios";
 import Carousel from "../../components/Common/Carousel";
 import Alerts from "../../components/Common/Alerts";
+import {
+  FaCalendarAlt,
+  FaChalkboardTeacher,
+  FaEnvelope,
+  FaFutbol,
+  FaLaptopCode,
+  FaLinkedin,
+  FaMapMarkerAlt,
+  FaProjectDiagram,
+  FaUserFriends,
+  FaUsers,
+  FaYoutube,
+} from "react-icons/fa";
 
-const slides = [
-        { img: "/carousel_images/cea.JPG"},
-];
+const slides = [{ img: "/carousel_images/cea.JPG" }];
 
 const alertsData = [
-    { message: "New feature: Dark Mode now live!" },
-    { message: "Scheduled maintenance: Sep 15, 12 AM - 2 AM" },
-    { message: "50% discount on premium plans till end of month!" },
-    { message: "Upcoming workshop: React Advanced Patterns - 20th Sep." },
-    { message: "Office closed on 30th Sep for a public holiday." },
+  { title: "CEA orientation and onboarding updates", link: "#" },
+  { title: "Upcoming expert talk announcements", link: "#" },
+  { title: "Workshop registration information", link: "#" },
+  { title: "Student activity and event highlights", link: "#" },
+  { title: "Faculty interaction session notices", link: "#" },
+];
+
+const activityCards = [
+  {
+    title: "Technical Seminars & Expert Talks",
+    icon: FaChalkboardTeacher,
+    summary:
+      "Sessions by industry leaders and professionals highlighting emerging trends, challenges, and career opportunities in civil and infrastructure engineering.",
+  },
+  {
+    title: "Software Workshops",
+    icon: FaLaptopCode,
+    summary:
+      "Hands-on training in widely used engineering tools and platforms like STAAD.Pro, AutoCAD, and other domain-relevant software.",
+  },
+  {
+    title: "Informal Faculty Interactions",
+    icon: FaUserFriends,
+    summary:
+      "Candid discussions with faculty members sharing their personal journeys, research insights, and career experiences.",
+  },
+  {
+    title: "Celebration of Key Days",
+    icon: FaCalendarAlt,
+    summary:
+      "Events on Engineers' Day, Teachers' Day, World Water Day, and other occasions to promote awareness and engagement.",
+  },
+  {
+    title: "Intra-Departmental Events",
+    icon: FaFutbol,
+    summary:
+      "Sports meets, quizzes, and technical contests that encourage collaboration, creativity, and camaraderie among students.",
+  },
+  {
+    title: "Site Visits",
+    icon: FaProjectDiagram,
+    summary:
+      "Educational trips to infrastructure projects and construction sites for real-world exposure to field practices and challenges.",
+  },
+];
+
+const contactLinks = [
+  {
+    label: "YouTube",
+    value: "Civil Engineering Association",
+    href: "https://www.youtube.com/@CivilengineeringAssociation",
+    icon: FaYoutube,
+    accent: "text-red-600",
+  },
+  {
+    label: "LinkedIn",
+    value: "CEA IIT Dharwad",
+    href: "https://www.linkedin.com/company/105620229/admin/dashboard/",
+    icon: FaLinkedin,
+    accent: "text-blue-700",
+  },
+  {
+    label: "Email",
+    value: "cea@iitdh.ac.in",
+    href: "mailto:cea@iitdh.ac.in",
+    icon: FaEnvelope,
+    accent: "text-[#89288f]",
+  },
+  {
+    label: "Location",
+    value: "Department of Civil & Infrastructure Engineering",
+    href: "https://iitdh.ac.in",
+    icon: FaMapMarkerAlt,
+    accent: "text-[#faa519]",
+  },
 ];
 
 const Cea = () => {
-  const [content, setContent] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    axios
-      .get(`${process.env.REACT_APP_STRAPI_URL}/cea?populate=*`)
-      .then((res) => {
-        setContent(res.data.data); // If your API changes, adjust accordingly
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch about data", err);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) return (
-    <div className="flex justify-center items-center min-h-[40vh]">
-      <span className="text-lg font-medium text-gray-500">Loading...</span>
-    </div>
-  );
-  if (!content) return (
-    <div className="flex justify-center items-center min-h-[40vh]">
-      <span className="text-lg text-red-500">Failed to load data.</span>
-    </div>
-  );
-
-  // If "programs" is an array, map over it. If it's a single rich text, just render.
   return (
-    <div className="min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-8 pb-10">
-        {/* <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
-        CEA
-        </h1> */}
-        <div className="flex flex-col md:flex-row gap-6 items-start">
-          <div className="md:w-1/4">
-            <Alerts data={alertsData} heading="What's New"/>
+    <div className="min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-8 pb-10 pt-14 sm:pt-16">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-6">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] items-stretch">
+          <div className="min-w-0">
+            <Alerts data={alertsData} heading="What's New" />
           </div>
-  
-          <div className="md:w-3/4">
-            <div className="carousel-home-container">
+
+          <div className="min-w-0">
+            <div className="carousel-home-container h-full">
               <Carousel slides={slides} />
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row gap-6 items-start w-full max-w-3xl sm:max-w-4xl lg:max-w-5xl xl:max-w-7xl mx-auto mt-10">
-          <div className="md:w-1/3 w-full">
-            <div className="bg-white shadow-xl rounded-xl p-5 sm:p-6 border border-gray-200">
-              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
 
-              <div className="grid grid-cols-1 gap-4">
-                <a
-                  href="https://www.youtube.com/@CivilengineeringAssociation"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-lg border border-gray-200 hover:bg-gray-50 transition"
-                >
-                  <span className="text-red-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor" aria-hidden="true">
-                      <path d="M23.498 6.186a2.995 2.995 0 0 0-2.11-2.116C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.388.57A2.995 2.995 0 0 0 .502 6.186C0 8.08 0 12 0 12s0 3.92.502 5.814a2.995 2.995 0 0 0 2.11 2.116c1.883.57 9.388.57 9.388.57s7.505 0 9.388-.57a2.995 2.995 0 0 0 2.11-2.116C24 15.92 24 12 24 12s0-3.92-.502-5.814ZM9.6 15.568V8.432L15.818 12 9.6 15.568Z" />
-                    </svg>
-                  </span>
-                  <div>
-                    <p className="text-sm text-gray-500">YouTube</p>
-                    <p className="text-gray-800 font-medium">Civil Engineering Association</p>
-                  </div>
-                </a>
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] items-stretch">
+          <aside className="min-w-0 h-full">
+            <div className="flex h-full flex-col rounded-3xl border border-gray-200 bg-white p-5 shadow-[0_18px_40px_rgba(39,38,53,0.08)] sm:p-6">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">
+                  Connect
+                </p>
+                <h2 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">
+                  Contact Us
+                </h2>
+                <p className="mt-3 text-sm leading-7 text-gray-600">
+                  Reach out to the Civil Engineering Association to stay updated on events, workshops, and opportunities within the department.
+                </p>
+              </div>
 
-                <a
-                  href="https://www.linkedin.com/company/105620229/admin/dashboard/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-lg border border-gray-200 hover:bg-gray-50 transition"
-                >
-                  <span className="text-blue-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor" aria-hidden="true">
-                      <path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5V5c0-2.761-2.239-5-5-5zM7.119 20.452H3.56V9h3.559v11.452zM5.339 7.433a2.06 2.06 0 1 1 0-4.119 2.06 2.06 0 0 1 0 4.119zM20.452 20.452h-3.558v-5.569c0-1.328-.027-3.037-1.851-3.037-1.852 0-2.136 1.447-2.136 2.94v5.666H9.35V9h3.414v1.561h.048c.476-.9 1.637-1.85 3.369-1.85 3.602 0 4.267 2.371 4.267 5.455v6.286z" />
-                    </svg>
-                  </span>
-                  <div>
-                    <p className="text-sm text-gray-500">LinkedIn</p>
-                    <p className="text-gray-800 font-medium">CEA IIT Dh</p>
-                  </div>
-                </a>
+              <div className="mt-5 space-y-3">
+                {contactLinks.map((link) => {
+                  const LinkIcon = link.icon;
 
-                <a
-                  href="mailto:cea@iitdh.ac.in"
-                  className="flex items-center gap-3 p-3 rounded-lg border border-gray-200 hover:bg-gray-50 transition"
-                >
-                  <span className="text-gray-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 7.5v9a2.25 2.25 0 0 1-2.25 2.25h-15A2.25 2.25 0 0 1 2.25 16.5v-9m19.5 0A2.25 2.25 0 0 0 19.5 5.25h-15A2.25 2.25 0 0 0 2.25 7.5m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.92l-7.5 4.687a2.25 2.25 0 0 1-2.36 0l-7.5-4.687a2.25 2.25 0 0 1-1.07-1.92V7.5" />
-                    </svg>
-                  </span>
-                  <div>
-                    <p className="text-sm text-gray-500">Email</p>
-                    <p className="text-gray-800 font-medium">cea@iitdh.ac.in</p>
+                  return (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target={link.href.startsWith("http") ? "_blank" : undefined}
+                      rel={link.href.startsWith("http") ? "noreferrer noopener" : undefined}
+                      className="group flex items-start gap-3 rounded-2xl border border-gray-200 bg-gray-50/80 p-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#faa519]/30 hover:bg-white hover:shadow-[0_12px_24px_rgba(39,38,53,0.08)]"
+                    >
+                      <span className={`mt-0.5 ${link.accent}`}>
+                        <LinkIcon className="h-5 w-5" />
+                      </span>
+                      <div className="min-w-0">
+                        <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                          {link.label}
+                        </p>
+                        <p className="mt-1 text-sm font-medium leading-6 text-gray-800 transition-colors group-hover:text-[#89288f]">
+                          {link.value}
+                        </p>
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
+
+              <div className="mt-auto pt-6">
+                <div className="rounded-3xl border border-gray-200 bg-gradient-to-br from-white to-[#f8f4ff] p-4 shadow-[0_12px_30px_rgba(39,38,53,0.08)]">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#faa519]/15 text-[#89288f]">
+                      <FaUsers className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                        CEA Logo
+                      </p>
+                    </div>
                   </div>
-                </a>
+
+                  <div className="mt-4 rounded-2xl border border-dashed border-[#89288f]/20 bg-white p-4">
+                    <img
+                      src="/cea-logo.png"
+                      alt="CEA Logo"
+                      className="mx-auto h-24 w-auto object-contain"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </aside>
 
-          <div className="md:w-2/3 w-full">
-            {content.ceaContent ? (
-              <div className="bg-white shadow-2xl rounded-xl p-6 sm:p-8 border border-gray-200 prose prose-slate max-w-none prose-sm sm:prose-base">
-                <BlocksRenderer content={content.ceaContent} />
+          <section className="min-w-0 h-full">
+            <div className="flex h-full flex-col rounded-3xl border border-gray-200 bg-white p-5 shadow-[0_18px_40px_rgba(39,38,53,0.08)] sm:p-6 lg:p-8">
+              <div className="max-w-5xl">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">
+                  About CEA
+                </p>
+                <h2 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">
+                  Civil Engineering Association, IIT Dharwad
+                </h2>
               </div>
-            ) : (
-              <div className="bg-white rounded-2xl shadow p-6 text-gray-500 text-center">
-                No program content available.
+
+              <div className="mt-5 space-y-5 text-gray-700">
+                <p className="text-sm leading-7 sm:text-base">
+                  <strong>Civil Engineering Association (CEA)</strong> at IIT Dharwad is a vibrant student-led body comprising undergraduate students, postgraduate scholars, and faculty members from the Department of Civil and Infrastructure Engineering. The association serves as a dynamic platform to foster professional development, peer-to-peer learning, and a strong sense of community within the department.
+                </p>
+                <p className="text-sm leading-7 sm:text-base">
+                  CEA aims to bridge the gap between academic knowledge and real-world application by organizing various technical and cultural activities that enhance practical skills and professional awareness. Through regular interactions with industry professionals and subject matter experts, the association nurtures curiosity, builds networks, and encourages interdisciplinary thinking.
+                </p>
               </div>
-            )}
-          </div>
+
+              <div className="mt-8">
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">
+                      Key Activities
+                    </p>
+                    <h3 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">
+                      What CEA does
+                    </h3>
+                  </div>
+                </div>
+
+                <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                  {activityCards.map((activity) => {
+                    const ActivityIcon = activity.icon;
+
+                    return (
+                      <article
+                        key={activity.title}
+                        className="group flex h-full min-h-[12rem] flex-col rounded-3xl border border-gray-200 bg-gradient-to-br from-white to-[#f8f4ff] p-5 shadow-[0_12px_30px_rgba(39,38,53,0.08)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(39,38,53,0.12)]"
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#faa519]/15 text-[#89288f] transition-transform duration-300 group-hover:scale-105">
+                            <ActivityIcon className="h-5 w-5" />
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <h4 className="text-lg font-bold text-gray-800">
+                              {activity.title}
+                            </h4>
+                            <p className="mt-2 text-sm leading-7 text-gray-600">
+                              {activity.summary}
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="mt-8 rounded-3xl border border-gray-200 bg-gray-50/80 p-5 text-sm leading-7 text-gray-700">
+                CEA continues to evolve as a proactive and inclusive platform where learning extends beyond the classroom, inspiring future-ready civil engineers committed to innovation and sustainability.
+              </div>
+            </div>
+          </section>
         </div>
+      </div>
     </div>
   );
 };

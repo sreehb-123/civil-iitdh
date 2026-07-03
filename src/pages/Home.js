@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { useLocation } from "react-router-dom";
-import { FaAward, FaBookOpen, FaFlask, FaUserGraduate, FaUsers } from "react-icons/fa";
+import { FaAward, FaBookOpen, FaFlask, FaGraduationCap, FaLeaf, FaRoad, FaUserGraduate, FaUsers } from "react-icons/fa";
 import "../styles/Home.css";
 import Carousel from "../components/Common/Carousel";
-
-import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 import Alerts from "../components/Common/Alerts";
 import { useNavbarHeight } from "../hooks/useNavbarHeight";
@@ -138,24 +135,44 @@ const departmentStats = [
   },
 ];
 
+const aboutThrustAreas = [
+  "Structural Engineering and Materials",
+  "Net-Zero Energy-Efficient Infrastructures",
+  "Transportation Engineering",
+  "Geotechnical Engineering",
+];
+
+const missionPoints = [
+  "Develop a curriculum based on the present and future challenges of civil infrastructure.",
+  "Conduct impactful research to build a smart, sustainable and resilient civil infrastructure.",
+  "Establish strong collaborations with civil engineering industries to address the challenges of built environment.",
+  "Foster the potential of students to excel as future entrepreneurs in the construction industry.",
+];
+
+const aboutHighlights = [
+  {
+    title: "Founded in 2022",
+    icon: FaAward,
+    summary:
+      "A young department with a strong academic foundation and a growing research culture at IIT Dharwad.",
+  },
+  {
+    title: "B.Tech + Ph.D. Pathways",
+    icon: FaGraduationCap,
+    summary:
+      "Comprehensive four-year undergraduate learning paired with advanced postgraduate research opportunities.",
+  },
+  {
+    title: "Research-Ready Environment",
+    icon: FaFlask,
+    summary:
+      "State-of-the-art laboratories and facilities that support real-world problem solving and innovation.",
+  },
+];
+
 const Home = () => {
-  const [about, setAbout] = useState(null);
-  const [loading, setLoading] = useState(true);
   const location = useLocation();
   const { height: navbarHeight } = useNavbarHeight();
-
-  useEffect(() => {
-    axios
-      .get(`${process.env.REACT_APP_STRAPI_URL}/about?populate=*`)
-      .then((res) => {
-        setAbout(res.data.data); // NO ".attributes" here!
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch about data", err);
-        setLoading(false);
-      });
-  }, []);
 
   useEffect(() => {
     if (location.hash !== "#about") return;
@@ -171,9 +188,6 @@ const Home = () => {
     const frame = window.requestAnimationFrame(scrollToAbout);
     return () => window.cancelAnimationFrame(frame);
   }, [location.hash, navbarHeight]);
-
-  if (loading) return <div>Loading...</div>;
-  if (!about) return <div>Failed to load data.</div>;
 
   return (
     <div className="min-h-screen bg-gray-100 pb-10 overflow-x-hidden">
@@ -195,14 +209,137 @@ const Home = () => {
         </div>
       </div>
 
-      {/* About Section - Fully Responsive */}
       <section id="about" className="py-10 bg-gray-100">
-        <div className="home-shell container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-          <div className="bg-white shadow-xl rounded-2xl border border-gray-200 p-4 sm:p-8">
-            <div className="prose prose-slate max-w-none prose-sm text-justify">
-              {about.content && <BlocksRenderer content={about.content} />}
-            </div>
+        <div className="home-shell container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 space-y-6">
+          <div className="text-center max-w-5xl mx-auto">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">About</p>
+            <h2 className="mt-2 text-3xl font-bold text-gray-800 sm:text-4xl">Department of Civil and Infrastructure Engineering</h2>
+            <p className="mt-4 text-sm leading-7 text-gray-700 sm:text-base">
+              From towering skyscrapers and robust bridges to efficient water systems and next-generation transportation, civil and infrastructure engineering shapes our world. As climate challenges intensify and technology transforms the way and quality of life, the demand for smart, sustainable, climate-resilient, and energy-efficient infrastructure has never been more urgent. Realizing such infrastructures requires a multidisciplinary, cross-cutting approach that bridges traditional civil engineering with emerging technologies and innovative design strategies. A flexible interdisciplinary curriculum is key to preparing future civil engineers to tackle these challenges holistically, ensuring infrastructure that endures the test of time while embracing social, economic, and environmental sustainability.
+            </p>
           </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {aboutHighlights.map((item) => {
+              const ItemIcon = item.icon;
+
+              return (
+                <article
+                  key={item.title}
+                  className="group rounded-3xl border border-gray-200 bg-white p-5 shadow-[0_12px_30px_rgba(39,38,53,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(39,38,53,0.12)]"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#faa519]/15 text-[#89288f] transition-transform duration-300 group-hover:scale-105">
+                      <ItemIcon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-800">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-gray-600">{item.summary}</p>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+
+          <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-[0_18px_40px_rgba(39,38,53,0.08)] sm:p-8">
+            <div className="max-w-5xl space-y-4 text-gray-700">
+              <p className="text-sm leading-7 sm:text-base">
+                Founded in 2022, the Department of Civil & Infrastructure Engineering at IIT Dharwad offers a comprehensive four-year B.Tech program that blends core civil engineering principles with modern advancements in sustainable energy-efficient construction, smart materials, and infrastructure resilience. At the postgraduate level, the department offers a Ph.D. program across diverse research areas as mentioned below. With state-of-the-art laboratories and cutting-edge research facilities, the department empowers its researchers to develop innovative, real-world solutions that drive progress in both industry and society.
+              </p>
+            </div>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              {aboutThrustAreas.map((area) => (
+                <div
+                  key={area}
+                  className="rounded-3xl border border-gray-200 bg-gradient-to-br from-white to-[#f8f4ff] px-4 py-4 text-sm font-semibold text-gray-700 shadow-sm"
+                >
+                  {area}
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-[0_18px_40px_rgba(39,38,53,0.08)] sm:p-8">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#faa519]/15 text-[#89288f]">
+                  <FaBookOpen className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">Key Thrust Areas</p>
+                  <h3 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">Research focus</h3>
+                </div>
+              </div>
+
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {aboutThrustAreas.map((area) => (
+                  <div
+                    key={area}
+                    className="rounded-2xl border border-gray-200 bg-gray-50/80 px-4 py-3 text-sm font-medium text-gray-700 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#faa519]/30 hover:bg-white hover:shadow-[0_12px_24px_rgba(39,38,53,0.08)]"
+                  >
+                    {area}
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-[0_18px_40px_rgba(39,38,53,0.08)] sm:p-8">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#faa519]/15 text-[#89288f]">
+                  <FaUsers className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">Consultancy</p>
+                  <h3 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">Industry engagement</h3>
+                </div>
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-gray-700 sm:text-base">
+                The department actively collaborates with public and private sector organizations, providing consultancy services in the aforementioned domains, along with expertise in infrastructure design, construction management, and sustainability solutions. These engagements foster strong industry-academia partnerships while offering students valuable exposure to real-world challenges.
+              </p>
+            </section>
+          </div>
+
+          <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-[0_18px_40px_rgba(39,38,53,0.08)] sm:p-8">
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#faa519]/15 text-[#89288f]">
+                <FaLeaf className="h-5 w-5" />
+              </div>
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">Vision</p>
+                <h3 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">Leading civil and infrastructure engineering for a sustainable future</h3>
+                <p className="mt-3 text-sm leading-7 text-gray-700 sm:text-base">
+                  To be a global leader in civil and infrastructure engineering education and research, contributing to the sustainable development of society.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-[0_18px_40px_rgba(39,38,53,0.08)] sm:p-8">
+            <div className="max-w-5xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">Mission</p>
+              <h3 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">What drives the department</h3>
+            </div>
+
+            <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              {missionPoints.map((point, index) => (
+                <article
+                  key={point}
+                  className="group rounded-3xl border border-gray-200 bg-gradient-to-br from-white to-[#f8f4ff] p-5 shadow-[0_12px_30px_rgba(39,38,53,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(39,38,53,0.12)]"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#faa519]/15 text-sm font-bold text-[#89288f] transition-transform duration-300 group-hover:scale-105">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+                    <p className="text-sm leading-7 text-gray-700">{point}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
         </div>
       </section>
 
