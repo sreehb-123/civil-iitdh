@@ -95,8 +95,8 @@ export default function Research() {
 
   return (
     <section className="min-h-screen bg-gray-100 pt-14 sm:pt-16 pb-8 sm:pb-10">
-      <div className="mx-auto flex min-h-[calc(100vh-7.5rem)] w-full max-w-7xl flex-col gap-4 px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[clamp(320px,30vw,420px)_minmax(0,1fr)] lg:items-start">
+      <div className="mx-auto flex min-h-[calc(100vh-7.5rem)] w-full max-w-[1800px] flex-col gap-4 px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[clamp(280px,24vw,360px)_minmax(0,1fr)] lg:items-start">
           <div className="min-w-0 order-2 lg:order-1">
             <div className="sticky top-4">
               <Alerts data={homeAlertsData} heading="Recent Publications" />

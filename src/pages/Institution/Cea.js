@@ -113,12 +113,20 @@ const Cea = () => {
         <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] items-stretch">
           <aside className="min-w-0 h-full">
             <div className="flex h-full flex-col rounded-3xl border border-gray-200 bg-white p-5 shadow-[0_18px_40px_rgba(39,38,53,0.08)] sm:p-6">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">
-                  Connect
+              <div className="rounded-2xl border border-dashed border-[#89288f]/20 bg-white p-3 sm:p-4">
+                <img
+                  src="/cea-logo.png"
+                  alt="CEA Logo"
+                  className="mx-auto h-28 w-full max-w-[220px] object-contain sm:h-32 sm:max-w-[250px]"
+                />
+                <p className="mt-3 text-center text-xs font-medium tracking-wide text-gray-600 sm:text-sm">
+                  Official logo of the CEA
                 </p>
-                <h2 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">
-                  Contact Us
+              </div>
+
+              <div className="mt-4">
+                <h2 className="text-2xl font-bold text-[#89288f] sm:text-3xl">
+                  Connect
                 </h2>
                 <p className="mt-3 text-sm leading-7 text-gray-600">
                   Reach out to the Civil Engineering Association to stay updated on events, workshops, and opportunities within the department.
@@ -153,37 +161,14 @@ const Cea = () => {
                 })}
               </div>
 
-              <div className="mt-auto pt-6">
-                {/* <div className="rounded-3xl border border-gray-200 bg-gradient-to-br from-white to-[#f8f4ff] p-4 shadow-[0_12px_30px_rgba(39,38,53,0.08)]"> */}
-                  {/* <div className="flex items-center gap-3">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#faa519]/15 text-[#89288f]">
-                      <FaUsers className="h-5 w-5" />
-                    </div>
-                  </div> */}
-
-                  <div className="mt-4 rounded-2xl border border-dashed border-[#89288f]/20 bg-white p-3 sm:p-4">
-                    <img
-                      src="/cea-logo.png"
-                      alt="CEA Logo"
-                      className="mx-auto h-28 w-full max-w-[220px] object-contain sm:h-32 sm:max-w-[250px]"
-                    />
-                    <p className="mt-3 text-center text-xs font-medium tracking-wide text-gray-600 sm:text-sm">
-                      Official logo of the CEA
-                    </p>
-                  </div>
-                {/* </div> */}
-              </div>
             </div>
           </aside>
 
           <section className="min-w-0 h-full">
             <div className="flex h-full flex-col rounded-3xl border border-gray-200 bg-white p-5 shadow-[0_18px_40px_rgba(39,38,53,0.08)] sm:p-6 lg:p-8">
               <div className="max-w-5xl">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">
+                <h2 className="text-2xl font-bold text-[#89288f] sm:text-3xl">
                   About CEA
-                </p>
-                <h2 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">
-                  Civil Engineering Association, IIT Dharwad
                 </h2>
               </div>
 
@@ -199,12 +184,9 @@ const Cea = () => {
               <div className="mt-8">
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">
+                    <h2 className="text-2xl font-bold text-[#89288f] sm:text-3xl">
                       Key Activities
-                    </p>
-                    <h3 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">
-                      What CEA does
-                    </h3>
+                    </h2>
                   </div>
                 </div>
 

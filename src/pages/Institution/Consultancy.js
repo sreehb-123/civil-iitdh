@@ -43,8 +43,7 @@ const Consultancy = () => {
     <div className="min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-8 pb-10 pt-14 sm:pt-16">
       <div className="mx-auto w-full max-w-7xl space-y-6">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">Consultancy</p>
-          <h1 className="mt-2 text-3xl font-bold text-gray-800 sm:text-4xl">Consultancy Services</h1>
+          <h1 className="text-3xl font-bold text-[#89288f] sm:text-4xl">Consultancy</h1>
         </div>
 
         <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-[0_18px_40px_rgba(39,38,53,0.08)] sm:p-8">
@@ -61,8 +60,7 @@ const Consultancy = () => {
         <section>
           <div className="mb-5 flex items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">Areas</p>
-              <h2 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">Consultancy Domains</h2>
+              <h2 className="text-2xl font-bold text-[#89288f] sm:text-3xl">Areas</h2>
             </div>
           </div>
 
@@ -97,8 +95,7 @@ const Consultancy = () => {
                 <FaEnvelope className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">For Queries</p>
-                <h2 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">Write to us</h2>
+                <h2 className="text-2xl font-bold text-[#89288f] sm:text-3xl">For Queries</h2>
                 <p className="mt-3 text-sm leading-7 text-gray-700">
                   Kindly write to the following email address for queries regarding consultancy services.
                 </p>

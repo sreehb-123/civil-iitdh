@@ -177,8 +177,7 @@ const Phd = () => {
 
           <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-[0_18px_40px_rgba(39,38,53,0.08)] sm:p-8">
             <div className="max-w-5xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">Admission Categories</p>
-              <h2 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">Full Time</h2>
+              <h2 className="text-2xl font-bold text-[#89288f] sm:text-3xl">Admission Categories</h2>
             </div>
 
             <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">

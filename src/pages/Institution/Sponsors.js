@@ -284,16 +284,16 @@ const Sponsors = () => {
           <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl">Sponsors</h1>
         </div>
 
-        {/* <section className="mb-8 rounded-3xl border border-gray-200 bg-white/90 p-5 shadow-[0_24px_70px_rgba(39,38,53,0.08)] backdrop-blur sm:p-6 lg:p-8">
-          <div className="mx-auto max-w-5xl space-y-4 text-gray-700">
+        <section className="mb-8 rounded-3xl border border-gray-200 bg-white/90 p-5 shadow-[0_24px_70px_rgba(39,38,53,0.08)] backdrop-blur sm:p-6 lg:p-8">
+          <div className="max-w-5xl space-y-4 text-left text-gray-700">
             <p className="text-sm leading-7 sm:text-base">
-              Civil Engineering Association (CEA) at IIT Dharwad invites industry partners and organizations to collaborate with us to empower the next generation of civil engineers. As part of our mission to bridge the gap between academic learning and real-world practice, CEA organizes a series of Industry Expert Talks every academic year. These talks feature leading professionals from the civil engineering sector sharing their experiences, insights, and knowledge on emerging trends and best practices.
+              Civil Engineering Association (CEA) at IIT Dharwad invites industry partners and organizations to collaborate with us to empower the next generation of civil engineers. As part of our mission to bridge the gap between academic learning and real-world practice, CEA organizes a series of Industry Talks every academic year. These talks feature leading professionals from the civil engineering sector sharing their experiences, insights, and knowledge on emerging trends and best practices.
             </p>
             <p className="text-sm leading-7 sm:text-base">
-              To make this initiative impactful and far-reaching, we welcome sponsorship support from visionary organizations that value innovation, education, and community engagement. Sponsorship opportunities are available in multiple tiers: Gold, Silver, Bronze, and Supporting Sponsorship, offering a range of benefits and visibility across our student and professional networks.
+              To make this initiative impactful and far-reaching, we welcome sponsorship support from visionary organizations that value innovation, education, and community engagement. Sponsorship opportunities are available in multiple tiers (Gold, Silver, Bronze, and Supporting Sponsorship) offering a range of benefits and visibility across our student and professional networks.
             </p>
           </div>
-        </section> */}
+        </section>
 
         <section className="mb-8 rounded-3xl border border-gray-200 bg-white/90 p-4 shadow-[0_24px_70px_rgba(39,38,53,0.08)] backdrop-blur sm:p-6 lg:p-8">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -353,10 +353,7 @@ const Sponsors = () => {
           <div className="rounded-3xl border border-gray-200 bg-white p-5 shadow-[0_18px_40px_rgba(39,38,53,0.08)] sm:p-6 lg:p-8">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">
-                  Selected Tier
-                </p>
-                <h2 className="mt-2 text-2xl font-bold text-gray-800">{activeTier.name}</h2>
+                <h2 className="text-2xl font-bold text-[#89288f]">Selected Tier</h2>
               </div>
               <div className="rounded-2xl bg-[#faa519]/10 px-4 py-2 text-right">
                 <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[#89288f]">Contribution</div>
@@ -397,11 +394,8 @@ const Sponsors = () => {
 
         <section className="mt-10 rounded-3xl border border-gray-200 bg-white/90 p-5 shadow-[0_24px_70px_rgba(39,38,53,0.08)] backdrop-blur sm:p-6 lg:p-8">
           <div className="max-w-5xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">
+            <h2 className="text-2xl font-bold text-[#89288f] sm:text-3xl">
               Why Sponsor CEA IITDH?
-            </p>
-            <h2 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">
-              Sponsorship that builds reach, relationships, and real impact
             </h2>
             <p className="mt-3 max-w-4xl text-sm leading-7 text-gray-600 sm:text-base">
               Support CEA at IIT Dharwad to strengthen visibility, engage emerging talent, and contribute to a strong bridge between academia and industry.
@@ -444,12 +438,40 @@ const Sponsors = () => {
                     </div>
                     <div className="min-w-0 flex-1">
                       <h3 className="text-lg font-bold text-gray-800">{reason.title}</h3>
-                      <p className="mt-2 text-sm leading-7 text-gray-600">{reason.summary}</p>
                     </div>
                   </div>
                 </article>
               );
             })}
+          </div>
+        </section>
+
+        <section className="mt-8 rounded-3xl border border-gray-200 bg-white/90 p-5 shadow-[0_24px_70px_rgba(39,38,53,0.08)] backdrop-blur sm:p-6 lg:p-8">
+          <div className="max-w-5xl space-y-4 text-sm leading-7 text-gray-600 sm:text-base">
+            <p>
+              Your support will not only enhance the educational experience for our students but also contribute to meaningful industry-academia collaboration. We look forward to partnering with you to foster innovation, skill development, and future-ready engineering talent.
+            </p>
+            <p>
+              For sponsorship inquiries, please contact us at:{" "}
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=cea@iitdh.ac.in"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="font-semibold text-[#89288f] underline decoration-[#faa519] underline-offset-4 transition-colors hover:text-[#6f2274]"
+              >
+                cea@iitdh.ac.in
+              </a>{" "}
+              and/or{" "}
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=head.civil@iitdh.ac.in"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="font-semibold text-[#89288f] underline decoration-[#faa519] underline-offset-4 transition-colors hover:text-[#6f2274]"
+              >
+                head.civil@iitdh.ac.in
+              </a>
+              .
+            </p>
           </div>
         </section>
       </div>

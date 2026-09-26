@@ -211,10 +211,9 @@ const Home = () => {
 
       <section id="about" className="py-10 bg-gray-100">
         <div className="home-shell container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 space-y-6">
-          <div className="text-center max-w-5xl mx-auto">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">About</p>
-            <h2 className="mt-2 text-3xl font-bold text-gray-800 sm:text-4xl">Department of Civil and Infrastructure Engineering</h2>
-            <p className="mt-4 text-sm leading-7 text-gray-700 sm:text-base">
+          <div className="w-full">
+            <h2 className="text-3xl font-bold text-[#89288f] sm:text-4xl">About</h2>
+            <p className="mt-5 text-left text-sm leading-8 text-gray-700 sm:text-base">
               From towering skyscrapers and robust bridges to efficient water systems and next-generation transportation, civil and infrastructure engineering shapes our world. As climate challenges intensify and technology transforms the way and quality of life, the demand for smart, sustainable, climate-resilient, and energy-efficient infrastructure has never been more urgent. Realizing such infrastructures requires a multidisciplinary, cross-cutting approach that bridges traditional civil engineering with emerging technologies and innovative design strategies. A flexible interdisciplinary curriculum is key to preparing future civil engineers to tackle these challenges holistically, ensuring infrastructure that endures the test of time while embracing social, economic, and environmental sustainability.
             </p>
           </div>
@@ -268,8 +267,7 @@ const Home = () => {
                   <FaBookOpen className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">Key Thrust Areas</p>
-                  <h3 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">Research focus</h3>
+                  <h2 className="text-2xl font-bold text-[#89288f] sm:text-3xl">Key Thrust Areas</h2>
                 </div>
               </div>
 
@@ -291,8 +289,7 @@ const Home = () => {
                   <FaUsers className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">Consultancy</p>
-                  <h3 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">Industry engagement</h3>
+                  <h2 className="text-2xl font-bold text-[#89288f] sm:text-3xl">Consultancy</h2>
                 </div>
               </div>
 
@@ -308,8 +305,7 @@ const Home = () => {
                 <FaLeaf className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">Vision</p>
-                <h3 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">Leading civil and infrastructure engineering for a sustainable future</h3>
+                <h2 className="text-2xl font-bold text-[#89288f] sm:text-3xl">Vision</h2>
                 <p className="mt-3 text-sm leading-7 text-gray-700 sm:text-base">
                   To be a global leader in civil and infrastructure engineering education and research, contributing to the sustainable development of society.
                 </p>
@@ -319,8 +315,7 @@ const Home = () => {
 
           <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-[0_18px_40px_rgba(39,38,53,0.08)] sm:p-8">
             <div className="max-w-5xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#89288f]">Mission</p>
-              <h3 className="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl">What drives the department</h3>
+              <h2 className="text-2xl font-bold text-[#89288f] sm:text-3xl">Mission</h2>
             </div>
 
             <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
